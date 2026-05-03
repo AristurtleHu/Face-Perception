@@ -1,3 +1,5 @@
+"""Trial specification and sequence generation for experiments."""
+
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -7,6 +9,8 @@ from collections import Counter
 
 @dataclass(frozen=True)
 class TrialSpec:
+    """Immutable trial configuration parameters."""
+
     trial_number: int
     category: int
     trial_type: int
@@ -18,6 +22,8 @@ class TrialSpec:
 
 @dataclass(frozen=True)
 class TrialOutcome:
+    """Immutable trial response data."""
+
     response_key: str
     rt_ms: int
     correct: bool
@@ -26,6 +32,7 @@ class TrialOutcome:
 
 
 def _no_adjacent_duplicates(values: list[int], rng: Random) -> list[int]:
+    """Shuffle list ensuring no consecutive identical values."""
     if len(values) < 2:
         return values[:]
 
@@ -37,13 +44,16 @@ def _no_adjacent_duplicates(values: list[int], rng: Random) -> list[int]:
 
 
 def _category_sequence(category_count: int, repeats: int, rng: Random) -> list[int]:
+    """Create randomized category sequence with no adjacent repeats."""
     categories = list(range(1, category_count + 1)) * repeats
     return _no_adjacent_duplicates(categories, rng)
 
 
 def build_experiment1_trials(rng: Random) -> list[TrialSpec]:
+    """Generate complete trial sequence for Experiment 1 (26 categories x 12 types)."""
     category_order = _category_sequence(26, 12, rng)
     trial_type_orders = {category: list(range(1, 13)) for category in range(1, 27)}
+    # Randomize trial type order within each category
     for order in trial_type_orders.values():
         rng.shuffle(order)
 
@@ -88,8 +98,10 @@ def build_experiment1_trials(rng: Random) -> list[TrialSpec]:
 
 
 def build_experiment2_trials(rng: Random) -> list[TrialSpec]:
+    """Generate complete trial sequence for Experiment 2 (23 categories x 18 types)."""
     category_order = _category_sequence(23, 18, rng)
     trial_type_orders = {category: list(range(1, 19)) for category in range(1, 24)}
+    # Randomize trial type order within each category
     for order in trial_type_orders.values():
         rng.shuffle(order)
 
@@ -119,6 +131,7 @@ def build_experiment2_trials(rng: Random) -> list[TrialSpec]:
 
 
 def ex1_row(spec: TrialSpec, outcome: TrialOutcome) -> dict[str, int]:
+    """Format trial data for Experiment 1 CSV output."""
     return {
         "trialNumber": spec.trial_number,
         "type": spec.trial_type,
@@ -135,6 +148,7 @@ def ex1_row(spec: TrialSpec, outcome: TrialOutcome) -> dict[str, int]:
 
 
 def ex2_row(spec: TrialSpec, outcome: TrialOutcome) -> dict[str, int]:
+    """Format trial data for Experiment 2 CSV output."""
     return {
         "trialNumber": spec.trial_number,
         "type": spec.trial_type,

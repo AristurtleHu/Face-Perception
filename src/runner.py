@@ -1,3 +1,5 @@
+"""Main experiment runner using pygame for visual search task."""
+
 from __future__ import annotations
 
 import csv
@@ -28,11 +30,14 @@ from trials import (
     ex2_row,
 )
 
+# Response keys for target present/absent
 PRESENT_KEYS = {pygame.K_RIGHT, pygame.K_p}
 ABSENT_KEYS = {pygame.K_LEFT, pygame.K_a}
 
 
 class VisualSearchRunner:
+    """Manages the visual search experiment including trials and data collection."""
+
     def __init__(
         self,
         config: ExperimentConfig,
@@ -58,6 +63,7 @@ class VisualSearchRunner:
         self.circle_layouts = build_circle_layouts()
 
     def run(self) -> Path:
+        """Initialize pygame and run complete experiment sequence."""
         pygame.init()
         pygame.font.init()
         flags = pygame.FULLSCREEN if self.fullscreen else 0
@@ -109,6 +115,7 @@ class VisualSearchRunner:
         feedback_duration: float | None = None,
         timeout_seconds: float | None = None,
     ) -> TrialOutcome:
+        """A single trial: show target, fixation, search array, and collect response."""
         assert self.window is not None
 
         target_surface = self._load_target_surface(spec)
@@ -168,6 +175,7 @@ class VisualSearchRunner:
     def _wait_for_response(
         self, search_onset: float, timeout_seconds: float | None
     ) -> tuple[str, int, bool]:
+        """Wait for participant response with timeout."""
         assert self.window is not None
 
         while True:
@@ -181,6 +189,7 @@ class VisualSearchRunner:
                 if event.key in ABSENT_KEYS:
                     return "a", int((time.perf_counter() - search_onset) * 1000), False
 
+            # Return timeout response if time exceeded
             if (
                 timeout_seconds is not None
                 and time.perf_counter() - search_onset > timeout_seconds

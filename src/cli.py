@@ -1,3 +1,5 @@
+"""Command-line interface for running face perception experiments."""
+
 from __future__ import annotations
 
 import argparse
@@ -41,12 +43,17 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def main(argv: list[str] | None = None) -> int:
+    """Parse arguments and run the selected experiment."""
     parser = build_parser()
     args = parser.parse_args(argv)
 
     project_root = args.project_root or _default_project_root()
     config = build_experiment_config(args.experiment, project_root)
+
+    # Prompt for subject ID if not provided
     subject_id = args.subject_id or input("type subject ID: ").strip() or "anon"
+
+    # Use provided seed or generate random seed from current time
     seed = args.seed if args.seed is not None else time_ns() % (2**31)
     output_dir = args.output_dir or (project_root / "output")
 

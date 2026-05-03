@@ -1,3 +1,5 @@
+"""Configuration definitions for experiments."""
+
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -6,6 +8,8 @@ from pathlib import Path
 
 @dataclass(frozen=True)
 class ExperimentConfig:
+    """Immutable configuration container for experiment parameters."""
+
     experiment_id: str
     display_name: str
     material_dir: Path
@@ -31,6 +35,7 @@ class ExperimentConfig:
 
 
 def build_experiment_config(experiment_id: str, repo_root: Path) -> ExperimentConfig:
+    """Create experiment configuration based on experiment ID."""
     experiment_id = experiment_id.lower()
     if experiment_id == "ex1":
         return ExperimentConfig(

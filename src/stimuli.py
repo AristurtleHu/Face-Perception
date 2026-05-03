@@ -1,3 +1,5 @@
+"""Stimulus rendering and layout utilities for visual search experiment."""
+
 from __future__ import annotations
 
 from functools import lru_cache
@@ -10,6 +12,7 @@ import pygame
 
 @lru_cache(maxsize=1024)
 def load_surface(path_str: str, mask_path_str: str | None = None) -> pygame.Surface:
+    """Load image file with optional mask into pygame surface with caching."""
     path = Path(path_str)
     image = Image.open(path).convert("RGBA")
 
@@ -29,6 +32,7 @@ def make_fixation_surface(
     color: tuple[int, int, int],
     background: tuple[int, int, int],
 ) -> pygame.Surface:
+    """Create a fixation cross centered on screen."""
     width, height = screen_size
     surface = pygame.Surface((width, height))
     surface.fill(background)
@@ -38,6 +42,7 @@ def make_fixation_surface(
     half_len = 17
     half_weight = 4
 
+    # Draw hollow cross
     pygame.draw.rect(
         surface,
         color,
@@ -91,6 +96,7 @@ def make_fixation_surface(
 def build_grid_offsets(
     stim_width: int = 120, stim_space: int = 12
 ) -> list[tuple[int, int]]:
+    """Generate grid positions for 16-item stimulus array."""
     coords = [
         int(value)
         for value in [
@@ -105,6 +111,7 @@ def build_grid_offsets(
 
 
 def build_circle_offsets(set_size: int, radius: int) -> list[tuple[int, int]]:
+    """Generate evenly-spaced circular positions."""
     theta = (2 * pi) / set_size
     return [
         (
@@ -120,6 +127,7 @@ def build_circle_layouts(radius: int = 400) -> dict[int, list[tuple[int, int]]]:
 
 
 def centered_rect(surface: pygame.Surface, center: tuple[int, int]) -> pygame.Rect:
+    """Return rect centered at given position."""
     rect = surface.get_rect()
     rect.center = center
     return rect
@@ -128,10 +136,12 @@ def centered_rect(surface: pygame.Surface, center: tuple[int, int]) -> pygame.Re
 def blit_centered(
     destination: pygame.Surface, source: pygame.Surface, center: tuple[int, int]
 ) -> None:
+    """Draw source surface centered at given position on destination."""
     destination.blit(source, centered_rect(source, center))
 
 
 def render_multiline_text(
     font: pygame.font.Font, text: str, color: tuple[int, int, int]
 ) -> list[pygame.Surface]:
+    """Render each line of text as separate surface."""
     return [font.render(line, True, color) for line in text.splitlines()]
