@@ -11,14 +11,35 @@ from PIL import Image
 import pygame
 
 
+def _resolve_existing_path(path: Path) -> Path:
+    """Resolve an image path with fallbacks for frozen and source runs."""
+    if path.exists():
+        return path
+
+    # When packaged with PyInstaller, data files may be missing from the bundle
+    # but still available next to the launched executable or in the working dir.
+    cwd_candidate = Path.cwd() / path
+    if cwd_candidate.exists():
+        return cwd_candidate
+
+    if path.parts and "docs" in path.parts:
+        docs_index = path.parts.index("docs")
+        relative = Path(*path.parts[docs_index:])
+        cwd_docs_candidate = Path.cwd() / relative
+        if cwd_docs_candidate.exists():
+            return cwd_docs_candidate
+
+    return path
+
+
 @lru_cache(maxsize=1024)
 def load_surface(path_str: str, mask_path_str: str | None = None) -> pygame.Surface:
     """Load image file with optional mask into pygame surface with caching."""
-    path = Path(path_str)
+    path = _resolve_existing_path(Path(path_str))
     image = Image.open(path).convert("RGBA")
 
     if mask_path_str is not None:
-        mask_path = Path(mask_path_str)
+        mask_path = _resolve_existing_path(Path(mask_path_str))
         mask = Image.open(mask_path).convert("L")
         if mask.size != image.size:
             mask = mask.resize(image.size, Image.Resampling.LANCZOS)

@@ -5,6 +5,8 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 
+from resources import resource_path
+
 
 @dataclass(frozen=True)
 class ExperimentConfig:
@@ -34,14 +36,17 @@ class ExperimentConfig:
         return self.material_dir / self.stimuli_dir_name
 
 
-def build_experiment_config(experiment_id: str, repo_root: Path) -> ExperimentConfig:
+def build_experiment_config(
+    experiment_id: str, repo_root: Path | None = None
+) -> ExperimentConfig:
     """Create experiment configuration based on experiment ID."""
     experiment_id = experiment_id.lower()
+    root_path = repo_root if repo_root is not None else resource_path()
     if experiment_id == "ex1":
         return ExperimentConfig(
             experiment_id="ex1",
             display_name="Experiment 1",
-            material_dir=repo_root / "docs" / "materials" / "experiment1materials",
+            material_dir=root_path / "docs" / "materials" / "experiment1materials",
             stimuli_dir_name="ex1Stimuli",
             target_folder_name="stimulusCategories",
             category_count=26,
@@ -55,7 +60,7 @@ def build_experiment_config(experiment_id: str, repo_root: Path) -> ExperimentCo
         return ExperimentConfig(
             experiment_id="ex2",
             display_name="Experiment 2",
-            material_dir=repo_root / "docs" / "materials" / "experiment2materials",
+            material_dir=root_path / "docs" / "materials" / "experiment2materials",
             stimuli_dir_name="ex2stimuli",
             target_folder_name="targetCategory",
             category_count=23,

@@ -17,4 +17,4 @@ face-search = "cli:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
-py-modules = ["cli", "config", "runner", "stimuli", "trials"]
+py-modules = ["cli", "config", "resources", "runner", "stimuli", "trials"]
