@@ -300,18 +300,16 @@ class VisualSearchRunner:
         specs = []
         for index in range(1, 7):
             target_present = index in present_trials
-            target_variant = "pFace" if target_present else "nonFace"
             specs.append(
                 TrialSpec(
                     trial_number=index,
-                    category=index,
+                    category=index,  # Used as practice trial index (1..6)
                     trial_type=index,
                     set_size=32 if self.config.experiment_id == "ex1" else 16,
                     target_present=target_present,
-                    target_variant=target_variant,
-                    target_source_index=(
-                        20 if self.config.experiment_id == "ex1" else None
-                    ),
+                    target_variant="pFace",  # Not used for practice
+                    target_source_index=None,
+                    is_practice=True,
                 )
             )
         return specs
@@ -379,18 +377,33 @@ class VisualSearchRunner:
             self.clock.tick(120)
 
     def _load_target_surface(self, spec: TrialSpec) -> pygame.Surface:
-        category_dir = (
-            self.config.stimuli_root
-            / self.config.target_folder_name
-            / str(spec.category)
-        )
-        if self.config.experiment_id == "ex1":
-            filename = "0.png" if spec.target_variant == "pFace" else "20.png"
-            return load_surface(str(category_dir / filename))
+        if spec.is_practice:
+            # Practice trials: read from practiceTrials folder
+            practice_dir = (
+                self.config.stimuli_root / "practiceTrials" / str(spec.category)
+            )
+            target_path = str(practice_dir / "0.png")
+        else:
+            # Main trials: read from target category folder
+            category_dir = (
+                self.config.stimuli_root
+                / self.config.target_folder_name
+                / str(spec.category)
+            )
+            if self.config.experiment_id == "ex1":
+                filename = "0.png" if spec.target_variant == "pFace" else "20.png"
+                target_path = str(category_dir / filename)
+            else:
+                target_path = str(category_dir / f"{spec.target_variant}.png")
 
-        mask_path = self.config.stimuli_root / "circularMask.png"
-        target_image_path = str(category_dir / f"{spec.target_variant}.png")
-        return load_surface(target_image_path, str(mask_path))
+        surface = load_surface(target_path)
+
+        # Apply mask for ex2 trials
+        if self.config.experiment_id == "ex2":
+            mask_path = self.config.stimuli_root / "circularMask.png"
+            return load_surface(target_path, str(mask_path))
+
+        return surface
 
     def _build_search_surface(
         self, spec: TrialSpec, target_surface: pygame.Surface
@@ -400,10 +413,104 @@ class VisualSearchRunner:
         search_surface = pygame.Surface((screen_width, screen_height))
         search_surface.fill((0, 0, 0))
 
+        # EX1 logic
         if self.config.experiment_id == "ex1":
             location_order = list(range(1, 65))
             self.rng.shuffle(location_order)
-            distractor_order = list(range(1, 66))
+
+            if spec.is_practice:
+                # Practice trials: read from practiceTrials folder (32 items)
+                practice_dir = (
+                    self.config.stimuli_root / "practiceTrials" / str(spec.category)
+                )
+                target_location = location_order[0]
+                for index in range(spec.set_size):
+                    location_index = location_order[index]
+                    if index == 0 and spec.target_present:
+                        source_surface = target_surface
+                    elif index == 0 and not spec.target_present:
+                        # For target-absent trials, use image 32 at position 0
+                        source_surface = load_surface(str(practice_dir / "32.png"))
+                    else:
+                        source_surface = load_surface(
+                            str(practice_dir / f"{index}.png")
+                        )
+
+                    offset_x, offset_y = self.grid_offsets[location_index - 1]
+                    rect = source_surface.get_rect(
+                        center=(
+                            screen_width // 2 + offset_x,
+                            screen_height // 2 + offset_y,
+                        )
+                    )
+                    search_surface.blit(source_surface, rect)
+            else:
+                # Main trials: standard logic
+                distractor_order = list(range(1, 66))
+                self.rng.shuffle(distractor_order)
+
+                category_dir = (
+                    self.config.stimuli_root
+                    / self.config.target_folder_name
+                    / str(spec.category)
+                )
+                target_location = location_order[0]
+                for index in range(spec.set_size):
+                    location_index = location_order[index]
+                    if index == 0 and spec.target_present:
+                        source_surface = target_surface
+                    else:
+                        candidate = distractor_order[index]
+                        if candidate == spec.target_source_index:
+                            candidate = distractor_order[spec.set_size]
+                        source_surface = load_surface(
+                            str(category_dir / f"{candidate}.png")
+                        )
+
+                    offset_x, offset_y = self.grid_offsets[location_index - 1]
+                    rect = source_surface.get_rect(
+                        center=(
+                            screen_width // 2 + offset_x,
+                            screen_height // 2 + offset_y,
+                        )
+                    )
+                    search_surface.blit(source_surface, rect)
+
+            return search_surface, target_location
+
+        # EX2 logic
+        location_order = list(range(1, spec.set_size + 1))
+        self.rng.shuffle(location_order)
+
+        if spec.is_practice:
+            # Practice trials: read from practiceTrials folder (16 items for ex2)
+            practice_dir = (
+                self.config.stimuli_root / "practiceTrials" / str(spec.category)
+            )
+            mask_path = self.config.stimuli_root / "circularMask.png"
+            positions = self.circle_layouts[spec.set_size]
+            for index in range(spec.set_size):
+                location_index = location_order[index]
+                if index == 0 and spec.target_present:
+                    source_surface = target_surface
+                elif index == 0 and not spec.target_present:
+                    # For target-absent trials, use image 17 at position 0
+                    source_surface = load_surface(
+                        str(practice_dir / "17.png"), str(mask_path)
+                    )
+                else:
+                    source_surface = load_surface(
+                        str(practice_dir / f"{index}.png"), str(mask_path)
+                    )
+
+                offset_x, offset_y = positions[location_index - 1]
+                rect = source_surface.get_rect(
+                    center=(screen_width // 2 + offset_x, screen_height // 2 + offset_y)
+                )
+                search_surface.blit(source_surface, rect)
+        else:
+            # Main trials: standard logic
+            distractor_order = list(range(1, 29))
             self.rng.shuffle(distractor_order)
 
             category_dir = (
@@ -411,60 +518,28 @@ class VisualSearchRunner:
                 / self.config.target_folder_name
                 / str(spec.category)
             )
-            target_location = location_order[0]
+            mask_path = self.config.stimuli_root / "circularMask.png"
+            positions = self.circle_layouts[spec.set_size]
             for index in range(spec.set_size):
                 location_index = location_order[index]
                 if index == 0 and spec.target_present:
                     source_surface = target_surface
                 else:
-                    candidate = distractor_order[index]
-                    if candidate == spec.target_source_index:
-                        candidate = distractor_order[spec.set_size]
-                    source_surface = load_surface(
-                        str(category_dir / f"{candidate}.png")
-                    )
+                    if spec.set_size == 4:
+                        distractor_index = index
+                    elif spec.set_size == 8:
+                        distractor_index = index + 4
+                    else:
+                        distractor_index = index + 12
+                    filename = f"{distractor_order[distractor_index]}.png"
+                    filepath = str(category_dir / filename)
+                    source_surface = load_surface(filepath, str(mask_path))
 
-                offset_x, offset_y = self.grid_offsets[location_index - 1]
+                offset_x, offset_y = positions[location_index - 1]
                 rect = source_surface.get_rect(
                     center=(screen_width // 2 + offset_x, screen_height // 2 + offset_y)
                 )
                 search_surface.blit(source_surface, rect)
-
-            return search_surface, target_location
-
-        assert spec.set_size in self.circle_layouts
-        location_order = list(range(1, spec.set_size + 1))
-        self.rng.shuffle(location_order)
-        distractor_order = list(range(1, 29))
-        self.rng.shuffle(distractor_order)
-
-        category_dir = (
-            self.config.stimuli_root
-            / self.config.target_folder_name
-            / str(spec.category)
-        )
-        mask_path = self.config.stimuli_root / "circularMask.png"
-        positions = self.circle_layouts[spec.set_size]
-        for index in range(spec.set_size):
-            location_index = location_order[index]
-            if index == 0 and spec.target_present:
-                source_surface = target_surface
-            else:
-                if spec.set_size == 4:
-                    distractor_index = index
-                elif spec.set_size == 8:
-                    distractor_index = index + 4
-                else:
-                    distractor_index = index + 12
-                filename = f"{distractor_order[distractor_index]}.png"
-                filepath = str(category_dir / filename)
-                source_surface = load_surface(filepath, str(mask_path))
-
-            offset_x, offset_y = positions[location_index - 1]
-            rect = source_surface.get_rect(
-                center=(screen_width // 2 + offset_x, screen_height // 2 + offset_y)
-            )
-            search_surface.blit(source_surface, rect)
 
         return search_surface, None
 

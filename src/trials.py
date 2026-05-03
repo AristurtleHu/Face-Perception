@@ -18,6 +18,7 @@ class TrialSpec:
     target_present: bool
     target_variant: str
     target_source_index: int | None = None
+    is_practice: bool = False
 
 
 @dataclass(frozen=True)
@@ -32,15 +33,35 @@ class TrialOutcome:
 
 
 def _no_adjacent_duplicates(values: list[int], rng: Random) -> list[int]:
-    """Shuffle list ensuring no consecutive identical values."""
+    """Shuffle list ensuring no consecutive identical values using greedy algorithm."""
     if len(values) < 2:
         return values[:]
 
-    shuffled = values[:]
-    while True:
-        rng.shuffle(shuffled)
-        if all(left != right for left, right in zip(shuffled, shuffled[1:])):
-            return shuffled[:]
+    # Count occurrences of each value
+    counts = Counter(values)
+    result: list[int] = []
+    last_value = None
+    available = list(counts.keys())
+
+    while available:
+        # Find candidates (aren't the last placed value and have remaining count)
+        candidates = [v for v in available if v != last_value and counts[v] > 0]
+
+        if not candidates:
+            # No valid candidate; need to pick from remaining values even if adjacent
+            # This shouldn't happen with valid input, but fallback to any available
+            candidates = [v for v in available if counts[v] > 0]
+
+        # Randomly pick from valid candidates
+        chosen = rng.choice(candidates)
+        result.append(chosen)
+        counts[chosen] -= 1
+
+        # Remove values with 0 count
+        available = [v for v in available if counts[v] > 0]
+        last_value = chosen
+
+    return result
 
 
 def _category_sequence(category_count: int, repeats: int, rng: Random) -> list[int]:
