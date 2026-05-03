@@ -574,7 +574,9 @@ class VisualSearchRunner:
             "trial_order": [asdict(spec) for spec in trial_specs],
             "csv_path": str(csv_path),
         }
-        manifest_path.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+        manifest_path.write_text(
+            json.dumps(manifest, indent=2, default=str), encoding="utf-8"
+        )
 
         script_copy_dir = base_dir / "scriptCopies"
         script_copy_dir.mkdir(parents=True, exist_ok=True)
