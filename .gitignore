@@ -1,3 +1,5 @@
 .vscode/
 build/
 materials/
+*.egg-info/
+__pycache__/
