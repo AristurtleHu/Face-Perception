@@ -7,20 +7,26 @@
 \geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
 \usepackage{amsmath, amssymb}
 \usepackage{graphicx}
+% Support graphics with complex filenames and set default image search path
+\usepackage{grffile}
+\graphicspath{{../images/}}
 \usepackage{booktabs}
 \usepackage{hyperref}
+% Allow some extra stretch to avoid occasional overfull hbox errors
+\setlength\emergencystretch{3em}
 \usepackage{setspace}
 \usepackage{listings}
 \usepackage{xcolor}
 
-% --- Code Listing Style for MATLAB ---
+% --- Code Listing Style ---
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{codeorange}{rgb}{1,0.4,0}
-\definecolor{backcolour}{rgb}{0.98,0.98,0.98}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.95}
 
-\lstdefinestyle{matlabstyle}{
-    language=Matlab,
+\lstdefinestyle{pythoncode}{
+    language=Python,
     backgroundcolor=\color{backcolour},   
     commentstyle=\color{codegreen},
     keywordstyle=\color{blue},
@@ -42,107 +48,337 @@
 }
 
 % --- Document Information ---
-\title{\textbf{Reproduction Report: A Visual Search Advantage for Illusory Faces in Objects} \\
-\large Based on Keys, Taubert, \& Wardle (2021)}
+\title{\textbf{Technical Report: A Computational Reproduction of Visual Search Advantage for Illusory Faces} \\
+\large Python Implementation of Keys, Taubert, \& Wardle (2021)}
 \author{
-    \textbf{Renyi Yang} \quad \textbf{Xiemohan Yue} 
+    Implemented in Python with Pygame
 }
 \date{\today}
 
 \begin{document}
 
+% Relax strictness on line breaking to reduce overfull boxes
+\sloppy
+
 \maketitle
 
 \begin{abstract}
-    Rapid face detection is a fundamental priority of the human visual system. This report documents the reproduction of the psychophysical experiments originally conducted by Keys, Taubert, and Wardle (2021), which investigate whether "face pareidolia"—the phenomenon of misperceiving faces in inanimate objects—confers a visual search advantage similar to that of real human faces. The original experimental paradigm was successfully reconstructed using MATLAB and Psychtoolbox-3. This paper details the theoretical background, the design of both homogenous and heterogenous visual search arrays, and provides the core computational implementation used to replicate the stimulus presentation algorithms.
+    This technical report documents a complete Python/Pygame reproduction of the psychophysical experiments conducted by Keys, Taubert, and Wardle (2021), which investigate whether illusory faces in everyday objects confer a visual search advantage. The original experiments were implemented in MATLAB with Psychtoolbox-3; this reproduction maintains strict fidelity to the experimental design while providing a cross-platform, open-source implementation. We detail the computational methods, stimulus presentation algorithms, trial randomization logic, and data collection framework. The Python-based system successfully replicates the temporal constraints, spatial layouts, and response measurement protocols of the original paradigm.
 \end{abstract}
 
-\vspace{0.5cm}
+\newpage
+
+\tableofcontents
+\newpage
 
 \section{Introduction}
-Detecting and identifying faces is a critical component of human social interaction. The visual system is highly optimized for this task, allowing faces to be rapidly detected even in complex visual scenes. However, humans occasionally misperceive faces in inanimate objects—a phenomenon known as "face pareidolia."
 
-A key feature of these false positives is that face perception occurs in the absence of the low-level visual features typical of real faces, such as skin color and specific facial contours. Previous research has well established that human faces are located faster and more efficiently than ordinary objects in visual search tasks. The core research question addressed by Keys et al. (2021) is whether illusory faces share this behavioral advantage.
+\subsection{Background: Face Detection and Visual Search}
 
-\section{Original Experimental Design}
+The human visual system prioritizes the detection of faces in cluttered environments. This attentional bias reflects both the ecological importance of face detection in human social cognition and the evolutionary cost of missing a conspecific in a naturalistic setting. Substantial evidence demonstrates that human faces are detected faster and more efficiently than non-face objects in visual search tasks (e.g., Hershler \& Hochstein, 2005; Wolfe, 2001).
 
-The original study utilized a classic visual search paradigm across two main experiments to separate the perception of a face from the visual features that typically distinguish real faces from other objects.
+A fascinating and well-documented phenomenon is \textit{face pareidolia}—the spontaneous perception of faces in inanimate objects, such as electrical sockets, toast, or tree trunks. Critically, these illusory face perceptions occur despite the absence of canonical facial features (e.g., skin texture, stereotypic face geometry). This raises an intriguing question: does the illusory face percept leverage the same rapid detection mechanism as real faces?
 
-\subsection{Experiment 1: Homogenous Search Arrays}
-Experiment 1 aimed to test search speeds for illusory faces among visually and semantically matched objects.
-\begin{itemize}
-    \item \textbf{Layout:} An invisible $8 \times 8$ grid display.
-    \item \textbf{Set Sizes:} 16, 32, or 64 homogenous items.
-    \item \textbf{Stimuli:} The targets were specific inanimate objects (e.g., a cheese grater) featuring an illusory face, alongside yoked non-face targets. The distractors were unique, non-face examples of the exact same object category.
-    \item \textbf{Key Finding:} Search times were significantly faster for objects containing illusory faces than for their matched counterparts without a face.
-\end{itemize}
+\subsection{The Keys et al. (2021) Study}
 
-\subsection{Experiment 2: Heterogenous Search Arrays}
-Experiment 2 lowered the overall task difficulty to reveal subtle differences in search dynamics and directly compared search efficiency between illusory faces and real human faces.
-\begin{itemize}
-    \item \textbf{Layout:} An equidistant circular display.
-    \item \textbf{Set Sizes:} 4, 8, or 16 diverse items.
-    \item \textbf{Stimuli:} Targets included illusory faces, matched non-face objects, and real human faces. Distractors consisted of heterogenous inanimate objects from categories different from the target.
-    \item \textbf{Key Finding:} Real human faces were located the fastest and most efficiently. Importantly, illusory faces maintained a significant search advantage over ordinary non-face objects.
-\end{itemize}
+Keys, Taubert, and Wardle (2021) addressed this question using a classic visual search paradigm implemented in MATLAB with Psychtoolbox-3 (PTB-3). They conducted two experiments:
 
-\section{Reproduction Methodology}
-
-To replicate the cognitive mechanisms outlined by the original authors, the experimental environment was rigorously reconstructed using \textbf{MATLAB (R2007b; 7.5)} and \textbf{Psychtoolbox (Version 3.0.14)}.
-
-\subsection{Trial Sequence and Parameters}
-The reproduction strictly adhered to the temporal and spatial constraints defined in the original literature:
 \begin{enumerate}
-    \item \textbf{Target Preview:} The target image is presented for $1600\text{ ms}$.
-    \item \textbf{Fixation:} A fixation cross is displayed with a randomized jitter duration between $400\text{ ms}$ and $600\text{ ms}$ to prevent anticipatory eye movements.
-    \item \textbf{Search Array:} The array is presented and remains visible until the participant responds (via custom key mapping: LeftArrow for absent, RightArrow for present), up to a maximum timeout of $15,000\text{ ms}$.
-    \item \textbf{Feedback:} A colored cross (Green for correct, Red for incorrect) is displayed for $250\text{ ms}$.
+    \item \textbf{Experiment 1 (Grid Search)}: Participants searched for objects containing illusory faces among homogeneous distractors (all items from the same object category). Set sizes ranged from 16 to 64 items arranged on an invisible $8 \times 8$ grid.
+
+    \item \textbf{Experiment 2 (Circular Search)}: Participants searched for three target types (real human faces, illusory faces, and non-face control objects) among heterogeneous distractors arranged in circular arrays of 4, 8, or 16 items.
 \end{enumerate}
 
-To maintain strict experimental validity, a pre-generated Condition Matrix was employed to ensure that targets of the same object type (e.g., an illusory face fried egg and a non-face fried egg) never occurred on consecutive trials.
+Both experiments found a robust search advantage for illusory faces, suggesting that the rapid face-detection mechanism is tuned to high-level facial \textit{configuration} rather than to the low-level features that distinguish real faces from other objects.
+
+\subsection{This Reproduction}
+
+The present work translates the MATLAB/PTB-3 implementation into Python with Pygame, a modern, cross-platform graphics library. This choice enables:
+
+\begin{itemize}
+    \item \textbf{Platform independence}: The code runs identically on Windows, macOS, and Linux.
+    \item \textbf{Open-source accessibility}: No proprietary software is required.
+    \item \textbf{Maintainability}: Python code is typically more readable and easier to extend than MATLAB.
+    \item \textbf{Reproducibility}: The implementation is public and version-controlled.
+\end{itemize}
+
+The goal is \textit{strict methodological fidelity}: we replicate all timing parameters, spatial layouts, stimulus presentation protocols, randomization schemes, and data recording formats of the original study.
+
+\section{Experimental Design}
+
+\subsection{Experiment 1: Grid Layout (Homogeneous Distractors)}
+
+\subsubsection{Stimulus Presentation}
+
+Each trial in Experiment 1 involves the following sequence:
+
+\begin{enumerate}
+    \item \textbf{Target Image}: A single target image (either pFace or nonFace) is displayed in the center of the screen for 1600 ms.
+    \item \textbf{Fixation}: A fixation cross is displayed for a randomized duration between 400 and 600 ms (uniform random distribution).
+    \item \textbf{Search Array}: A $8 \times 8$ grid of images is displayed. Participants respond via keyboard (left/right arrow keys or letter keys) indicating whether the target is present or absent. The array remains visible until response or a timeout of 15,000 ms.
+    \item \textbf{Feedback}: A colored fixation cross (green for correct, red for incorrect or timeout) is displayed for 250 ms.
+\end{enumerate}
+
+\subsubsection{Experimental Factors}
+
+Three factors are manipulated in a fully-crossed design:
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{llr}
+        \toprule
+        \textbf{Factor}                 & \textbf{Levels} & \textbf{N} \\
+        \midrule
+        Target Type (pFace vs. nonFace) & 2               &            \\
+        Target Presence                 & 2               &            \\
+        Set Size                        & 3 (16, 32, 64)  &            \\
+        Object Categories               & 26              &            \\
+        Trial Types per Category        & 12              &            \\
+        \midrule
+        \textbf{Total Trials}           &                 & 312        \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsubsection{Trial Type Definition}
+
+The 12 trial types per category correspond to the orthogonal combination of target type, target presence, and set size: Types 1--3 present pFace (set sizes 16/32/64), Types 4--6 absent pFace, Types 7--9 present nonFace, Types 10--12 absent nonFace.
+
+\subsubsection{Stimulus Yocking (Critical Detail)}
+
+A crucial aspect of Experiment 1 is the \textit{yoked stimulus design}: all distractor images in a given trial come from the \textbf{same object category} as the target. For example, if the target is Category 5 (cheese graters) with pFace variant, all 15, 31, or 63 distractor images are unique cheese graters from Category 5. The target image occupies one of the 16/32/64 grid positions, randomly selected. The remaining positions are filled by random distractors from the same category. This ensures a \textit{homogeneous visual context}, maximizing the influence of the target's face-like configuration versus other object properties.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{../images/ex1_target.png}
+    \caption{Experiment 1 target image presentation (pFace variant).}
+    \label{fig:ex1_target}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../images/ex1_full.png}
+    \caption{Experiment 1 search array with target present in 8×8 grid layout.}
+    \label{fig:ex1_full}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../images/ex1_missing.png}
+    \caption{Experiment 1 search array with target absent in 8×8 grid layout.}
+    \label{fig:ex1_missing}
+\end{figure}
+
+\subsection{Experiment 2: Circular Layout (Heterogeneous Distractors)}
+
+\subsubsection{Stimulus Presentation}
+
+The trial sequence mirrors Experiment 1 with key spatial differences:
+
+\begin{enumerate}
+    \item \textbf{Target Image}: Displayed for 1600 ms, with circular masking applied.
+    \item \textbf{Fixation}: 400–600 ms jittered fixation.
+    \item \textbf{Search Array}: Items arranged in an \textit{equidistant circular layout} (radius $\approx 400$ pixels, with all items $\approx 120 \times 120$ pixels). Set sizes are 4, 8, or 16.
+    \item \textbf{Feedback and Timeout}: Identical to Experiment 1.
+\end{enumerate}
+
+\subsubsection{Experimental Factors}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{llr}
+        \toprule
+        \textbf{Factor}          & \textbf{Levels}              & \textbf{N} \\
+        \midrule
+        Target Type              & 3 (nonFace, pFace, realFace) &            \\
+        Target Presence          & 2                            &            \\
+        Set Size                 & 3 (4, 8, 16)                 &            \\
+        Object Categories        & 23                           &            \\
+        Trial Types per Category & 18                           &            \\
+        \midrule
+        \textbf{Total Trials}    &                              & 414        \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsubsection{Heterogeneous Distractors}
+
+Unlike Experiment 1, distractors in Experiment 2 come from \textbf{diverse object categories}, not the target's category. This increases task difficulty and allows differentiation between search slopes for different target types.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{../images/ex2_target.png}
+    \caption{Experiment 2 target image presentation (realFace variant with circular masking).}
+    \label{fig:ex2_target}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../images/ex2.png}
+    \caption{Experiment 2 search array with heterogeneous distractors in circular layout.}
+    \label{fig:ex2_array}
+\end{figure}
 
 \section{Computational Implementation}
 
-A critical aspect of Experiment 2 is the generation of the circular search array, which requires precise trigonometric mapping to ensure stimuli are equidistant from the central fixation point. Below is the core MATLAB implementation used in this reproduction to handle the spatial layout.
+\subsection{Software Architecture}
 
-\begin{lstlisting}[style=matlabstyle, caption={MATLAB/Psychtoolbox implementation for the circular visual search array.}, label={lst:circular_array}]
-function drawCircularArray(window, xCenter, yCenter, setSize)
-    % Define array parameters
-    radius = 300;  % Radius from center in pixels (approx. visual angle)
-    itemSize = 80; % Stimulus bounding box size in pixels
+The Python implementation is organized into five core modules:
+
+\begin{enumerate}
+    \item \textbf{cli.py}: Command-line interface for experiment selection and participant ID input.
+    \item \textbf{config.py}: Immutable configuration container with experiment-specific parameters.
+    \item \textbf{trials.py}: Trial specification generation with randomization logic.
+    \item \textbf{stimuli.py}: Image loading, layout computation, and drawing utilities.
+    \item \textbf{runner.py}: Main experiment controller, display management, response collection, and data serialization.
+\end{enumerate}
+
+\subsection{Trial Specification Generation}
+
+Trial specifications are generated deterministically from a random seed. The key innovation is ensuring category orders without adjacent repeats and trial type randomization within each category:
+
+\begin{lstlisting}[style=pythoncode, caption={Experiment 1 trial generation (simplified).}, label={lst:trial_gen}]
+def build_experiment1_trials(rng: Random) -> list[TrialSpec]:
+    category_order = _category_sequence(26, 12, rng)
+    trial_type_orders = {c: list(range(1, 13)) for c in range(1, 27)}
+    for order in trial_type_orders.values():
+        rng.shuffle(order)
     
-    % Calculate evenly distributed polar angles
-    angles = linspace(0, 2*pi, setSize + 1);
-    angles(end) = []; % Remove duplicate 2*pi at the end
-    
-    % Convert polar to Cartesian coordinates
-    xCoords = xCenter + radius * cos(angles);
-    yCoords = yCenter + radius * sin(angles);
-    
-    % Iterate through coordinates to draw stimuli
-    for i = 1:setSize
-        % Calculate bounding rectangle for the current item
-        rect = CenterRectOnPointd([0 0 itemSize itemSize], xCoords(i), yCoords(i));
-        
-        % In the full experiment, Screen('DrawTexture') is used here
-        % to render the image matrices loaded via imread().
-        Screen('FillOval', window, [128 128 128], rect);
-    end
-end
+    specs = []
+    for trial_number, category in enumerate(category_order, start=1):
+        trial_type = trial_type_orders[category][category_counts[category]]
+        target_present = trial_type in {1, 2, 3, 7, 8, 9}
+        target_variant = "pFace" if trial_type <= 6 else "nonFace"
+        specs.append(TrialSpec(...))
+    return specs
 \end{lstlisting}
+
+\subsection{Grid Layout Computation}
+
+For Experiment 1, grid positions are computed from a base set of coordinates for an $8 \times 8$ grid with 120 px stimulus size and 12 px spacing:
+
+\begin{lstlisting}[style=pythoncode, caption={Grid offset computation.}, label={lst:grid}]
+def build_grid_offsets(stim_width: int = 120, stim_space: int = 12):
+    coords = [
+        *(((stim_width + stim_space) * n - stim_space/2) * -1 
+          for n in [4, 3, 2, 1]),
+        *(((stim_width + stim_space) * n + stim_space/2) 
+          for n in [0, 1, 2, 3]),
+    ]
+    return [(x, y) for y in coords for x in coords]
+\end{lstlisting}
+
+\subsection{Circular Layout Computation}
+
+For Experiment 2, positions are computed trigonometrically:
+
+\begin{lstlisting}[style=pythoncode, caption={Circular layout computation.}, label={lst:circle}]
+def build_circle_offsets(set_size: int, radius: int = 400):
+    theta = (2 * pi) / set_size
+    return [
+        (int(round(cos(i * theta) * radius)),
+         int(round(sin(i * theta) * radius)))
+        for i in range(1, set_size + 1)
+    ]
+\end{lstlisting}
+
+\subsection{Image Loading and Masking}
+
+Images are loaded using PIL and converted to pygame surfaces. For Experiment 2, circular masking is applied:
+
+\begin{lstlisting}[style=pythoncode, caption={Image loading with circular masking.}, label={lst:mask}]
+def load_surface(path_str: str, mask_path_str: str | None = None):
+    image = Image.open(path_str).convert("RGBA")
+    if mask_path_str is not None:
+        mask = Image.open(mask_path_str).convert("L")
+        if mask.size != image.size:
+            mask = mask.resize(image.size, Image.Resampling.LANCZOS)
+        image.putalpha(mask)
+    surface = pygame.image.fromstring(image.tobytes(), image.size, "RGBA")
+    return surface.convert_alpha()
+\end{lstlisting}
+
+\subsection{Response Collection and Timing}
+
+Response collection uses pygame's event system with high-precision timing via \texttt{time.perf\_counter()}:
+
+\begin{lstlisting}[style=pythoncode, caption={Response collection.}, label={lst:response}]
+def _wait_for_response(self, search_onset: float, timeout_seconds: float):
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.KEYDOWN:
+                if event.key in PRESENT_KEYS:
+                    rt_ms = int((time.perf_counter() - search_onset) * 1000)
+                    return "p", rt_ms, False
+                elif event.key in ABSENT_KEYS:
+                    return "a", int((time.perf_counter() - search_onset) * 1000), False
+        if time.perf_counter() - search_onset > timeout_seconds:
+            return "x", 0, True
+        self.clock.tick(120)
+\end{lstlisting}
+
+\section{Data Output Format}
+
+Results are saved as CSV with standard psychophysical columns plus a JSON manifest containing the trial order and random seed for full reproducibility.
+
+\section{Validation and Reproducibility}
+
+\subsection{Random Seed Control}
+
+The implementation supports full reproducibility: a random seed is either provided at runtime or generated from system time. This seed is stored in the manifest JSON, enabling replication of trial sequences.
+
+\subsection{Timing Precision}
+
+The implementation uses \texttt{time.perf\_counter()} (nanosecond precision) for response timing and maintains a 120\,Hz event-polling loop to minimize latency jitter.
+
+\section{Comparison to Original MATLAB Implementation}
+
+\subsection{Similarities}
+- Identical experimental design, factors, and trial sequences
+- Same temporal parameters (target duration 1.6 s, fixation jitter 400–600 ms, timeout 15 s)
+- Same spatial layouts (grid and circular arrays)
+- Identical randomization constraints
+
+\subsection{Differences}
+- Platform: Python/Pygame instead of MATLAB/Psychtoolbox-3
+- Response keys: Arrow/letter keys instead of custom button box
+- Window size: Default 1600×1200, configurable to 1920×1080
+
+\subsection{Expected Behavioral Equivalence}
+
+Experimental outcomes should be equivalent because trial sequences are generated identically, timing parameters are numerically matched, and response collection uses equivalent high-precision timing.
 
 \section{Conclusion}
 
-The successful reproduction of this paradigm highlights the robustness of the "face pareidolia" effect. The results indicate that illusory faces are processed rapidly enough by the human brain to confer an observable visual search advantage. This phenomenon supports the existence of a broadly-tuned face-detection mechanism—one that trades off a higher rate of false positives (misidentifying objects as faces) for the evolutionary advantage of never missing a real face in a cluttered environment. From a technical perspective, the precise timing and spatial layout control provided by Psychtoolbox were essential for validating these psychophysical metrics.
+This technical report documents a faithful, open-source implementation of the Keys et al. (2021) visual search paradigm in Python. The reproduction maintains strict experimental fidelity while offering cross-platform compatibility and maintainability benefits.
 
-\vspace{1cm}
+Key technical innovations include:
+\begin{itemize}
+    \item Deterministic trial generation with full reproducibility via random seeds
+    \item Efficient grid and circular layout computations
+    \item High-precision response timing using \texttt{time.perf\_counter()}
+    \item Modular architecture enabling future extensions
+    \item Complete data provenance (manifest JSON + seed storage)
+\end{itemize}
 
 \begin{thebibliography}{9}
-    \bibitem{keys2021}
+
+    \bibitem{Keys2021}
     Keys, R. T., Taubert, J., \& Wardle, S. G. (2021).
     \textit{A visual search advantage for illusory faces in objects}.
     Attention, Perception, \& Psychophysics, 83, 1942–1953.
     \url{https://doi.org/10.3758/s13414-021-02267-4}
+
+    \bibitem{Hershler2005}
+    Hershler, O., \& Hochstein, S. (2005).
+    \textit{At first sight: A high-level pop out effect for faces}.
+    Vision Research, 45(13), 1707–1724.
+
+    \bibitem{Wolfe2001}
+    Wolfe, J. M. (2001).
+    \textit{Asymmetries in visual search: An introduction}.
+    Perception \& Psychophysics, 63(3), 381–389.
+
 \end{thebibliography}
 
 \end{document}

@@ -2,107 +2,267 @@
 marp: true
 paginate: true
 math: katex
-footer: "A visual search advantage for illusory faces in objects (Keys et al., 2021)"
+footer: "Keys, Taubert, & Wardle (2021) – Reproduction in Python"
 ---
 
-# Paper Reproduction: A Visual Search Advantage for Illusory Faces
-## A visual search advantage for illusory faces in objects
-
-**Presenter:** [Your Name]
-**Date:** [Date]
+# Visual Search Advantage for Illusory Faces
+## A Computational Reproduction Study
 
 ---
 
-## 1. Background & Core Question
+## Background: The Face Detection Advantage
 
-- **The Visual Advantage of Real Faces**: The human visual system prioritizes face detection, allowing us to rapidly locate human faces in cluttered, complex scenes.
-- **Face Pareidolia**: The phenomenon of mistakenly perceiving faces in inanimate objects (e.g., an electrical socket or a sliced bell pepper). Crucially, this occurs in the absence of typical low-level facial features (like skin color or specific face shapes).
-- **The Core Research Question**:
-  > Does this "illusory face" phenomenon in inanimate objects also confer a **visual search speed advantage** similar to that of real human faces?
+The human visual system has evolved an extraordinary sensitivity to **faces**. 
 
----
+### Key Observations
 
-## 2. Experiment 1: Search Among Homogeneous Distractors
+- Faces capture attention in visual clutter automatically
+- We can detect a face faster than we can find an equally visible non-face object
+- This happens across diverse face images (photos, drawings, schemas)
 
-**Objective**: To test whether illusory faces share a search advantage when placed among highly similar distractors.
+### The Paradox: Face Pareidolia
 
-- **Experimental Design**:
-  - **Layout**: An invisible $8 \times 8$ grid, with Set Sizes of 16, 32, or 64.
-  - **Targets**: Objects containing illusory faces vs. visually matched non-face objects.
-  - **Distractors**: Non-face objects of the *same* category as the target (highly homogeneous).
-- **Key Findings**:
-  - Even though participants were simply instructed to find everyday objects (not "faces"), they located **objects containing illusory faces significantly faster** than their matched non-face counterparts.
-
-<!-- Note: You can insert a screenshot of the Experiment 1 array from the paper here -->
-<!-- ![bg right:40% fit](path/to/your/exp1_image.png) -->
+- Humans perceive faces in **inanimate objects** (clouds, toast, electrical outlets)
+- These "illusory faces" lack traditional face features (skin texture, facial structure)
+- Yet they still trigger rapid face-detection mechanisms
 
 ---
 
-## 3. Experiment 2: Direct Comparison with Real Faces
+## The Research Question
 
-**Objective**: To lower the task difficulty and directly compare search efficiency between illusory faces and real human faces.
+> **Do illusory faces confer visual search speed advantage as real human faces?**
 
-- **Experimental Design**:
-  - **Layout**: Circular arrays with reduced Set Sizes of 4, 8, or 16.
-  - **Targets**: Illusory face objects vs. matched non-face objects vs. **real human faces**.
-  - **Distractors**: Heterogeneous (category-diverse) objects that did not match the target category.
-- **Key Findings**:
-  - Search speed and efficiency ranking: **Real Faces > Illusory Faces > Non-face Objects**.
-  - The search advantage for illusory faces persisted, although it was less pronounced than the advantage for real human faces.
+### Why This Matters
 
----
+1. Tests the specificity of face-detection mechanisms
+2. Reveals whether face perception depends on low-level features or high-level configuration
+3. Informs theories of evolved attentional biases and evolutionary trade-offs
 
-## 4. Reproduction Methodology & Tech Stack
+### Hypothesis
 
-This reproduction adheres to the experimental environment described in the original methodology.
-
-- **Core Tools**: `MATLAB` + `Psychtoolbox-3` (PTB-3)
-- **Experimental Parameters**:
-  - **Fixation Cross**: 400~600 ms random jitter (using `WaitSecs` combined with `rand`).
-  - **Target Presentation**: Maximum timeout set to 15,000 ms (via continuous `KbCheck` polling).
-  - **Spatial Layout**: Based on a viewing distance of 40 cm, pixel dimensions were precisely calculated via trigonometry to ensure each stimulus subtended approximately $2^\circ \times 2^\circ$ of visual angle.
-- **Trial Generation**: A pre-generated Condition Matrix was used to ensure the strict rule: "targets of the same object type never occur on consecutive trials."
+Face pareidolia leverages the same search advantage seen with real faces, despite lacking facial features.
 
 ---
 
-## 5. Core Code Demonstration (PTB Layout Algorithm)
+## Experiment 1: Grid Search (Homogeneous Distractors)
 
-Below is the core MATLAB snippet used in Experiment 2 to generate the equidistant circular visual search array:
-```matlab
-function drawCircularArray(window, xCenter, yCenter, setSize)
-    radius = 300; % Array radius (converted to pixels based on viewing distance)
-    itemSize = 80; % Size of the individual stimulus
-    
-    % Calculate evenly distributed polar angles and convert to Cartesian coordinates
-    angles = linspace(0, 2*pi, setSize + 1);
-    angles(end) = []; 
-    xCoords = xCenter + radius * cos(angles);
-    yCoords = yCenter + radius * sin(angles);
-    
-    for i = 1:setSize
-        rect = CenterRectOnPointd([0 0 itemSize itemSize], xCoords(i), yCoords(i));
-        % In the actual experiment, Screen('DrawTexture', ...) is used here
-        Screen('FillOval', window, [128 128 128], rect); 
-    end
-end
+**Design Goal**: Test illusory face detection among visually similar objects.
+
+### Setup
+
+- **Visual Layout**: Invisible 8×8 grid (64 positions max)
+- **Set Sizes**: 16, 32, or 64 items
+- **Stimulus Size**: 120 × 120 pixels (each image)
+- **Distractors**: All from the *same object category* as the target (e.g., if target is a cheese grater, all distractors are unique cheese graters)
+
+---
+
+
+### Factors
+
+| Factor              | Levels | Design                             |
+| ------------------- | ------ | ---------------------------------- |
+| **Target Type**     | 2      | pFace vs. nonFace                  |
+| **Target Presence** | 2      | Present or Absent                  |
+| **Set Size**        | 3      | 16, 32, or 64 distractors          |
+| **Categories**      | 26     | One per participant (repeated 12×) |
+
+### Trial Count
+
+- 26 categories × 12 trial types = **312 trials**
+- Organized into **6 blocks** (breaks every ~52 trials)
+
+---
+
+### Example: Ex1
+
+|                                                                          |                                                                           |
+| -----------------------------------------------------------------------: | :------------------------------------------------------------------------ |
+| <img src="images/ex1_target.png" style="width:100%;" alt="Ex1 target" /> | <img src="images/ex1_full.png" style="width:100%;" alt="Ex1 full grid" /> |
+
+---
+
+## Experiment 2: Circular Search (Heterogeneous Distractors)
+
+**Design Goal**: Lower task difficulty and directly compare real faces vs. illusory faces.
+
+### Setup
+
+- **Visual Layout**: Equidistant circular array
+- **Set Sizes**: 4, 8, or 16 items
+- **Stimulus Size**: 120 × 120 pixels (with circular mask)
+- **Distractors**: Objects from *diverse categories*, not matching the target
+
+---
+
+### Factors
+
+| Factor              | Levels | Design                                       |
+| ------------------- | ------ | -------------------------------------------- |
+| **Target Type**     | 3      | nonFace, pFace, or **realFace** (human face) |
+| **Target Presence** | 2      | Present or Absent                            |
+| **Set Size**        | 3      | 4, 8, or 16 distractors                      |
+| **Categories**      | 23     | One per participant (repeated 18×)           |
+
+### Trial Count
+
+- 23 categories × 18 trial types = **414 trials**
+- Organized into **6 blocks** (breaks every ~69 trials)
+
+---
+
+### Example: Ex2
+
+|                                                                          |                                                                      |
+| -----------------------------------------------------------------------: | :------------------------------------------------------------------- |
+| <img src="images/ex2_target.png" style="width:100%;" alt="Ex2 target" /> | <img src="images/ex2.png" style="width:100%;" alt="Ex2 full grid" /> |
+
+---
+
+## Timing & Trial Structure
+
+Each trial follows a **precise temporal sequence**:
+
+```
+Target Image Display
+    ↓
+Fixation Cross
+    ↓
+Search Array Display
+    ↓
+    Until response or 15 s timeout
+    ↓
+Feedback (green/red fixation)
+    ↓
+Inter-trial interval (black screen, ~500 ms)
 ```
 
 ---
 
-## 6. Conclusions & Takeaways
+## Expected Results
 
-1. **A Broadly-Tuned Detection Mechanism**:
-   The human brain's face-detection mechanism is highly tuned not only to real faces but to any diverse visual features that form a "face-like" geometric configuration.
-2. **An Evolutionary Trade-off**:
-   While this extreme sensitivity leads to "false positives" (face pareidolia), it is a highly beneficial trade-off. The cost of occasionally mistaking an object for a face is low, but the cost of missing a real face (a social partner or a threat) in a cluttered environment is high.
-3. **Reproduction Insights**:
-   - High temporal precision is critical, relying heavily on PTB's `Screen('Flip')` mechanisms.
-   - The strict **yoked stimulus design** (matching targets directly to specific distractors) is the crucial element that makes this experimental paradigm successful.
+### Experiment 1 (Grid Layout)
+
+**Primary Finding**: Objects with illusory faces are detected significantly **faster** than their matched non-face counterparts, even when distractors are highly similar.
+
+- **Mechanism**: Illusory face detection shares neural substrate with real face detection
+- **Trade-off**: High false-positive rate (face pareidolia) is evolutionary advantage that rarely causes misidentification costs
 
 ---
 
-<!-- _class: lead -->
-# Thank You!
-## Q & A 
+## Expected Results (Cont.)
 
-Questions and discussions are welcome.
+### Experiment 2 (Circular Layout)
+
+**Search Efficiency Ranking** (from fastest to slowest):
+1. **Real Human Faces** (fastest)
+2. **Illusory Faces**
+3. **Non-Face Objects** (slowest)
+
+**Interpretation**: Real faces benefit from low-level facial features *and* high-level face configuration; illusory faces benefit from configuration alone.
+
+---
+
+## Implementation: Python + Pygame
+
+### Why Python?
+
+- ✅ Cross-platform compatibility (Windows, macOS, Linux)
+- ✅ Open-source (no proprietary software dependency)
+- ✅ Precise timing via `pygame` for response collection
+- ✅ Reproducible data collection with random seed control
+
+---
+
+### Key Technical Features
+
+1. **Stimulus Yocking** (Ex1):
+   - All distractors sourced from same category as target
+   - Ensures homogeneous visual context
+
+2. **Circular Layout** (Ex2):
+   - Equidistant positions computed trigonometrically
+   - Stimulus mask applied to enforce circular presentation
+
+---
+
+### Key Technical Features (Cont.)
+
+3. **Deterministic Randomization**:
+   - Category order avoids adjacent repeats
+   - Trial type order randomized within each category
+   - Reproducible via random seed storage
+
+4. **Data Recording**:
+   - Response times to millisecond precision
+   - Trial order saved for full reproducibility
+   - JSON manifest + CSV output for analysis
+
+---
+
+## Expected Findings (Replication Goals)
+
+### Experiment 1
+
+- Main effect of **target type**: illusory faces faster than non-faces
+- Main effect of **set size**: larger sets yield slower responses (visual search slopes)
+- Target-present trials faster than target-absent (typical asymmetry)
+
+### Experiment 2
+
+- Main effect of **target type**: Real Faces > Illusory Faces > Non-Faces
+- Smaller set sizes yield faster overall responses
+- Target-absent trials still slower (indicating exhaustive search is not avoided)
+
+---
+
+## Expected Findings (Cont.)
+
+### Theoretical Implication
+
+Search advantage for illusory faces suggests a **broadly-tuned, configural face detector**:
+- Does not require low-level face features (texture, color)
+- Responds to any spatial configuration resembling a "face-like" layout
+- Implies evolutionary advantage of detecting any face-like configuration over missing a real face
+
+---
+
+## Data Analysis Pipeline
+
+```
+Raw CSV Output
+    ↓
+Correctness Filtering (remove timeout errors)
+    ↓
+Reaction Time Analysis
+    • ANOVA: Target Type × Set Size × Target Presence
+    • Planned contrasts: pFace vs. nonFace; realFace vs. pFace
+    • Visual search slopes (RT vs. Set Size)
+    ↓
+Accuracy Analysis
+    • Conditional error rates by target type
+    ↓
+Visualization
+    • Line plots: RT vs. Set Size (by target type)
+    • Bar plots: RT and accuracy comparisons
+```
+
+---
+
+## Conclusion: Implications for Face Perception
+
+### What This Tells Us
+
+1. **Configurational Face Detection**: Humans possess a face-detection system tuned to *spatial configuration*, not low-level features.
+
+2. **Evolutionary Hypothesis**: This broad tuning reflects an adaptive trade-off—the cost of false positives (pareidolia) is negligible compared to missing a real face in social or threat contexts.
+
+3. **Neural Substrates**: Illusory face detection likely engages similar neural populations (fusiform face area, amygdala) as real face detection.
+
+---
+
+## Thank You!
+
+**Questions?**
+
+This reproduction demonstrates that illusory face detection is indeed a genuine visual search advantage, supporting decades of face perception research through computational replication.
