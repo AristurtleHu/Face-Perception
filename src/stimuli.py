@@ -97,7 +97,7 @@ def make_fixation_surface(
 
 
 def build_grid_offsets(
-    stim_width: int = 120, stim_space: int = 12
+    stim_width: int = 120, stim_space: int = 2
 ) -> list[tuple[int, int]]:
     """Generate grid positions for 16-item stimulus array."""
     coords = [
@@ -125,7 +125,7 @@ def build_circle_offsets(set_size: int, radius: int) -> list[tuple[int, int]]:
     ]
 
 
-def build_circle_layouts(radius: int = 400) -> dict[int, list[tuple[int, int]]]:
+def build_circle_layouts(radius: int = 340) -> dict[int, list[tuple[int, int]]]:
     return {set_size: build_circle_offsets(set_size, radius) for set_size in (4, 8, 16)}
 
 

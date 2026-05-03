@@ -321,7 +321,7 @@ class VisualSearchRunner:
         lines = [
             "take a quick break!",
             "press either key to continue",
-            f"starting block {block_index} of 6",
+            f"starting block {block_index}",
         ]
         y = self.window.get_rect().centery - 40
         for text in lines:
@@ -339,7 +339,7 @@ class VisualSearchRunner:
         assert self.font_small is not None
         self.window.fill((0, 0, 0))
         banner = self.font_small.render(
-            f"Starting block {block_index} of 6", True, (255, 255, 255)
+            f"Starting block {block_index}", True, (255, 255, 255)
         )
         self.window.blit(banner, banner.get_rect(center=self.window.get_rect().center))
         pygame.display.flip()
@@ -574,7 +574,9 @@ class VisualSearchRunner:
             "trial_order": [asdict(spec) for spec in trial_specs],
             "csv_path": str(csv_path),
         }
-        manifest_path.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+        manifest_path.write_text(
+            json.dumps(manifest, indent=2, default=str), encoding="utf-8"
+        )
 
         script_copy_dir = base_dir / "scriptCopies"
         script_copy_dir.mkdir(parents=True, exist_ok=True)

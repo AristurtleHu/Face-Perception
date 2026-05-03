@@ -6,6 +6,9 @@ from dataclasses import dataclass
 from random import Random
 from collections import Counter
 
+# Sample a shorter randomized subset for quick runs.
+TEST_SAMPLE_DIVISOR = 32
+
 
 @dataclass(frozen=True)
 class TrialSpec:
@@ -70,6 +73,33 @@ def _category_sequence(category_count: int, repeats: int, rng: Random) -> list[i
     return _no_adjacent_duplicates(categories, rng)
 
 
+def _sample_trials(
+    specs: list[TrialSpec], rng: Random, divisor: int
+) -> list[TrialSpec]:
+    """Randomly sample a subset of trials and renumber trial indices."""
+    if divisor <= 1:
+        return specs
+
+    count = max(1, len(specs) // divisor)
+    shuffled = specs[:]
+    rng.shuffle(shuffled)
+    sampled = shuffled[:count]
+
+    return [
+        TrialSpec(
+            trial_number=index,
+            category=spec.category,
+            trial_type=spec.trial_type,
+            set_size=spec.set_size,
+            target_present=spec.target_present,
+            target_variant=spec.target_variant,
+            target_source_index=spec.target_source_index,
+            is_practice=spec.is_practice,
+        )
+        for index, spec in enumerate(sampled, start=1)
+    ]
+
+
 def build_experiment1_trials(rng: Random) -> list[TrialSpec]:
     """Generate complete trial sequence for Experiment 1 (26 categories x 12 types)."""
     category_order = _category_sequence(26, 12, rng)
@@ -115,7 +145,7 @@ def build_experiment1_trials(rng: Random) -> list[TrialSpec]:
             )
         )
 
-    return specs
+    return _sample_trials(specs, rng, TEST_SAMPLE_DIVISOR)
 
 
 def build_experiment2_trials(rng: Random) -> list[TrialSpec]:
@@ -148,7 +178,7 @@ def build_experiment2_trials(rng: Random) -> list[TrialSpec]:
             )
         )
 
-    return specs
+    return _sample_trials(specs, rng, TEST_SAMPLE_DIVISOR)
 
 
 def ex1_row(spec: TrialSpec, outcome: TrialOutcome) -> dict[str, int]:

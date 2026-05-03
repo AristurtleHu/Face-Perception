@@ -20,7 +20,7 @@ class ExperimentConfig:
     set_sizes: tuple[int, ...]
     layout: str
     break_points: tuple[int, ...]
-    window_size: tuple[int, int] = (1600, 1200)
+    window_size: tuple[int, int] = (1600, 1100)
     target_duration: float = 1.6
     fixation_min: float = 0.4
     fixation_max: float = 0.6
