@@ -5,6 +5,7 @@ from __future__ import annotations
 from functools import lru_cache
 from math import cos, pi, sin
 from pathlib import Path
+from typing import Literal, cast
 
 from PIL import Image
 import pygame
@@ -23,7 +24,9 @@ def load_surface(path_str: str, mask_path_str: str | None = None) -> pygame.Surf
             mask = mask.resize(image.size, Image.Resampling.LANCZOS)
         image.putalpha(mask)
 
-    surface = pygame.image.fromstring(image.tobytes(), image.size, image.mode)
+    surface = pygame.image.fromstring(
+        image.tobytes(), image.size, cast(Literal["RGBA"], image.mode.upper())
+    )
     return surface.convert_alpha()
 
 

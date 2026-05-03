@@ -261,6 +261,7 @@ class VisualSearchRunner:
             self._wait_for_any_key()
 
     def _show_practice(self) -> None:
+        assert self.window is not None
         practice = self._build_practice_trials()
         self.window.fill((0, 0, 0))
         pygame.display.flip()
