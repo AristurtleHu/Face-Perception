@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from random import Random
+from collections import Counter
 
 
 @dataclass(frozen=True)
@@ -25,6 +26,9 @@ class TrialOutcome:
 
 
 def _no_adjacent_duplicates(values: list[int], rng: Random) -> list[int]:
+    if len(values) < 2:
+        return values[:]
+
     shuffled = values[:]
     while True:
         rng.shuffle(shuffled)
