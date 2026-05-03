@@ -3,18 +3,19 @@
 from __future__ import annotations
 
 import argparse
+import sys
+import traceback
 from pathlib import Path
 import sys
 from time import time_ns
 
 from config import build_experiment_config
 from runner import VisualSearchRunner
+from resources import resource_path
 
 
 def _default_project_root() -> Path:
-    if getattr(sys, "frozen", False):
-        return Path(getattr(sys, "_MEIPASS", Path.cwd()))
-    return Path(__file__).resolve().parents[1]
+    return resource_path()
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -26,7 +27,7 @@ def build_parser() -> argparse.ArgumentParser:
         nargs="?",
         choices=("ex1", "ex2"),
         default=None,
-        help="Which experiment to run (optional; prompts when omitted)",
+        help="Which experiment to run",
     )
     parser.add_argument(
         "--subject-id", default=None, help="Participant ID used in output filenames"
@@ -54,16 +55,14 @@ def main(argv: list[str] | None = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
 
-    project_root = args.project_root or _default_project_root()
-
     experiment = args.experiment
-    while experiment is None:
-        choice = input("choose experiment (ex1/ex2): ").strip().lower()
-        if choice in ("ex1", "ex2"):
-            experiment = choice
+    if experiment is None:
+        if sys.stdin.isatty():
+            experiment = input("choose experiment (ex1/ex2): ").strip().lower() or "ex1"
         else:
-            print("Please enter ex1 or ex2.")
+            experiment = "ex1"
 
+    project_root = args.project_root or _default_project_root()
     config = build_experiment_config(experiment, project_root)
 
     # Prompt for subject ID if not provided
@@ -71,24 +70,25 @@ def main(argv: list[str] | None = None) -> int:
 
     # Use provided seed or generate random seed from current time
     seed = args.seed if args.seed is not None else time_ns() % (2**31)
-    if args.output_dir is not None:
-        output_dir = args.output_dir
-    elif getattr(sys, "frozen", False):
-        output_dir = Path(sys.executable).resolve().parent / "output"
-    else:
-        output_dir = project_root / "output"
+    output_dir = args.output_dir or (Path.cwd() / "output")
 
-    runner = VisualSearchRunner(
-        config=config,
-        project_root=project_root,
-        output_root=output_dir,
-        subject_id=subject_id,
-        seed=seed,
-        fullscreen=args.fullscreen,
-    )
-    csv_path = runner.run()
-    print(csv_path)
-    return 0
+    try:
+        runner = VisualSearchRunner(
+            config=config,
+            project_root=project_root,
+            output_root=output_dir,
+            subject_id=subject_id,
+            seed=seed,
+            fullscreen=args.fullscreen,
+        )
+        csv_path = runner.run()
+        print(csv_path)
+        return 0
+    except Exception:
+        traceback.print_exc()
+        if sys.stdin.isatty():
+            input("Press Enter to exit...")
+        return 1
 
 
 if __name__ == "__main__":
