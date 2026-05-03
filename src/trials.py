@@ -7,7 +7,7 @@ from random import Random
 from collections import Counter
 
 # Sample a shorter randomized subset for quick runs.
-TEST_SAMPLE_DIVISOR = 32
+TEST_SAMPLE_DIVISOR = 6
 
 
 @dataclass(frozen=True)
