@@ -127,9 +127,15 @@ def build_experiment2_trials(rng: Random) -> list[TrialSpec]:
         rng.shuffle(order)
 
     category_counts = {category: 0 for category in range(1, 24)}
-    presence_pattern = [1, 0] * 9
-    variant_pattern = ["nonFace", "pFace", "realFace"] * 6
-    set_size_pattern = [4, 8, 16] * 6
+    target_variants = ["nonFace", "pFace", "realFace"]
+    target_presence = [True, False]
+    set_sizes = [4, 8, 16]
+    condition_map = [
+        (variant, present, size)
+        for variant in target_variants
+        for present in target_presence
+        for size in set_sizes
+    ]
 
     specs: list[TrialSpec] = []
     for trial_number, category in enumerate(category_order, start=1):
@@ -137,14 +143,16 @@ def build_experiment2_trials(rng: Random) -> list[TrialSpec]:
         category_counts[category] += 1
         trial_type = trial_type_orders[category][index]
 
+        target_variant, target_present, set_size = condition_map[trial_type - 1]
+
         specs.append(
             TrialSpec(
                 trial_number=trial_number,
                 category=category,
                 trial_type=trial_type,
-                set_size=set_size_pattern[trial_type - 1],
-                target_present=bool(presence_pattern[trial_type - 1]),
-                target_variant=variant_pattern[trial_type - 1],
+                set_size=set_size,
+                target_present=target_present,
+                target_variant=target_variant,
             )
         )
 
