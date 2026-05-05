@@ -4,6 +4,25 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from pathlib import Path
+from typing import NamedTuple
+
+
+class DisplayProfile(NamedTuple):
+    window_size: tuple[int, int]
+    stimulus_spacing: int
+
+
+DISPLAY_PROFILES = {
+    1080: DisplayProfile(window_size=(1600, 1100), stimulus_spacing=2),
+    float('inf'): DisplayProfile(window_size=(1600, 1200), stimulus_spacing=12),
+}
+
+
+def get_display_profile(screen_height: int) -> DisplayProfile:
+    for threshold in sorted(DISPLAY_PROFILES.keys()):
+        if screen_height <= threshold:
+            return DISPLAY_PROFILES[threshold]
+    return DISPLAY_PROFILES[float('inf')]
 
 
 @dataclass(frozen=True)

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 from pathlib import Path
+import sys
 from time import time_ns
 
 from config import build_experiment_config
@@ -11,6 +12,8 @@ from runner import VisualSearchRunner
 
 
 def _default_project_root() -> Path:
+    if getattr(sys, "frozen", False):
+        return Path(getattr(sys, "_MEIPASS", Path.cwd()))
     return Path(__file__).resolve().parents[1]
 
 
@@ -19,7 +22,11 @@ def build_parser() -> argparse.ArgumentParser:
         description="Run the face pareidolia visual-search experiment"
     )
     parser.add_argument(
-        "experiment", choices=("ex1", "ex2"), help="Which experiment to run"
+        "experiment",
+        nargs="?",
+        choices=("ex1", "ex2"),
+        default=None,
+        help="Which experiment to run (optional; prompts when omitted)",
     )
     parser.add_argument(
         "--subject-id", default=None, help="Participant ID used in output filenames"
@@ -48,14 +55,28 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     project_root = args.project_root or _default_project_root()
-    config = build_experiment_config(args.experiment, project_root)
+
+    experiment = args.experiment
+    while experiment is None:
+        choice = input("choose experiment (ex1/ex2): ").strip().lower()
+        if choice in ("ex1", "ex2"):
+            experiment = choice
+        else:
+            print("Please enter ex1 or ex2.")
+
+    config = build_experiment_config(experiment, project_root)
 
     # Prompt for subject ID if not provided
     subject_id = args.subject_id or input("type subject ID: ").strip() or "anon"
 
     # Use provided seed or generate random seed from current time
     seed = args.seed if args.seed is not None else time_ns() % (2**31)
-    output_dir = args.output_dir or (project_root / "output")
+    if args.output_dir is not None:
+        output_dir = args.output_dir
+    elif getattr(sys, "frozen", False):
+        output_dir = Path(sys.executable).resolve().parent / "output"
+    else:
+        output_dir = project_root / "output"
 
     runner = VisualSearchRunner(
         config=config,

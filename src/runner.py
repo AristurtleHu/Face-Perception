@@ -12,7 +12,7 @@ from random import Random
 
 import pygame
 
-from config import ExperimentConfig
+from config import ExperimentConfig, get_display_profile
 from stimuli import (
     blit_centered,
     build_circle_layouts,
@@ -59,6 +59,7 @@ class VisualSearchRunner:
         self.clock = pygame.time.Clock()
         self.font_small: pygame.font.Font | None = None
         self.font_large: pygame.font.Font | None = None
+        self.window_size: tuple[int, int] = self.config.window_size
         self.grid_offsets = build_grid_offsets()
         self.circle_layouts = build_circle_layouts()
 
@@ -66,8 +67,14 @@ class VisualSearchRunner:
         """Initialize pygame and run complete experiment sequence."""
         pygame.init()
         pygame.font.init()
+
+        info = pygame.display.Info()
+        display_profile = get_display_profile(info.current_h)
+        self.window_size = display_profile.window_size
+        self.grid_offsets = build_grid_offsets(stim_space=display_profile.stimulus_spacing)
+
         flags = pygame.FULLSCREEN if self.fullscreen else 0
-        self.window = pygame.display.set_mode(self.config.window_size, flags)
+        self.window = pygame.display.set_mode(self.window_size, flags)
         pygame.display.set_caption(f"Face Search - {self.config.display_name}")
         self.font_small = pygame.font.Font(None, 32)
         self.font_large = pygame.font.Font(None, 42)
@@ -147,7 +154,7 @@ class VisualSearchRunner:
         self._wait(target_duration)
 
         fixation = make_fixation_surface(
-            self.config.window_size, (150, 150, 150), (0, 0, 0)
+            self.window_size, (150, 150, 150), (0, 0, 0)
         )
         self.window.blit(fixation, (0, 0))
         pygame.display.flip()
@@ -212,7 +219,7 @@ class VisualSearchRunner:
         assert self.font_large is not None
         color = (90, 255, 60) if correct else (180, 0, 30)
         self.window.fill((0, 0, 0))
-        fixation = make_fixation_surface(self.config.window_size, color, (0, 0, 0))
+        fixation = make_fixation_surface(self.window_size, color, (0, 0, 0))
         self.window.blit(fixation, (0, 0))
 
         if timed_out:
@@ -409,7 +416,7 @@ class VisualSearchRunner:
         self, spec: TrialSpec, target_surface: pygame.Surface
     ) -> tuple[pygame.Surface, int | None]:
         assert self.window is not None
-        screen_width, screen_height = self.config.window_size
+        screen_width, screen_height = self.window_size
         search_surface = pygame.Surface((screen_width, screen_height))
         search_surface.fill((0, 0, 0))
 
