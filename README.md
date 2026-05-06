@@ -6,6 +6,18 @@ A computational reproduction of **Keys et al. (2021)** visual search paradigm in
 
 This project implements two visual search experiments using **Python (pygame)** to replicate the psychophysical task originally conducted with MATLAB/Psychtoolbox-3. The code maintains strict fidelity to the original experimental design while providing a portable, open-source alternative.
 
+## Contents
+
+- [Quick Start](#quick-start)
+- [Stimulus Materials](#stimulus-materials)
+- [Results Summary (Current Data)](#results-summary-current-data)
+- [Experiment Design](#experiment-design)
+- [Experimental Pipeline](#experimental-pipeline)
+- [Output Format](#output-format)
+- [Code Architecture](#code-architecture)
+- [Response Keys](#response-keys)
+- [Citation](#citation)
+
 ### Original Reference
 > Keys, R.T., Taubert, J. & Wardle, S.G. A visual search advantage for illusory faces in objects. Atten Percept Psychophys 83, 1942–1953 (2021)  
 > https://doi.org/10.3758/s13414-021-02267-4
@@ -61,6 +73,21 @@ docs/materials/
 ```bash
 find . -name ".DS_Store" -type f -delete
 ```
+
+## Results Summary (Current Data)
+
+Based on the current aggregated results in `results.csv` and the plots in `viz/outputs/`:
+
+- **Experiment 1**: Reaction time increases with set size; target-absent trials are slower than target-present; illusory faces are detected faster than non-face objects.
+- **Experiment 2**: Reaction time increases with set size; target-absent trials are slower than target-present; real faces are fastest, followed by illusory faces, then non-face objects.
+
+**Visualizations:**
+
+![RT by Set Size](viz/outputs/01_rt_by_setsize.png)
+![Accuracy by Set Size](viz/outputs/02_accuracy_by_setsize.png)
+![RT by Presence](viz/outputs/03_rt_by_presence.png)
+![Accuracy by Presence](viz/outputs/04_accuracy_by_presence.png)
+![Experiment Comparison](viz/outputs/05_experiment_comparison.png)
 
 ## Experiment Design
 
@@ -209,6 +236,19 @@ output/
 
 ## Code Architecture
 
+```
+.
+├── src/                          # Experiment runtime (pygame)
+├── viz/                          # Analysis + plotting package
+│   ├── outputs/                  # Generated figures
+│   └── requirements.txt          # Viz-only dependencies
+├── docs/                         # Report + slides + images
+├── output/                       # Per-participant raw results
+├── results.csv                   # Aggregated results for analysis
+├── generate_visualizations.py    # Build plots from results.csv
+└── update_results_from_output.py # Merge output/ CSVs into results.csv
+```
+
 ### Core Modules
 
 - **`cli.py`**: Command-line interface, argument parsing, participant ID input
@@ -216,6 +256,12 @@ output/
 - **`trials.py`**: Trial specification generation, randomization logic
 - **`stimuli.py`**: Image loading, layout computation (grid/circular), stimulus rendering
 - **`runner.py`**: Main experiment loop, display management, response collection, data saving
+
+### Visualization & Results
+
+- **`viz/`**: Analysis and plotting package (`viz/analysis.py`, `viz/plots.py`, outputs in `viz/outputs/`).
+- **`generate_visualizations.py`**: Entry point to build plots from `results.csv`.
+- **`update_results_from_output.py`**: Merges per-participant response CSVs from `output/` into `results.csv`.
 
 ## Response Keys
 

@@ -139,27 +139,51 @@ Inter-trial interval (black screen, ~500 ms)
 
 ---
 
-## Expected Results
 
-### Experiment 1 (Grid Layout)
-
-**Primary Finding**: Objects with illusory faces are detected significantly **faster** than their matched non-face counterparts, even when distractors are highly similar.
-
-- **Mechanism**: Illusory face detection shares neural substrate with real face detection
-- **Trade-off**: High false-positive rate (face pareidolia) is evolutionary advantage that rarely causes misidentification costs
+![w:900](../viz/outputs/01_rt_by_setsize.png)
 
 ---
 
-## Expected Results (Cont.)
+![w:900](../viz/outputs/02_accuracy_by_setsize.png)
 
-### Experiment 2 (Circular Layout)
+---
 
-**Search Efficiency Ranking** (from fastest to slowest):
-1. **Real Human Faces** (fastest)
-2. **Illusory Faces**
-3. **Non-Face Objects** (slowest)
+![w:750](../viz/outputs/03_rt_by_presence.png)
 
-**Interpretation**: Real faces benefit from low-level facial features *and* high-level face configuration; illusory faces benefit from configuration alone.
+---
+
+![w:750](../viz/outputs/04_accuracy_by_presence.png)
+
+---
+
+![w:1050](../viz/outputs/05_experiment_comparison.png)
+
+---
+
+## Observed Findings
+
+### Experiment 1
+
+- Main effect of **target type**: illusory faces faster than non-faces
+- Main effect of **set size**: larger sets yield slower responses (visual search slopes)
+- Target-absent trials slower than target-present
+
+### Experiment 2
+
+- Main effect of **target type**: Real Faces < Illusory Faces < Non-Faces in reaction time
+- Smaller set sizes yield faster overall responses
+- Target-absent trials slower than target-present
+
+---
+
+## Expected Findings (Cont.)
+
+### Theoretical Implication
+
+Search advantage for illusory faces suggests a **broadly-tuned, configural face detector**:
+- Does not require low-level face features (texture, color)
+- Responds to any spatial configuration resembling a "face-like" layout
+- Implies evolutionary advantage of detecting any face-like configuration over missing a real face
 
 ---
 
@@ -197,33 +221,6 @@ Inter-trial interval (black screen, ~500 ms)
    - Response times to millisecond precision
    - Trial order saved for full reproducibility
    - JSON manifest + CSV output for analysis
-
----
-
-## Expected Findings (Replication Goals)
-
-### Experiment 1
-
-- Main effect of **target type**: illusory faces faster than non-faces
-- Main effect of **set size**: larger sets yield slower responses (visual search slopes)
-- Target-present trials faster than target-absent (typical asymmetry)
-
-### Experiment 2
-
-- Main effect of **target type**: Real Faces > Illusory Faces > Non-Faces
-- Smaller set sizes yield faster overall responses
-- Target-absent trials still slower (indicating exhaustive search is not avoided)
-
----
-
-## Expected Findings (Cont.)
-
-### Theoretical Implication
-
-Search advantage for illusory faces suggests a **broadly-tuned, configural face detector**:
-- Does not require low-level face features (texture, color)
-- Responds to any spatial configuration resembling a "face-like" layout
-- Implies evolutionary advantage of detecting any face-like configuration over missing a real face
 
 ---
 

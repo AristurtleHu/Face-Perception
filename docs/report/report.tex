@@ -3,13 +3,14 @@
 % --- Packages ---
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{float}
 \usepackage{geometry}
 \geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
 \usepackage{amsmath, amssymb}
 \usepackage{graphicx}
 % Support graphics with complex filenames and set default image search path
 \usepackage{grffile}
-\graphicspath{{../images/}}
+\graphicspath{{../images/}{../../viz/outputs/}}
 \usepackage{booktabs}
 \usepackage{hyperref}
 % Allow some extra stretch to avoid occasional overfull hbox errors
@@ -123,7 +124,7 @@ Each trial in Experiment 1 involves the following sequence:
 
 Three factors are manipulated in a fully-crossed design:
 
-\begin{table}[h]
+\begin{table}[H]
     \centering
     \begin{tabular}{llr}
         \toprule
@@ -148,21 +149,21 @@ The 12 trial types per category correspond to the orthogonal combination of targ
 
 A crucial aspect of Experiment 1 is the \textit{yoked stimulus design}: all distractor images in a given trial come from the \textbf{same object category} as the target. For example, if the target is Category 5 (cheese graters) with pFace variant, all 15, 31, or 63 distractor images are unique cheese graters from Category 5. The target image occupies one of the 16/32/64 grid positions, randomly selected. The remaining positions are filled by random distractors from the same category. This ensures a \textit{homogeneous visual context}, maximizing the influence of the target's face-like configuration versus other object properties.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{../images/ex1_target.png}
     \caption{Experiment 1 target image presentation (pFace variant).}
     \label{fig:ex1_target}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{../images/ex1_full.png}
     \caption{Experiment 1 search array with target present in 8×8 grid layout.}
     \label{fig:ex1_full}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{../images/ex1_missing.png}
     \caption{Experiment 1 search array with target absent in 8×8 grid layout.}
@@ -184,7 +185,7 @@ The trial sequence mirrors Experiment 1 with key spatial differences:
 
 \subsubsection{Experimental Factors}
 
-\begin{table}[h]
+\begin{table}[H]
     \centering
     \begin{tabular}{llr}
         \toprule
@@ -205,18 +206,74 @@ The trial sequence mirrors Experiment 1 with key spatial differences:
 
 Unlike Experiment 1, distractors in Experiment 2 come from \textbf{diverse object categories}, not the target's category. This increases task difficulty and allows differentiation between search slopes for different target types.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{../images/ex2_target.png}
     \caption{Experiment 2 target image presentation (realFace variant with circular masking).}
     \label{fig:ex2_target}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{../images/ex2.png}
     \caption{Experiment 2 search array with heterogeneous distractors in circular layout.}
     \label{fig:ex2_array}
+\end{figure}
+
+\section{Results Summary (Current Data)}
+
+The current aggregated dataset and visualization outputs indicate the following trends:
+
+\begin{itemize}
+    \item \textbf{Set size effect}: Reaction time increases with larger set sizes in both experiments.
+    \item \textbf{Presence effect}: Target-absent trials are slower than target-present trials.
+    \item \textbf{Experiment 1 target type}: Illusory faces (pFace) are detected faster than non-face objects.
+    \item \textbf{Experiment 2 target type}: Real faces are fastest, followed by illusory faces, then non-face objects.
+\end{itemize}
+
+Figure \ref{fig:rt_by_setsize} shows the reaction time slopes by set size and target presence. The increase in reaction time with larger arrays is consistent with a serial visual search component, and the target-absent panels are uniformly higher, reflecting the cost of exhaustive search when the target is missing.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{01_rt_by_setsize.png}
+    \caption{Reaction time by set size and target presence.}
+    \label{fig:rt_by_setsize}
+\end{figure}
+
+Figure \ref{fig:acc_by_setsize} summarizes accuracy across the same conditions. Accuracy remains relatively high, with modest decreases at larger set sizes, indicating that the reaction time effects are not driven by a speed-accuracy tradeoff.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{02_accuracy_by_setsize.png}
+    \caption{Accuracy by set size and target presence.}
+    \label{fig:acc_by_setsize}
+\end{figure}
+
+To isolate target presence effects, Figure \ref{fig:rt_by_presence} aggregates across set sizes. Target-absent trials show a consistent time penalty, and the ordering of target types is clear within each experiment, with illusory faces faster than non-face objects in Experiment 1 and real faces fastest in Experiment 2.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{03_rt_by_presence.png}
+    \caption{Reaction time by target presence (aggregated across set sizes).}
+    \label{fig:rt_by_presence}
+\end{figure}
+
+Figure \ref{fig:acc_by_presence} shows accuracy aggregated across set sizes. The accuracy pattern mirrors the reaction time ordering, supporting the interpretation that faster target types are not simply due to lower decision thresholds.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{04_accuracy_by_presence.png}
+    \caption{Accuracy by target presence (aggregated across set sizes).}
+    \label{fig:acc_by_presence}
+\end{figure}
+
+Finally, Figure \ref{fig:exp_comparison} contrasts overall reaction time and accuracy between experiments. Experiment 2 is faster overall, consistent with the smaller set sizes and heterogeneous distractors, while the target-type ordering remains stable across the aggregated comparison.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{05_experiment_comparison.png}
+    \caption{Overall comparison of reaction time and accuracy by experiment.}
+    \label{fig:exp_comparison}
 \end{figure}
 
 \section{Computational Implementation}
