@@ -13,6 +13,11 @@ SET_SIZES_BY_EXPERIMENT = {
 
 
 TARGET_ORDER = ["face", "non-face object", "real face"]
+TARGET_COLORS = {
+    "face": "#1f77b4",
+    "non-face object": "#ff7f0e",
+    "real face": "#2ca02c",
+}
 
 
 def _ensure_target_present(df: pd.DataFrame) -> pd.DataFrame:
@@ -181,7 +186,8 @@ def plot_rt_by_presence(df: pd.DataFrame, save_path: str | Path | None = None) -
             grouped = grouped.reindex(targets)
 
             x = np.arange(len(targets))
-            ax.bar(x, grouped["mean"], color="#4c78a8", alpha=0.8)
+            bar_colors = [TARGET_COLORS.get(t, "#4c78a8") for t in targets]
+            ax.bar(x, grouped["mean"], color=bar_colors, alpha=0.8)
             ax.errorbar(
                 x,
                 grouped["mean"],
@@ -236,7 +242,8 @@ def plot_accuracy_by_presence(
             ci = 1.96 * np.sqrt(np.maximum(p * (1 - p) / safe_n, 0))
 
             x = np.arange(len(targets))
-            ax.bar(x, grouped["mean"], color="#72b7b2", alpha=0.8)
+            bar_colors = [TARGET_COLORS.get(t, "#72b7b2") for t in targets]
+            ax.bar(x, grouped["mean"], color=bar_colors, alpha=0.8)
             ax.errorbar(
                 x,
                 grouped["mean"],
