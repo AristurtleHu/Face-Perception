@@ -146,9 +146,9 @@ def plot_accuracy_by_condition(
             ax.set_xlabel("Set Size", fontsize=11)
             if col == 0:
                 ax.set_ylabel("Accuracy (% Correct)", fontsize=11)
-            ax.set_ylim([0, 1.05])
-            ax.set_yticks([0, 0.25, 0.5, 0.75, 1.0])
-            ax.set_yticklabels(["0%", "25%", "50%", "75%", "100%"])
+            ax.set_ylim([0.35, 1.02])
+            ax.set_yticks([0.35, 0.5, 0.65, 0.8, 0.95, 1.0])
+            ax.set_yticklabels(["35%", "50%", "65%", "80%", "95%", "100%"])
             ax.set_title(
                 f"{exp_title} - {present_title}", fontsize=12, fontweight="bold"
             )
@@ -279,7 +279,7 @@ def plot_experiment_comparison(
 ) -> None:
     """Compare overall performance metrics between experiments."""
     df_rt = _filter_rt_trials(df)
-    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(12, 10))
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 4.5))
 
     # Define distinct colors for the 3 search targets
     colors_3 = ["#1f77b4", "#ff7f0e", "#2ca02c"]  # Blue, Orange, Green
@@ -304,28 +304,6 @@ def plot_experiment_comparison(
     ax2.set_xlabel("Experiment")
     ax2.legend(title="Search Target", labels=acc_data.columns)
     ax2.grid(True, alpha=0.3, axis="y")
-
-    # RT distribution
-    for exp in sorted(df_rt["experiment"].unique()):
-        exp_data = df_rt[df_rt["experiment"] == exp]
-        ax3.hist(exp_data["rt"], bins=50, alpha=0.6, label=f"Exp {exp}")
-    ax3.set_title("Reaction Time Distribution", fontweight="bold")
-    ax3.set_xlabel("RT (ms)")
-    ax3.set_ylabel("Frequency")
-    ax3.legend()
-    ax3.grid(True, alpha=0.3, axis="y")
-
-    # Error rate by experiment
-    errors = df.groupby("experiment").apply(
-        lambda x: (~x["correctResponse"].astype(bool)).sum() / len(x)
-    )
-    colors_exp = ["#d62728", "#d62728"]
-    ax4.bar(errors.index, errors.values, color=colors_exp, alpha=0.7)
-    ax4.set_title("Error Rate by Experiment", fontweight="bold")
-    ax4.set_ylabel("Error Rate")
-    ax4.set_ylim([0, max(errors.values) * 1.2])
-    ax4.set_xlabel("Experiment")
-    ax4.grid(True, alpha=0.3, axis="y")
 
     plt.tight_layout()
     if save_path:
