@@ -176,7 +176,7 @@ Inter-trial interval (black screen, ~500 ms)
 
 ---
 
-## Expected Findings (Cont.)
+## Observed Findings (Cont.)
 
 ### Theoretical Implication
 
@@ -233,7 +233,7 @@ Correctness Filtering (remove timeout errors)
     ↓
 Reaction Time Analysis
     • ANOVA: Target Type × Set Size × Target Presence
-    • Planned contrasts: pFace vs. nonFace; realFace vs. pFace
+    • Planned contrasts: pFace vs. nonFace; realFace vs. pFace vs. nonFace
     • Visual search slopes (RT vs. Set Size)
     ↓
 Accuracy Analysis
