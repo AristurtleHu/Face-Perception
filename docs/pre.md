@@ -164,15 +164,21 @@ Inter-trial interval (black screen, ~500 ms)
 
 ### Experiment 1
 
-- Main effect of **target type**: illusory faces faster than non-faces
-- Main effect of **set size**: larger sets yield slower responses (visual search slopes)
-- Target-absent trials slower than target-present
+- Main effect of target type: illusory faces faster than non-faces, F(1,17)=32.09, p<.0001 (Target-Present)
+- Main effect of set size: larger sets yield slower responses, F(2,34)=28.58, p<.0001
+- Significant interaction in Target-Present: F(2,34)=8.85, p=.0008
+- Target-absent trials overall slower than target-present trials
+
+---
+
+## Observed Findings (Cont.)
 
 ### Experiment 2
 
-- Main effect of **target type**: Real Faces < Illusory Faces < Non-Faces in reaction time
-- Smaller set sizes yield faster overall responses
-- Target-absent trials slower than target-present
+- Main effect of target type: Real Faces < Illusory Faces < Non-Faces, F(2,14)=15.56, p<.001 (Target-Present)
+- Main effect of set size: smaller sets yield faster responses, F(2,14)=15.07, p<.001
+- Significant interaction in Target-Present: F(4,28)=9.27, p<.0001
+- Target-absent trials overall slower than target-present trials
 
 ---
 
