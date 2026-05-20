@@ -111,6 +111,15 @@ The goal is \textit{strict methodological fidelity}: we replicate all timing par
 
 To clarify the mechanism behind any search advantage, we supplemented descriptive performance measures with diffusion decision modeling (DDM; \textcite{Ratcliff2008}). Standard analyses of mean reaction times and accuracy cannot disentangle whether faster responses reflect more efficient evidence accumulation or shifts in response caution. DDM addresses this limitation by decomposing choice and reaction time distributions into psychologically interpretable components, allowing us to test whether set size and target type influence evidence quality, decision thresholds, or nondecision processes. This modeling approach is particularly appropriate for visual search, where increasing array size may reduce evidence efficiency, increase cautiousness, or both.
 
+
+\subsection{Present Hypotheses}
+
+Based on the original findings of \textcite{Keys2021}, we expected illusory-face targets to produce faster and more accurate responses than matched nonface objects during visual search. In Experiment 2, we further expected real faces to produce the greatest search advantage overall.
+
+At the computational level, we hypothesized that these behavioral advantages would primarily be reflected in drift rate differences within the diffusion decision model, indicating more efficient evidence accumulation for face-related stimuli. Specifically, we expected real faces to produce the highest drift rates, illusory faces intermediate drift rates, and nonface objects the lowest drift rates.
+
+For target-absent trials, we expected increasing set size to promote more conservative search termination processes, reflected by increases in boundary separation parameters.
+
 \section{Method}
 
 \subsection{Experiment 1: Grid Layout (Homogeneous Distractors)}
@@ -600,15 +609,29 @@ Observed-versus-simulated RT distributions for the target-absent conditions unde
     \caption{Observed and simulated RT distributions across set sizes for the target-absent real-face condition under Model B.}
     \label{fig:ex2_rt_by_setsize_model_b_target_absent_real_face}
 \end{figure}
+
+\section{Discussion}
+
+The present findings broadly supported the hypotheses proposed in the Introduction.
+Across both experiments, illusory-face stimuli produced faster responses
+and higher drift rates than matched nonface objects,
+while real faces produced the strongest overall search advantage.
+These results suggest that the visual-search advantage for illusory faces
+primarily reflects enhanced evidence accumulation rather than reduced response caution.
+
+This pattern is broadly consistent with previous diffusion-model studies of face perception. For example, \textcite{Tu2020} reported that perceptual decisions toward faces are associated with enhanced evidence accumulation, reflected by increased drift rates during face categorization tasks. The present findings extend this account by showing that similar drift-rate advantages emerge not only for real human faces, but also for illusory face configurations embedded in everyday objects.
+
+Importantly, the intermediate drift rates observed for illusory faces suggest that face-related perceptual mechanisms can be partially recruited even in the absence of genuine facial structure. This supports the idea that the visual system is highly sensitive to coarse facial configuration and may prioritize face-like patterns during perceptual decision-making.
+
+By contrast, target-absent decisions were primarily characterized by increased boundary separation, suggesting more conservative search termination processes as display complexity increased. This dissociation between drift-rate modulation and boundary adjustment highlights the utility of DDM for separating perceptual evidence accumulation from strategic response caution in visual search tasks.
+
 \section{Conclusion}
 
-This report reproduced the visual-search paradigm of \textcite{Keys2021} and extended the original behavioral analysis using diffusion decision modeling (DDM). Across both experiments, behavioral results showed reliable effects of set size and target presence, with larger search arrays producing slower responses and target-absent trials generating additional search costs.
-
-Importantly, DDM analyses revealed distinct computational mechanisms underlying target-present and target-absent decisions. In target-present conditions, set-size effects were primarily associated with reductions in drift rate, indicating less efficient evidence accumulation as visual competition increased. Illusory faces consistently produced higher drift rates than matched nonface objects, while real faces showed the strongest evidence accumulation overall. These findings suggest that illusory faces partially recruit face-related perceptual processing during visual search.
-
-In contrast, target-absent conditions were better characterized by increases in boundary separation, consistent with increasingly conservative search termination processes as set size increased. Together, these findings demonstrate that behavioral visual-search effects can emerge from dissociable latent decision mechanisms, highlighting the value of diffusion decision modeling for interpreting reaction-time distributions beyond mean response measures alone.
+This study reproduced the illusory-face visual-search advantage reported by \textcite{Keys2021} and extended the paradigm using diffusion decision modeling. The findings suggest that illusory faces benefit from enhanced evidence accumulation during visual search, positioning pareidolia as a meaningful component of face-related perceptual processing. More broadly, the study demonstrates how DDM can reveal latent cognitive mechanisms underlying reaction-time effects in complex visual search behavior.
 
 \printbibliography
+
+\newpage
 
 \section*{Author Notes}
 \subsection*{Project Duration}
@@ -617,8 +640,9 @@ The project was completed over an estimated total period of approximately 4–6 
 
 The initial translation of the experimental paradigm from MATLAB to Python required approximately 15 hours of development and debugging. Data collection was conducted over approximately 2 days of experimental sessions. Data preprocessing and visualization required approximately 5 hours, while diffusion decision modeling and parameter estimation required approximately 30 hours. The final report writing and revision process required approximately 40 hours.
 
+
 \subsection*{AI Usage Statement}
-AI-assisted tools (ChatGPT) were extensively used throughout this project, particularly for software development. A substantial portion of the initial Python/Pygame implementation was generated with AI assistance, including stimulus presentation logic, experimental control flow, and data handling scripts. These outputs were subsequently reviewed, debugged, and modified by the authors to ensure correctness and alignment with the experimental design.
+AI-assisted tools were extensively used throughout this project, particularly for software development. A substantial portion of the initial Python/Pygame implementation was generated with AI assistance, including stimulus presentation logic, experimental control flow, and data handling scripts. These outputs were subsequently reviewed, debugged, and modified by the authors to ensure correctness and alignment with the experimental design.
 
 In addition, AI tools were used to support understanding of diffusion decision modeling (DDM), assist with LaTeX formatting, and provide suggestions for language refinement.
 
