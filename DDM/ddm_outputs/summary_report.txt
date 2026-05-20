@@ -1,0 +1,21 @@
+DDM Fitting Summary Report
+===========================
+
+Input CSV: ..\results.csv
+Output Dir: ddm_outputs
+
+Cleaning Summary:
+- Total rows: 2180
+- Dropped missing: 0
+- Dropped RT outliers: 73
+- Dropped incorrect trials: 283
+- RT unit detected: ms
+- Clean rows: 1814
+
+Modeling Notes:
+- Experiment 1: set size 影响 drift rate（证据积累效率）。
+- Experiment 2: target type 影响 drift rate（证据质量）。
+- Boundary (a), starting point (z), and nondecision time (Ter) are fixed unless specified.
+- noise parameter s 通常固定（DDM 可辨识性约束）。
+- 不做 quantile binning：PyDDM 使用 trial-level 似然直接拟合。
+- PyDDM 为最大似然拟合，不生成 MCMC posterior 或 trace。
