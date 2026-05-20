@@ -1,680 +1,680 @@
 experiment,participant,trialNumber,searchTarget,task,setSize,correctResponse,rt,timeoutOrKeyNotPressed
-1,ex1p001,1,non-face object,target absent,64,True,8738,False
-1,ex1p001,2,non-face object,target absent,32,True,11177,False
-1,ex1p001,3,non-face object,target present,32,True,4169,False
-1,ex1p001,4,face,target present,16,True,2981,False
-1,ex1p001,5,non-face object,target present,32,True,4693,False
-1,ex1p001,6,face,target present,32,True,1921,False
-1,ex1p001,7,non-face object,target absent,64,False,7796,False
-1,ex1p001,8,face,target present,16,True,990,False
-1,ex1p001,9,non-face object,target present,64,True,2284,False
-1,ex1p001,10,face,target absent,16,True,5782,False
-1,ex1p001,11,non-face object,target present,32,False,1235,False
-1,ex1p001,12,face,target absent,16,True,4156,False
-1,ex1p001,13,face,target present,64,True,4853,False
-1,ex1p001,14,non-face object,target present,32,False,9171,False
-1,ex1p001,15,face,target absent,32,True,3881,False
-1,ex1p001,16,face,target absent,32,True,6076,False
-1,ex1p001,17,non-face object,target present,16,True,4085,False
-1,ex1p001,18,face,target present,64,True,1779,False
-1,ex1p001,19,face,target present,32,True,2298,False
-1,ex1p001,20,face,target present,16,True,1570,False
-1,ex1p001,21,non-face object,target present,64,True,1141,False
-1,ex1p001,22,non-face object,target present,64,False,9615,False
-1,ex1p001,23,face,target absent,32,True,6432,False
-1,ex1p001,24,face,target absent,16,True,9041,False
-1,ex1p001,25,face,target absent,64,True,9156,False
-1,ex1p001,26,face,target present,64,True,7793,False
-1,ex1p001,27,face,target present,16,True,2308,False
-1,ex1p001,28,non-face object,target present,16,True,870,False
-1,ex1p001,29,non-face object,target absent,64,True,12925,False
-1,ex1p001,30,non-face object,target present,16,True,3303,False
-1,ex1p001,31,non-face object,target absent,32,True,6191,False
-1,ex1p001,32,face,target absent,64,True,13415,False
-1,ex1p001,33,non-face object,target absent,32,True,6201,False
-1,ex1p001,34,non-face object,target absent,64,True,6126,False
-1,ex1p001,35,non-face object,target present,32,False,6706,False
-1,ex1p001,36,non-face object,target present,64,False,7492,False
-1,ex1p001,37,face,target present,64,True,3481,False
-1,ex1p001,38,non-face object,target present,16,True,1474,False
-1,ex1p001,39,face,target present,16,True,1416,False
-1,ex1p001,40,face,target present,32,True,2295,False
-1,ex1p001,41,non-face object,target absent,16,True,4367,False
-1,ex1p001,42,face,target present,16,True,1587,False
-1,ex1p001,43,non-face object,target absent,32,True,7707,False
-1,ex1p001,44,non-face object,target present,16,False,3425,False
-1,ex1p001,45,non-face object,target present,64,True,9766,False
-1,ex1p001,46,face,target absent,16,True,1966,False
-1,ex1p001,47,non-face object,target present,32,False,5433,False
-1,ex1p001,48,non-face object,target present,32,True,2098,False
-1,ex1p001,49,non-face object,target absent,64,True,9039,False
-1,ex1p001,50,face,target absent,16,True,3228,False
-1,ex1p001,51,face,target absent,32,True,4806,False
-1,ex1p001,52,face,target absent,32,True,4169,False
-1,ex1p1,1,face,target present,16,True,6545,False
-1,ex1p1,1,face,target present,16,True,1845,False
-1,ex1p1,1,non-face object,target present,64,True,5017,False
-1,ex1p1,1,face,target absent,32,True,5874,False
-1,ex1p1,1,face,target absent,64,True,5582,False
-1,ex1p1,2,non-face object,target present,64,True,3699,False
-1,ex1p1,2,face,target present,16,True,1945,False
-1,ex1p1,2,non-face object,target absent,32,True,6700,False
-1,ex1p1,2,non-face object,target present,32,True,4878,False
-1,ex1p1,2,face,target present,64,True,2166,False
-1,ex1p1,3,non-face object,target absent,64,False,0,True
-1,ex1p1,3,face,target absent,16,True,1931,False
-1,ex1p1,3,non-face object,target present,16,True,4082,False
-1,ex1p1,3,non-face object,target absent,64,True,11604,False
-1,ex1p1,3,non-face object,target present,16,True,3236,False
-1,ex1p1,4,face,target absent,64,True,6861,False
-1,ex1p1,4,non-face object,target present,64,True,1992,False
-1,ex1p1,4,non-face object,target absent,64,True,7202,False
-1,ex1p1,4,face,target absent,16,True,5267,False
-1,ex1p1,4,face,target absent,16,True,3684,False
-1,ex1p1,5,face,target present,32,True,1342,False
-1,ex1p1,5,face,target absent,16,True,1902,False
-1,ex1p1,5,non-face object,target absent,32,True,6584,False
-1,ex1p1,5,face,target absent,32,True,2391,False
-1,ex1p1,5,non-face object,target absent,32,True,5646,False
-1,ex1p1,6,face,target absent,64,False,0,True
-1,ex1p1,6,non-face object,target present,64,False,3930,False
-1,ex1p1,6,face,target absent,32,True,3450,False
-1,ex1p1,6,face,target present,64,True,8418,False
-1,ex1p1,6,face,target absent,16,True,3775,False
-1,ex1p1,7,non-face object,target present,32,False,6265,False
-1,ex1p1,7,non-face object,target present,32,False,7555,False
-1,ex1p1,7,face,target present,64,True,2234,False
-1,ex1p1,7,non-face object,target present,32,True,1082,False
-1,ex1p1,7,non-face object,target present,16,True,1843,False
-1,ex1p1,8,non-face object,target absent,16,True,3059,False
-1,ex1p1,8,non-face object,target present,32,True,856,False
-1,ex1p1,8,face,target present,64,True,2049,False
-1,ex1p1,8,non-face object,target present,64,True,2353,False
-1,ex1p1,8,face,target present,32,True,1687,False
-1,ex1p1,9,face,target present,32,True,1328,False
-1,ex1p1,9,face,target present,64,True,1262,False
-1,ex1p1,9,face,target absent,16,True,2814,False
-1,ex1p1,9,face,target present,64,True,1723,False
-1,ex1p1,9,non-face object,target absent,16,True,2094,False
-1,ex1p1,10,non-face object,target present,16,True,4158,False
-1,ex1p1,10,non-face object,target present,32,True,1279,False
-1,ex1p1,10,face,target absent,64,True,7846,False
-1,ex1p1,10,non-face object,target present,16,True,2927,False
-1,ex1p1,10,face,target absent,32,True,3888,False
-1,ex1p1,11,non-face object,target absent,64,True,10688,False
-1,ex1p1,11,face,target present,64,True,1564,False
-1,ex1p1,11,face,target present,16,True,1119,False
-1,ex1p1,11,face,target absent,16,True,3810,False
-1,ex1p1,11,non-face object,target absent,64,True,5167,False
-1,ex1p1,12,non-face object,target absent,64,True,8068,False
-1,ex1p1,12,face,target present,64,True,4700,False
-1,ex1p1,12,non-face object,target absent,32,True,7185,False
-1,ex1p1,12,face,target absent,16,True,5472,False
-1,ex1p1,12,face,target absent,16,True,1041,False
-1,ex1p1,13,non-face object,target present,32,False,10099,False
-1,ex1p1,13,face,target present,64,True,1075,False
-1,ex1p1,13,face,target present,64,False,6996,False
-1,ex1p1,13,non-face object,target absent,16,True,4889,False
-1,ex1p1,13,face,target absent,64,True,4476,False
-1,ex1p1,14,face,target absent,16,True,4610,False
-1,ex1p1,14,non-face object,target present,16,True,2840,False
-1,ex1p1,14,non-face object,target absent,64,True,10258,False
-1,ex1p1,14,non-face object,target absent,16,True,4915,False
-1,ex1p1,14,non-face object,target present,16,True,4558,False
-1,ex1p1,15,face,target present,32,False,11685,False
-1,ex1p1,15,face,target absent,64,True,4862,False
-1,ex1p1,15,non-face object,target absent,64,False,0,True
-1,ex1p1,15,face,target absent,64,True,11199,False
-1,ex1p1,15,non-face object,target present,32,True,2075,False
-1,ex1p1,16,face,target absent,32,False,8056,False
-1,ex1p1,16,non-face object,target absent,32,True,6165,False
-1,ex1p1,16,non-face object,target present,64,False,7966,False
-1,ex1p1,16,face,target present,64,True,6514,False
-1,ex1p1,16,non-face object,target absent,32,True,6111,False
-1,ex1p1,17,non-face object,target absent,16,True,10108,False
-1,ex1p1,17,face,target absent,32,True,4665,False
-1,ex1p1,17,face,target absent,64,True,8131,False
-1,ex1p1,17,face,target absent,32,True,8003,False
-1,ex1p1,17,non-face object,target present,64,False,5912,False
-1,ex1p1,18,non-face object,target present,64,True,1023,False
-1,ex1p1,18,non-face object,target absent,32,True,2628,False
-1,ex1p1,18,non-face object,target absent,32,True,8170,False
-1,ex1p1,18,non-face object,target present,64,True,5587,False
-1,ex1p1,18,non-face object,target absent,64,False,3046,False
-1,ex1p1,19,face,target present,64,True,3916,False
-1,ex1p1,19,face,target absent,32,True,4642,False
-1,ex1p1,19,face,target absent,16,True,3865,False
-1,ex1p1,19,non-face object,target absent,32,True,9043,False
-1,ex1p1,19,face,target present,64,False,3129,False
-1,ex1p1,20,face,target present,32,True,1907,False
-1,ex1p1,20,face,target present,32,True,1527,False
-1,ex1p1,20,face,target absent,32,True,5303,False
-1,ex1p1,20,non-face object,target absent,32,True,11925,False
-1,ex1p1,20,non-face object,target absent,16,True,2239,False
-1,ex1p1,21,non-face object,target absent,16,False,2041,False
-1,ex1p1,21,face,target present,16,True,1959,False
-1,ex1p1,21,non-face object,target absent,16,True,4248,False
-1,ex1p1,21,face,target absent,64,True,7151,False
-1,ex1p1,21,non-face object,target absent,32,True,3721,False
-1,ex1p1,22,non-face object,target absent,16,True,4386,False
-1,ex1p1,22,non-face object,target present,64,True,1134,False
-1,ex1p1,22,face,target absent,16,True,3333,False
-1,ex1p1,22,face,target present,32,True,1949,False
-1,ex1p1,22,non-face object,target absent,64,True,4359,False
-1,ex1p1,23,non-face object,target present,16,True,1981,False
-1,ex1p1,23,face,target present,64,True,704,False
-1,ex1p1,23,face,target absent,32,True,4457,False
-1,ex1p1,23,non-face object,target absent,32,True,7130,False
-1,ex1p1,23,face,target absent,64,True,5744,False
-1,ex1p1,24,non-face object,target present,32,True,1178,False
-1,ex1p1,24,face,target present,16,True,854,False
-1,ex1p1,24,non-face object,target present,32,False,5474,False
-1,ex1p1,24,face,target present,16,True,956,False
-1,ex1p1,24,non-face object,target absent,32,True,4225,False
-1,ex1p1,25,non-face object,target present,16,True,1407,False
-1,ex1p1,25,non-face object,target present,64,True,1122,False
-1,ex1p1,25,non-face object,target present,64,True,7732,False
-1,ex1p1,25,non-face object,target present,64,True,13121,False
-1,ex1p1,25,non-face object,target present,16,True,4119,False
-1,ex1p1,26,non-face object,target absent,32,True,3826,False
-1,ex1p1,26,face,target absent,64,True,6829,False
-1,ex1p1,26,face,target absent,16,True,2533,False
-1,ex1p1,26,non-face object,target absent,32,True,8805,False
-1,ex1p1,26,non-face object,target absent,16,True,3307,False
-1,ex1p1,27,face,target present,32,True,4198,False
-1,ex1p1,27,non-face object,target absent,32,True,5470,False
-1,ex1p1,27,non-face object,target present,16,True,3302,False
-1,ex1p1,27,face,target present,64,True,955,False
-1,ex1p1,27,face,target present,32,True,1589,False
-1,ex1p1,28,non-face object,target present,16,False,5526,False
-1,ex1p1,28,face,target present,32,True,1290,False
-1,ex1p1,28,non-face object,target present,16,True,3424,False
-1,ex1p1,28,face,target present,32,True,817,False
-1,ex1p1,28,non-face object,target absent,16,True,4086,False
-1,ex1p1,29,non-face object,target absent,32,True,7791,False
-1,ex1p1,29,face,target absent,16,True,2320,False
-1,ex1p1,29,face,target present,32,True,1557,False
-1,ex1p1,29,face,target absent,32,True,5012,False
-1,ex1p1,29,face,target present,64,True,2948,False
-1,ex1p1,30,face,target present,32,True,2073,False
-1,ex1p1,30,face,target absent,64,True,5674,False
-1,ex1p1,30,non-face object,target absent,32,True,6226,False
-1,ex1p1,30,non-face object,target absent,32,True,8237,False
-1,ex1p1,30,non-face object,target absent,16,True,2182,False
-1,ex1p1,31,non-face object,target present,32,False,9833,False
-1,ex1p1,31,face,target absent,16,True,5430,False
-1,ex1p1,31,face,target absent,32,True,7085,False
-1,ex1p1,31,non-face object,target absent,64,True,14696,False
-1,ex1p1,31,non-face object,target absent,16,True,2758,False
-1,ex1p1,32,non-face object,target absent,16,True,6967,False
-1,ex1p1,32,non-face object,target absent,16,True,3684,False
-1,ex1p1,32,face,target absent,32,True,5396,False
-1,ex1p1,32,non-face object,target present,32,True,7066,False
-1,ex1p1,32,non-face object,target present,16,True,1167,False
-1,ex1p1,33,face,target present,16,True,689,False
-1,ex1p1,33,face,target absent,16,True,3927,False
-1,ex1p1,33,face,target present,16,False,3756,False
-1,ex1p1,33,face,target present,16,True,779,False
-1,ex1p1,33,non-face object,target present,16,True,2238,False
-1,ex1p1,34,face,target absent,32,True,3753,False
-1,ex1p1,34,non-face object,target present,16,False,4508,False
-1,ex1p1,34,non-face object,target present,16,True,2993,False
-1,ex1p1,34,face,target absent,64,True,11053,False
-1,ex1p1,34,non-face object,target absent,64,True,3840,False
-1,ex1p1,35,non-face object,target absent,16,True,3423,False
-1,ex1p1,35,face,target present,16,True,3263,False
-1,ex1p1,35,non-face object,target absent,32,True,6855,False
-1,ex1p1,35,non-face object,target absent,16,True,4292,False
-1,ex1p1,35,non-face object,target present,32,True,1186,False
-1,ex1p1,36,face,target absent,16,True,4652,False
-1,ex1p1,36,face,target absent,32,True,5760,False
-1,ex1p1,36,face,target absent,64,True,9929,False
-1,ex1p1,36,non-face object,target present,32,False,6991,False
-1,ex1p1,36,non-face object,target present,32,True,1016,False
-1,ex1p1,37,face,target absent,16,True,4451,False
-1,ex1p1,37,non-face object,target present,32,False,8346,False
-1,ex1p1,37,face,target present,16,True,904,False
-1,ex1p1,37,face,target present,64,True,999,False
-1,ex1p1,37,non-face object,target absent,64,True,5808,False
-1,ex1p1,38,non-face object,target present,16,False,7545,False
-1,ex1p1,38,non-face object,target present,32,True,3424,False
-1,ex1p1,38,non-face object,target absent,64,True,9671,False
-1,ex1p1,38,non-face object,target present,64,True,4631,False
-1,ex1p1,38,non-face object,target absent,32,True,2337,False
-1,ex1p1,39,non-face object,target absent,64,False,3439,False
-1,ex1p1,39,non-face object,target absent,64,True,8274,False
-1,ex1p1,39,non-face object,target present,64,True,10485,False
-1,ex1p1,39,face,target absent,16,True,5300,False
-1,ex1p1,39,face,target absent,16,True,2616,False
-1,ex1p1,40,non-face object,target present,64,True,7875,False
-1,ex1p1,40,non-face object,target present,64,False,6834,False
-1,ex1p1,40,non-face object,target absent,16,True,4763,False
-1,ex1p1,40,face,target absent,16,True,4952,False
-1,ex1p1,40,face,target present,64,True,815,False
-1,ex1p1,41,face,target absent,32,True,4061,False
-1,ex1p1,41,non-face object,target absent,16,True,4252,False
-1,ex1p1,41,face,target absent,32,True,4666,False
-1,ex1p1,41,non-face object,target present,32,True,2774,False
-1,ex1p1,41,non-face object,target present,32,True,1309,False
-1,ex1p1,42,face,target present,32,True,1073,False
-1,ex1p1,42,non-face object,target absent,16,True,3272,False
-1,ex1p1,42,face,target absent,16,True,4870,False
-1,ex1p1,42,face,target present,32,True,1072,False
-1,ex1p1,42,non-face object,target absent,16,True,3166,False
-1,ex1p1,43,face,target present,32,False,7023,False
-1,ex1p1,43,face,target present,64,True,1287,False
-1,ex1p1,43,non-face object,target absent,32,False,5211,False
-1,ex1p1,43,non-face object,target present,64,False,4885,False
-1,ex1p1,43,face,target absent,64,True,2537,False
-1,ex1p1,44,face,target absent,32,True,8412,False
-1,ex1p1,44,non-face object,target present,16,False,2102,False
-1,ex1p1,44,non-face object,target present,16,True,2019,False
-1,ex1p1,44,non-face object,target absent,64,True,13245,False
-1,ex1p1,44,non-face object,target present,16,True,1704,False
-1,ex1p1,45,face,target absent,16,True,5353,False
-1,ex1p1,45,face,target present,32,True,3824,False
-1,ex1p1,45,non-face object,target absent,16,True,1749,False
-1,ex1p1,45,face,target absent,64,True,5433,False
-1,ex1p1,45,face,target absent,32,True,2563,False
-1,ex1p1,46,non-face object,target present,64,False,13922,False
-1,ex1p1,46,face,target present,64,True,2773,False
-1,ex1p1,46,face,target absent,16,True,2155,False
-1,ex1p1,46,non-face object,target present,32,True,6392,False
-1,ex1p1,46,face,target absent,64,True,2479,False
-1,ex1p1,47,face,target absent,16,True,5714,False
-1,ex1p1,47,face,target absent,32,True,4243,False
-1,ex1p1,47,face,target absent,64,True,7109,False
-1,ex1p1,47,non-face object,target present,16,True,2395,False
-1,ex1p1,47,non-face object,target absent,16,True,2815,False
-1,ex1p1,48,face,target present,64,True,1282,False
-1,ex1p1,48,face,target absent,64,True,6041,False
-1,ex1p1,48,face,target present,32,True,2345,False
-1,ex1p1,48,non-face object,target present,32,True,1562,False
-1,ex1p1,48,non-face object,target present,32,True,4344,False
-1,ex1p1,49,face,target absent,16,True,3784,False
-1,ex1p1,49,non-face object,target present,32,True,3325,False
-1,ex1p1,49,face,target present,16,True,616,False
-1,ex1p1,49,face,target absent,64,True,7649,False
-1,ex1p1,49,face,target absent,16,True,2373,False
-1,ex1p1,50,face,target present,64,True,1139,False
-1,ex1p1,50,non-face object,target absent,32,True,7687,False
-1,ex1p1,50,face,target absent,64,True,3116,False
-1,ex1p1,50,non-face object,target absent,64,False,12635,False
-1,ex1p1,50,face,target absent,16,True,1834,False
-1,ex1p1,51,non-face object,target absent,16,True,7536,False
-1,ex1p1,51,non-face object,target present,64,True,1147,False
-1,ex1p1,51,face,target absent,32,False,3877,False
-1,ex1p1,51,non-face object,target absent,64,True,2639,False
-1,ex1p1,51,face,target present,64,True,2766,False
-1,ex1p1,52,non-face object,target absent,16,True,3848,False
-1,ex1p1,52,face,target absent,16,True,5596,False
-1,ex1p1,52,non-face object,target present,64,True,6368,False
-1,ex1p1,52,face,target absent,16,True,2260,False
-1,ex1p1,52,face,target absent,16,True,2903,False
-1,ex1p111,1,face,target present,16,True,2254,False
-1,ex1p111,2,non-face object,target present,64,False,0,True
-1,ex1p111,3,non-face object,target absent,32,True,6353,False
-1,ex1p111,4,face,target present,32,True,1001,False
-1,ex1p111,5,face,target present,64,True,2213,False
-1,ex1p111,6,face,target absent,16,True,2417,False
-1,ex1p111,7,non-face object,target present,16,True,2472,False
-1,ex1p111,8,non-face object,target absent,32,True,7621,False
-1,ex1p111,9,non-face object,target absent,32,True,5842,False
-1,ex1p111,10,non-face object,target present,64,False,4596,False
-1,ex1p111,11,non-face object,target absent,16,True,2885,False
-1,ex1p111,12,non-face object,target present,32,True,1619,False
-1,ex1p111,13,non-face object,target absent,16,False,5697,False
-1,ex1p111,14,non-face object,target present,16,True,2133,False
-1,ex1p111,15,non-face object,target present,16,True,1098,False
-1,ex1p111,16,non-face object,target absent,16,True,5528,False
-1,ex1p111,17,non-face object,target absent,64,True,10496,False
-1,ex1p111,18,face,target absent,32,True,5638,False
-1,ex1p111,19,non-face object,target present,16,True,2359,False
-1,ex1p111,20,non-face object,target present,64,True,2600,False
-1,ex1p111,21,non-face object,target present,64,True,6478,False
-1,ex1p111,22,non-face object,target absent,32,True,6326,False
-1,ex1p111,23,non-face object,target absent,16,True,5277,False
-1,ex1p111,24,non-face object,target absent,16,True,5572,False
-1,ex1p111,25,non-face object,target present,32,False,8995,False
-1,ex1p111,26,non-face object,target present,32,True,1044,False
-1,ex1p111,27,non-face object,target present,64,True,8128,False
-1,ex1p111,28,face,target present,64,True,4612,False
-1,ex1p111,29,non-face object,target present,32,True,4708,False
-1,ex1p111,30,face,target present,16,True,1357,False
-1,ex1p111,31,non-face object,target absent,32,True,8961,False
-1,ex1p111,32,face,target absent,32,True,5710,False
-1,ex1p111,33,non-face object,target absent,64,True,10924,False
-1,ex1p111,34,face,target absent,32,True,6201,False
-1,ex1p111,35,non-face object,target present,64,False,10600,False
-1,ex1p111,36,non-face object,target present,64,True,3492,False
-1,ex1p111,37,face,target present,64,True,1535,False
-1,ex1p111,38,non-face object,target absent,64,True,7519,False
-1,ex1p111,39,face,target present,32,True,3299,False
-1,ex1p111,40,face,target present,32,True,2356,False
-1,ex1p111,41,non-face object,target present,32,True,9917,False
-1,ex1p111,42,face,target present,16,True,2058,False
-1,ex1p111,43,face,target present,64,True,1134,False
-1,ex1p111,44,non-face object,target present,16,False,5441,False
-1,ex1p111,45,non-face object,target present,32,True,4770,False
-1,ex1p111,46,non-face object,target present,32,True,3851,False
-1,ex1p111,47,non-face object,target absent,16,True,3987,False
-1,ex1p111,48,face,target absent,64,True,10581,False
-1,ex1p111,49,face,target absent,16,True,2770,False
-1,ex1p111,50,face,target present,64,True,9456,False
-1,ex1p111,51,non-face object,target absent,64,True,9281,False
-1,ex1p111,52,face,target present,64,True,2057,False
-1,ex1p114514,1,non-face object,target present,64,False,8713,False
-1,ex1p114514,2,non-face object,target absent,64,True,11817,False
-1,ex1p114514,3,non-face object,target absent,32,True,12697,False
-1,ex1p114514,4,face,target absent,64,True,14664,False
-1,ex1p114514,5,face,target absent,64,False,0,True
-1,ex1p114514,6,face,target absent,16,True,4288,False
-1,ex1p114514,7,non-face object,target present,64,False,10186,False
-1,ex1p114514,8,non-face object,target present,16,True,1020,False
-1,ex1p114514,9,non-face object,target absent,16,True,1957,False
-1,ex1p114514,10,non-face object,target absent,32,True,7092,False
-1,ex1p114514,11,non-face object,target absent,16,True,6520,False
-1,ex1p114514,12,non-face object,target absent,32,True,8711,False
-1,ex1p114514,13,face,target absent,16,True,4811,False
-1,ex1p114514,14,face,target absent,64,True,14167,False
-1,ex1p114514,15,face,target present,16,True,1183,False
-1,ex1p114514,16,face,target absent,32,True,2330,False
-1,ex1p114514,17,non-face object,target present,32,True,3042,False
-1,ex1p114514,18,face,target absent,64,True,5407,False
-1,ex1p114514,19,face,target present,64,True,2793,False
-1,ex1p114514,20,non-face object,target present,32,True,960,False
-1,ex1p114514,21,face,target present,64,True,1176,False
-1,ex1p114514,22,face,target present,16,True,2845,False
-1,ex1p114514,23,face,target absent,16,True,5003,False
-1,ex1p114514,24,non-face object,target absent,32,True,2904,False
-1,ex1p114514,25,face,target present,16,True,1572,False
-1,ex1p114514,26,non-face object,target present,32,True,5097,False
-1,ex1p114514,27,non-face object,target absent,32,True,8700,False
-1,ex1p114514,28,non-face object,target present,32,True,9583,False
-1,ex1p114514,29,face,target absent,32,True,12439,False
-1,ex1p114514,30,non-face object,target present,16,True,908,False
-1,ex1p114514,31,face,target present,64,True,995,False
-1,ex1p114514,32,non-face object,target absent,16,True,4274,False
-1,ex1p114514,33,non-face object,target absent,64,True,8447,False
-1,ex1p114514,34,face,target present,32,True,752,False
-1,ex1p114514,35,non-face object,target present,32,True,993,False
-1,ex1p114514,36,face,target absent,16,True,2352,False
-1,ex1p114514,37,face,target present,16,True,1290,False
-1,ex1p114514,38,non-face object,target absent,16,True,3511,False
-1,ex1p114514,39,non-face object,target present,64,False,6270,False
-1,ex1p114514,40,face,target absent,16,True,3299,False
-1,ex1p114514,41,face,target present,64,True,882,False
-1,ex1p114514,42,face,target absent,32,True,2830,False
-1,ex1p114514,43,face,target absent,32,True,3976,False
-1,ex1p114514,44,face,target absent,32,True,6806,False
-1,ex1p114514,45,face,target present,32,True,1237,False
-1,ex1p114514,46,face,target present,16,True,883,False
-1,ex1p114514,47,face,target present,16,True,1333,False
-1,ex1p114514,48,non-face object,target present,32,False,5556,False
-1,ex1p114514,49,face,target present,16,True,1812,False
-1,ex1p114514,50,non-face object,target present,16,True,1435,False
-1,ex1p114514,51,face,target absent,64,True,4442,False
-1,ex1p114514,52,non-face object,target present,64,True,4345,False
-1,ex1p123,1,face,target present,64,False,4880,False
-1,ex1p123,1,face,target present,64,True,7632,False
-1,ex1p123,2,face,target absent,32,False,6559,False
-1,ex1p123,2,non-face object,target absent,32,True,7097,False
-1,ex1p123,3,face,target absent,32,False,8863,False
-1,ex1p123,3,face,target absent,32,True,2484,False
-1,ex1p123,4,non-face object,target present,32,False,1752,False
-1,ex1p123,4,non-face object,target absent,64,True,6296,False
-1,ex1p123,5,non-face object,target absent,32,False,5812,False
-1,ex1p123,5,non-face object,target absent,32,True,4653,False
-1,ex1p123,6,face,target absent,64,False,6893,False
-1,ex1p123,6,non-face object,target absent,16,True,3601,False
-1,ex1p123,7,non-face object,target present,16,False,1111,False
-1,ex1p123,7,face,target absent,16,True,1630,False
-1,ex1p123,8,face,target present,16,False,2165,False
-1,ex1p123,8,non-face object,target present,32,True,2561,False
-1,ex1p123,9,non-face object,target present,16,True,810,False
-1,ex1p123,9,non-face object,target present,16,True,1110,False
-1,ex1p123,10,non-face object,target absent,16,False,3990,False
-1,ex1p123,10,face,target absent,16,True,2970,False
-1,ex1p123,11,face,target present,64,False,1807,False
-1,ex1p123,11,face,target present,16,True,1445,False
-1,ex1p123,12,non-face object,target present,32,True,5487,False
-1,ex1p123,12,non-face object,target absent,32,True,5458,False
-1,ex1p123,13,non-face object,target absent,64,False,4749,False
-1,ex1p123,13,non-face object,target present,16,True,1821,False
-1,ex1p123,14,non-face object,target absent,16,False,2029,False
-1,ex1p123,14,non-face object,target present,32,False,8254,False
-1,ex1p123,15,face,target present,32,False,998,False
-1,ex1p123,15,face,target absent,32,True,3165,False
-1,ex1p123,16,face,target present,32,False,786,False
-1,ex1p123,16,face,target present,32,True,1924,False
-1,ex1p123,17,face,target absent,16,False,1693,False
-1,ex1p123,17,face,target absent,16,True,1960,False
-1,ex1p123,18,non-face object,target absent,32,False,2786,False
-1,ex1p123,18,non-face object,target present,16,False,3252,False
-1,ex1p123,19,non-face object,target present,64,False,2682,False
-1,ex1p123,19,face,target absent,32,True,4427,False
-1,ex1p123,20,non-face object,target present,32,True,6748,False
-1,ex1p123,20,non-face object,target present,32,True,4680,False
-1,ex1p123,21,non-face object,target present,32,True,5101,False
-1,ex1p123,21,non-face object,target absent,32,False,8759,False
-1,ex1p123,22,non-face object,target absent,32,False,7961,False
-1,ex1p123,22,face,target present,16,True,1753,False
-1,ex1p123,23,non-face object,target present,64,False,1931,False
-1,ex1p123,23,non-face object,target present,16,True,1904,False
-1,ex1p123,24,face,target present,32,False,936,False
-1,ex1p123,24,face,target absent,64,True,6343,False
-1,ex1p123,25,face,target present,16,False,1108,False
-1,ex1p123,25,face,target absent,16,True,2947,False
-1,ex1p123,26,face,target present,16,False,998,False
-1,ex1p123,26,non-face object,target present,64,False,4488,False
-1,ex1p123,27,face,target present,16,False,1051,False
-1,ex1p123,27,non-face object,target absent,16,True,2745,False
-1,ex1p123,28,face,target absent,16,False,1556,False
-1,ex1p123,28,non-face object,target present,32,True,2313,False
-1,ex1p123,29,non-face object,target absent,32,False,4767,False
-1,ex1p123,29,non-face object,target present,16,True,1816,False
-1,ex1p123,30,non-face object,target absent,64,False,4976,False
-1,ex1p123,30,non-face object,target absent,32,False,3613,False
-1,ex1p123,31,face,target absent,64,False,3687,False
-1,ex1p123,31,face,target absent,32,True,3190,False
-1,ex1p123,32,non-face object,target absent,64,False,5898,False
-1,ex1p123,32,face,target present,32,True,2356,False
-1,ex1p123,33,face,target absent,64,False,5695,False
-1,ex1p123,33,non-face object,target absent,32,True,5095,False
-1,ex1p123,34,non-face object,target present,16,True,3641,False
-1,ex1p123,34,non-face object,target absent,16,True,2305,False
-1,ex1p123,35,face,target present,64,False,3750,False
-1,ex1p123,35,non-face object,target absent,32,True,4569,False
-1,ex1p123,36,face,target present,64,True,5932,False
-1,ex1p123,36,face,target absent,16,True,3543,False
-1,ex1p123,37,non-face object,target present,16,False,3106,False
-1,ex1p123,37,non-face object,target present,64,True,4844,False
-1,ex1p123,38,non-face object,target absent,64,False,7337,False
-1,ex1p123,38,non-face object,target absent,32,True,4745,False
-1,ex1p123,39,face,target present,16,False,1290,False
-1,ex1p123,39,face,target absent,32,True,3943,False
-1,ex1p123,40,non-face object,target present,32,False,4234,False
-1,ex1p123,40,face,target absent,32,True,3327,False
-1,ex1p123,41,non-face object,target present,64,False,2599,False
-1,ex1p123,41,face,target present,64,True,3822,False
-1,ex1p123,42,face,target present,16,False,1824,False
-1,ex1p123,42,non-face object,target absent,64,True,5830,False
-1,ex1p123,43,face,target present,16,False,670,False
-1,ex1p123,43,face,target absent,32,True,5022,False
-1,ex1p123,44,face,target absent,32,False,3131,False
-1,ex1p123,44,face,target absent,32,True,3304,False
-1,ex1p123,45,face,target present,64,True,1557,False
-1,ex1p123,45,face,target absent,32,True,2988,False
-1,ex1p123,46,face,target absent,64,True,4553,False
-1,ex1p123,46,non-face object,target absent,32,True,6845,False
-1,ex1p123,47,face,target present,32,False,1872,False
-1,ex1p123,47,face,target present,64,True,810,False
-1,ex1p123,48,non-face object,target absent,16,False,3470,False
-1,ex1p123,48,face,target absent,16,True,2876,False
-1,ex1p123,49,non-face object,target absent,64,True,1470,False
-1,ex1p123,49,face,target absent,32,True,1342,False
-1,ex1p123,50,non-face object,target absent,16,False,4916,False
-1,ex1p123,50,face,target absent,32,True,2968,False
-1,ex1p123,51,face,target present,16,False,1463,False
-1,ex1p123,51,face,target present,64,True,5609,False
-1,ex1p123,52,face,target present,64,False,3862,False
-1,ex1p123,52,non-face object,target present,64,False,4621,False
-1,ex1p67,1,non-face object,target absent,16,True,4756,False
-1,ex1p67,2,face,target present,16,True,1053,False
-1,ex1p67,3,non-face object,target present,64,True,5005,False
-1,ex1p67,4,face,target absent,16,True,7078,False
-1,ex1p67,5,non-face object,target present,16,True,1796,False
-1,ex1p67,6,non-face object,target absent,16,True,6897,False
-1,ex1p67,7,face,target present,64,True,2590,False
-1,ex1p67,8,non-face object,target absent,16,True,5635,False
-1,ex1p67,9,non-face object,target present,32,True,2343,False
-1,ex1p67,10,face,target present,16,True,3905,False
-1,ex1p67,11,face,target present,32,False,1143,False
-1,ex1p67,12,face,target present,64,True,1469,False
-1,ex1p67,13,non-face object,target present,16,True,1400,False
-1,ex1p67,14,face,target present,32,True,750,False
-1,ex1p67,15,non-face object,target present,32,True,1783,False
-1,ex1p67,16,face,target present,16,True,2159,False
-1,ex1p67,17,face,target absent,16,True,6283,False
-1,ex1p67,18,non-face object,target absent,64,True,12439,False
-1,ex1p67,19,non-face object,target present,32,True,3705,False
-1,ex1p67,20,face,target absent,32,True,7590,False
-1,ex1p67,21,non-face object,target present,32,True,1554,False
-1,ex1p67,22,non-face object,target absent,32,True,7489,False
-1,ex1p67,23,non-face object,target absent,64,True,8866,False
-1,ex1p67,24,face,target present,32,True,1188,False
-1,ex1p67,25,face,target absent,32,True,10326,False
-1,ex1p67,26,non-face object,target absent,64,True,13251,False
-1,ex1p67,27,non-face object,target present,64,True,1266,False
-1,ex1p67,28,non-face object,target present,64,True,3782,False
-1,ex1p67,29,face,target absent,16,True,5004,False
-1,ex1p67,30,non-face object,target absent,32,True,5702,False
-1,ex1p67,31,non-face object,target present,32,True,1984,False
-1,ex1p67,32,face,target present,32,True,3296,False
-1,ex1p67,33,face,target absent,64,True,8683,False
-1,ex1p67,34,non-face object,target present,16,True,1119,False
-1,ex1p67,35,face,target absent,16,True,6861,False
-1,ex1p67,36,face,target present,64,True,2687,False
-1,ex1p67,37,non-face object,target present,64,True,3306,False
-1,ex1p67,38,face,target present,32,True,1764,False
-1,ex1p67,39,non-face object,target present,64,True,1068,False
-1,ex1p67,40,face,target absent,64,True,8607,False
-1,ex1p67,41,face,target present,64,True,1483,False
-1,ex1p67,42,non-face object,target present,16,False,4637,False
-1,ex1p67,43,non-face object,target absent,64,True,3509,False
-1,ex1p67,44,face,target present,64,True,5203,False
-1,ex1p67,45,face,target present,32,True,4541,False
-1,ex1p67,46,face,target absent,32,True,6101,False
-1,ex1p67,47,face,target absent,32,True,6384,False
-1,ex1p67,48,face,target absent,32,True,8374,False
-1,ex1p67,49,non-face object,target absent,32,True,5126,False
-1,ex1p67,50,non-face object,target absent,64,True,7670,False
-1,ex1p67,51,non-face object,target absent,32,True,9547,False
-1,ex1p67,52,face,target present,16,True,814,False
-1,ex1p88080,1,non-face object,target absent,16,True,3703,False
-1,ex1p88080,2,non-face object,target absent,32,True,2377,False
-1,ex1p88080,3,non-face object,target absent,64,False,5717,False
-1,ex1p88080,4,non-face object,target absent,32,True,1766,False
-1,ex1p88080,5,non-face object,target absent,16,True,3881,False
-1,ex1p88080,6,non-face object,target absent,32,True,3461,False
-1,ex1p88080,7,non-face object,target absent,64,True,5261,False
-1,ex1p88080,8,face,target present,16,True,564,False
-1,ex1p88080,9,face,target present,32,True,889,False
-1,ex1p88080,10,non-face object,target present,32,True,1030,False
-1,ex1p88080,11,face,target absent,16,True,3365,False
-1,ex1p88080,12,face,target absent,64,True,3388,False
-1,ex1p88080,13,non-face object,target absent,64,True,7309,False
-1,ex1p88080,14,face,target absent,64,True,10570,False
-1,ex1p88080,15,face,target present,64,True,1060,False
-1,ex1p88080,16,non-face object,target present,32,True,1404,False
-1,ex1p88080,17,face,target absent,16,True,4047,False
-1,ex1p88080,18,face,target absent,32,True,6852,False
-1,ex1p88080,19,non-face object,target present,32,True,2285,False
-1,ex1p88080,20,face,target present,32,True,1220,False
-1,ex1p88080,21,face,target present,32,True,996,False
-1,ex1p88080,22,face,target absent,64,True,6712,False
-1,ex1p88080,23,non-face object,target absent,16,True,2749,False
-1,ex1p88080,24,non-face object,target present,64,True,1366,False
-1,ex1p88080,25,face,target absent,32,True,4168,False
-1,ex1p88080,26,face,target present,32,True,703,False
-1,ex1p88080,27,face,target absent,16,True,1537,False
-1,ex1p88080,28,non-face object,target absent,32,True,6111,False
-1,ex1p88080,29,non-face object,target absent,32,True,5916,False
-1,ex1p88080,30,face,target absent,16,True,3543,False
-1,ex1p88080,31,face,target present,16,True,779,False
-1,ex1p88080,32,non-face object,target absent,16,True,2355,False
-1,ex1p88080,33,face,target absent,16,True,1939,False
-1,ex1p88080,34,face,target present,16,True,568,False
-1,ex1p88080,35,non-face object,target present,64,True,2061,False
-1,ex1p88080,36,face,target absent,64,False,4580,False
-1,ex1p88080,37,face,target present,16,True,816,False
-1,ex1p88080,38,non-face object,target present,16,True,2278,False
-1,ex1p88080,39,non-face object,target absent,16,True,4126,False
-1,ex1p88080,40,face,target absent,32,True,3352,False
-1,ex1p88080,41,non-face object,target absent,64,True,5385,False
-1,ex1p88080,42,face,target present,16,True,571,False
-1,ex1p88080,43,face,target present,32,True,762,False
-1,ex1p88080,44,non-face object,target present,32,True,606,False
-1,ex1p88080,45,non-face object,target present,16,True,631,False
-1,ex1p88080,46,non-face object,target present,64,False,11043,False
-1,ex1p88080,47,non-face object,target present,32,True,1266,False
-1,ex1p88080,48,face,target absent,64,True,7252,False
-1,ex1p88080,49,non-face object,target present,16,True,815,False
-1,ex1p88080,50,non-face object,target absent,32,True,3597,False
-1,ex1p88080,51,non-face object,target absent,16,True,777,False
-1,ex1p88080,52,face,target absent,16,True,4775,False
-1,ex1pImyxmh,1,face,target absent,32,True,9153,False
-1,ex1pImyxmh,2,face,target present,16,True,1137,False
-1,ex1pImyxmh,3,face,target absent,64,True,9631,False
-1,ex1pImyxmh,4,face,target present,64,True,1701,False
-1,ex1pImyxmh,5,face,target present,32,True,1273,False
-1,ex1pImyxmh,6,face,target absent,16,True,3872,False
-1,ex1pImyxmh,7,non-face object,target present,64,True,6692,False
-1,ex1pImyxmh,8,face,target absent,32,True,5597,False
-1,ex1pImyxmh,9,non-face object,target present,32,True,1612,False
-1,ex1pImyxmh,10,non-face object,target present,64,True,2385,False
-1,ex1pImyxmh,11,face,target absent,32,True,5545,False
-1,ex1pImyxmh,12,non-face object,target present,32,True,5436,False
-1,ex1pImyxmh,13,face,target absent,64,True,5539,False
-1,ex1pImyxmh,14,non-face object,target present,64,True,1157,False
-1,ex1pImyxmh,15,non-face object,target present,16,False,4572,False
-1,ex1pImyxmh,16,non-face object,target absent,64,True,12094,False
-1,ex1pImyxmh,17,face,target present,64,True,2141,False
-1,ex1pImyxmh,18,non-face object,target absent,16,True,5619,False
-1,ex1pImyxmh,19,face,target present,16,False,3787,False
-1,ex1pImyxmh,20,non-face object,target present,32,True,3828,False
-1,ex1pImyxmh,21,face,target present,64,True,1800,False
-1,ex1pImyxmh,22,face,target present,16,True,2136,False
-1,ex1pImyxmh,23,non-face object,target absent,32,True,3790,False
-1,ex1pImyxmh,24,face,target present,32,True,1066,False
-1,ex1pImyxmh,25,non-face object,target absent,16,True,5111,False
-1,ex1pImyxmh,26,non-face object,target present,16,True,2001,False
-1,ex1pImyxmh,27,non-face object,target absent,32,True,5907,False
-1,ex1pImyxmh,28,non-face object,target present,32,True,1792,False
-1,ex1pImyxmh,29,non-face object,target absent,64,True,8458,False
-1,ex1pImyxmh,30,face,target absent,16,True,4388,False
-1,ex1pImyxmh,31,non-face object,target absent,16,True,6467,False
-1,ex1pImyxmh,32,non-face object,target present,16,False,6331,False
-1,ex1pImyxmh,33,non-face object,target absent,32,True,9389,False
-1,ex1pImyxmh,34,non-face object,target present,32,False,5771,False
-1,ex1pImyxmh,35,face,target present,32,True,1093,False
-1,ex1pImyxmh,36,face,target absent,64,True,4933,False
-1,ex1pImyxmh,37,face,target absent,16,True,6809,False
-1,ex1pImyxmh,38,face,target absent,16,True,3086,False
-1,ex1pImyxmh,39,face,target absent,16,True,3506,False
-1,ex1pImyxmh,40,face,target present,16,True,1214,False
-1,ex1pImyxmh,41,non-face object,target present,32,True,1569,False
-1,ex1pImyxmh,42,non-face object,target absent,64,True,13654,False
-1,ex1pImyxmh,43,non-face object,target present,64,False,6741,False
-1,ex1pImyxmh,44,non-face object,target absent,64,True,14070,False
-1,ex1pImyxmh,45,non-face object,target absent,16,True,8121,False
-1,ex1pImyxmh,46,face,target present,32,True,1058,False
-1,ex1pImyxmh,47,face,target absent,16,True,3670,False
-1,ex1pImyxmh,48,non-face object,target present,16,True,1620,False
-1,ex1pImyxmh,49,face,target present,64,False,6234,False
-1,ex1pImyxmh,50,non-face object,target present,64,True,2894,False
-1,ex1pImyxmh,51,non-face object,target absent,64,True,8322,False
-1,ex1pImyxmh,52,non-face object,target present,64,True,4491,False
+1,ex1p001,1,non-face object,target absent,64,TRUE,8738,FALSE
+1,ex1p001,2,non-face object,target absent,32,TRUE,11177,FALSE
+1,ex1p001,3,non-face object,target present,32,TRUE,4169,FALSE
+1,ex1p001,4,face,target present,16,TRUE,2981,FALSE
+1,ex1p001,5,non-face object,target present,32,TRUE,4693,FALSE
+1,ex1p001,6,face,target present,32,TRUE,1921,FALSE
+1,ex1p001,7,non-face object,target absent,64,FALSE,7796,FALSE
+1,ex1p001,8,face,target present,16,TRUE,990,FALSE
+1,ex1p001,9,non-face object,target present,64,TRUE,2284,FALSE
+1,ex1p001,10,face,target absent,16,TRUE,5782,FALSE
+1,ex1p001,11,non-face object,target present,32,FALSE,1235,FALSE
+1,ex1p001,12,face,target absent,16,TRUE,4156,FALSE
+1,ex1p001,13,face,target present,64,TRUE,4853,FALSE
+1,ex1p001,14,non-face object,target present,32,FALSE,9171,FALSE
+1,ex1p001,15,face,target absent,32,TRUE,3881,FALSE
+1,ex1p001,16,face,target absent,32,TRUE,6076,FALSE
+1,ex1p001,17,non-face object,target present,16,TRUE,4085,FALSE
+1,ex1p001,18,face,target present,64,TRUE,1779,FALSE
+1,ex1p001,19,face,target present,32,TRUE,2298,FALSE
+1,ex1p001,20,face,target present,16,TRUE,1570,FALSE
+1,ex1p001,21,non-face object,target present,64,TRUE,1141,FALSE
+1,ex1p001,22,non-face object,target present,64,FALSE,9615,FALSE
+1,ex1p001,23,face,target absent,32,TRUE,6432,FALSE
+1,ex1p001,24,face,target absent,16,TRUE,9041,FALSE
+1,ex1p001,25,face,target absent,64,TRUE,9156,FALSE
+1,ex1p001,26,face,target present,64,TRUE,7793,FALSE
+1,ex1p001,27,face,target present,16,TRUE,2308,FALSE
+1,ex1p001,28,non-face object,target present,16,TRUE,870,FALSE
+1,ex1p001,29,non-face object,target absent,64,TRUE,12925,FALSE
+1,ex1p001,30,non-face object,target present,16,TRUE,3303,FALSE
+1,ex1p001,31,non-face object,target absent,32,TRUE,6191,FALSE
+1,ex1p001,32,face,target absent,64,TRUE,13415,FALSE
+1,ex1p001,33,non-face object,target absent,32,TRUE,6201,FALSE
+1,ex1p001,34,non-face object,target absent,64,TRUE,6126,FALSE
+1,ex1p001,35,non-face object,target present,32,FALSE,6706,FALSE
+1,ex1p001,36,non-face object,target present,64,FALSE,7492,FALSE
+1,ex1p001,37,face,target present,64,TRUE,3481,FALSE
+1,ex1p001,38,non-face object,target present,16,TRUE,1474,FALSE
+1,ex1p001,39,face,target present,16,TRUE,1416,FALSE
+1,ex1p001,40,face,target present,32,TRUE,2295,FALSE
+1,ex1p001,41,non-face object,target absent,16,TRUE,4367,FALSE
+1,ex1p001,42,face,target present,16,TRUE,1587,FALSE
+1,ex1p001,43,non-face object,target absent,32,TRUE,7707,FALSE
+1,ex1p001,44,non-face object,target present,16,FALSE,3425,FALSE
+1,ex1p001,45,non-face object,target present,64,TRUE,9766,FALSE
+1,ex1p001,46,face,target absent,16,TRUE,1966,FALSE
+1,ex1p001,47,non-face object,target present,32,FALSE,5433,FALSE
+1,ex1p001,48,non-face object,target present,32,TRUE,2098,FALSE
+1,ex1p001,49,non-face object,target absent,64,TRUE,9039,FALSE
+1,ex1p001,50,face,target absent,16,TRUE,3228,FALSE
+1,ex1p001,51,face,target absent,32,TRUE,4806,FALSE
+1,ex1p001,52,face,target absent,32,TRUE,4169,FALSE
+1,ex1p1,1,face,target present,16,TRUE,6545,FALSE
+1,ex1p1,1,face,target present,16,TRUE,1845,FALSE
+1,ex1p1,1,non-face object,target present,64,TRUE,5017,FALSE
+1,ex1p1,1,face,target absent,32,TRUE,5874,FALSE
+1,ex1p1,1,face,target absent,64,TRUE,5582,FALSE
+1,ex1p1,2,non-face object,target present,64,TRUE,3699,FALSE
+1,ex1p1,2,face,target present,16,TRUE,1945,FALSE
+1,ex1p1,2,non-face object,target absent,32,TRUE,6700,FALSE
+1,ex1p1,2,non-face object,target present,32,TRUE,4878,FALSE
+1,ex1p1,2,face,target present,64,TRUE,2166,FALSE
+1,ex1p1,3,non-face object,target absent,64,FALSE,0,TRUE
+1,ex1p1,3,face,target absent,16,TRUE,1931,FALSE
+1,ex1p1,3,non-face object,target present,16,TRUE,4082,FALSE
+1,ex1p1,3,non-face object,target absent,64,TRUE,11604,FALSE
+1,ex1p1,3,non-face object,target present,16,TRUE,3236,FALSE
+1,ex1p1,4,face,target absent,64,TRUE,6861,FALSE
+1,ex1p1,4,non-face object,target present,64,TRUE,1992,FALSE
+1,ex1p1,4,non-face object,target absent,64,TRUE,7202,FALSE
+1,ex1p1,4,face,target absent,16,TRUE,5267,FALSE
+1,ex1p1,4,face,target absent,16,TRUE,3684,FALSE
+1,ex1p1,5,face,target present,32,TRUE,1342,FALSE
+1,ex1p1,5,face,target absent,16,TRUE,1902,FALSE
+1,ex1p1,5,non-face object,target absent,32,TRUE,6584,FALSE
+1,ex1p1,5,face,target absent,32,TRUE,2391,FALSE
+1,ex1p1,5,non-face object,target absent,32,TRUE,5646,FALSE
+1,ex1p1,6,face,target absent,64,FALSE,0,TRUE
+1,ex1p1,6,non-face object,target present,64,FALSE,3930,FALSE
+1,ex1p1,6,face,target absent,32,TRUE,3450,FALSE
+1,ex1p1,6,face,target present,64,TRUE,8418,FALSE
+1,ex1p1,6,face,target absent,16,TRUE,3775,FALSE
+1,ex1p1,7,non-face object,target present,32,FALSE,6265,FALSE
+1,ex1p1,7,non-face object,target present,32,FALSE,7555,FALSE
+1,ex1p1,7,face,target present,64,TRUE,2234,FALSE
+1,ex1p1,7,non-face object,target present,32,TRUE,1082,FALSE
+1,ex1p1,7,non-face object,target present,16,TRUE,1843,FALSE
+1,ex1p1,8,non-face object,target absent,16,TRUE,3059,FALSE
+1,ex1p1,8,non-face object,target present,32,TRUE,856,FALSE
+1,ex1p1,8,face,target present,64,TRUE,2049,FALSE
+1,ex1p1,8,non-face object,target present,64,TRUE,2353,FALSE
+1,ex1p1,8,face,target present,32,TRUE,1687,FALSE
+1,ex1p1,9,face,target present,32,TRUE,1328,FALSE
+1,ex1p1,9,face,target present,64,TRUE,1262,FALSE
+1,ex1p1,9,face,target absent,16,TRUE,2814,FALSE
+1,ex1p1,9,face,target present,64,TRUE,1723,FALSE
+1,ex1p1,9,non-face object,target absent,16,TRUE,2094,FALSE
+1,ex1p1,10,non-face object,target present,16,TRUE,4158,FALSE
+1,ex1p1,10,non-face object,target present,32,TRUE,1279,FALSE
+1,ex1p1,10,face,target absent,64,TRUE,7846,FALSE
+1,ex1p1,10,non-face object,target present,16,TRUE,2927,FALSE
+1,ex1p1,10,face,target absent,32,TRUE,3888,FALSE
+1,ex1p1,11,non-face object,target absent,64,TRUE,10688,FALSE
+1,ex1p1,11,face,target present,64,TRUE,1564,FALSE
+1,ex1p1,11,face,target present,16,TRUE,1119,FALSE
+1,ex1p1,11,face,target absent,16,TRUE,3810,FALSE
+1,ex1p1,11,non-face object,target absent,64,TRUE,5167,FALSE
+1,ex1p1,12,non-face object,target absent,64,TRUE,8068,FALSE
+1,ex1p1,12,face,target present,64,TRUE,4700,FALSE
+1,ex1p1,12,non-face object,target absent,32,TRUE,7185,FALSE
+1,ex1p1,12,face,target absent,16,TRUE,5472,FALSE
+1,ex1p1,12,face,target absent,16,TRUE,1041,FALSE
+1,ex1p1,13,non-face object,target present,32,FALSE,10099,FALSE
+1,ex1p1,13,face,target present,64,TRUE,1075,FALSE
+1,ex1p1,13,face,target present,64,FALSE,6996,FALSE
+1,ex1p1,13,non-face object,target absent,16,TRUE,4889,FALSE
+1,ex1p1,13,face,target absent,64,TRUE,4476,FALSE
+1,ex1p1,14,face,target absent,16,TRUE,4610,FALSE
+1,ex1p1,14,non-face object,target present,16,TRUE,2840,FALSE
+1,ex1p1,14,non-face object,target absent,64,TRUE,10258,FALSE
+1,ex1p1,14,non-face object,target absent,16,TRUE,4915,FALSE
+1,ex1p1,14,non-face object,target present,16,TRUE,4558,FALSE
+1,ex1p1,15,face,target present,32,FALSE,11685,FALSE
+1,ex1p1,15,face,target absent,64,TRUE,4862,FALSE
+1,ex1p1,15,non-face object,target absent,64,FALSE,0,TRUE
+1,ex1p1,15,face,target absent,64,TRUE,11199,FALSE
+1,ex1p1,15,non-face object,target present,32,TRUE,2075,FALSE
+1,ex1p1,16,face,target absent,32,FALSE,8056,FALSE
+1,ex1p1,16,non-face object,target absent,32,TRUE,6165,FALSE
+1,ex1p1,16,non-face object,target present,64,FALSE,7966,FALSE
+1,ex1p1,16,face,target present,64,TRUE,6514,FALSE
+1,ex1p1,16,non-face object,target absent,32,TRUE,6111,FALSE
+1,ex1p1,17,non-face object,target absent,16,TRUE,10108,FALSE
+1,ex1p1,17,face,target absent,32,TRUE,4665,FALSE
+1,ex1p1,17,face,target absent,64,TRUE,8131,FALSE
+1,ex1p1,17,face,target absent,32,TRUE,8003,FALSE
+1,ex1p1,17,non-face object,target present,64,FALSE,5912,FALSE
+1,ex1p1,18,non-face object,target present,64,TRUE,1023,FALSE
+1,ex1p1,18,non-face object,target absent,32,TRUE,2628,FALSE
+1,ex1p1,18,non-face object,target absent,32,TRUE,8170,FALSE
+1,ex1p1,18,non-face object,target present,64,TRUE,5587,FALSE
+1,ex1p1,18,non-face object,target absent,64,FALSE,3046,FALSE
+1,ex1p1,19,face,target present,64,TRUE,3916,FALSE
+1,ex1p1,19,face,target absent,32,TRUE,4642,FALSE
+1,ex1p1,19,face,target absent,16,TRUE,3865,FALSE
+1,ex1p1,19,non-face object,target absent,32,TRUE,9043,FALSE
+1,ex1p1,19,face,target present,64,FALSE,3129,FALSE
+1,ex1p1,20,face,target present,32,TRUE,1907,FALSE
+1,ex1p1,20,face,target present,32,TRUE,1527,FALSE
+1,ex1p1,20,face,target absent,32,TRUE,5303,FALSE
+1,ex1p1,20,non-face object,target absent,32,TRUE,11925,FALSE
+1,ex1p1,20,non-face object,target absent,16,TRUE,2239,FALSE
+1,ex1p1,21,non-face object,target absent,16,FALSE,2041,FALSE
+1,ex1p1,21,face,target present,16,TRUE,1959,FALSE
+1,ex1p1,21,non-face object,target absent,16,TRUE,4248,FALSE
+1,ex1p1,21,face,target absent,64,TRUE,7151,FALSE
+1,ex1p1,21,non-face object,target absent,32,TRUE,3721,FALSE
+1,ex1p1,22,non-face object,target absent,16,TRUE,4386,FALSE
+1,ex1p1,22,non-face object,target present,64,TRUE,1134,FALSE
+1,ex1p1,22,face,target absent,16,TRUE,3333,FALSE
+1,ex1p1,22,face,target present,32,TRUE,1949,FALSE
+1,ex1p1,22,non-face object,target absent,64,TRUE,4359,FALSE
+1,ex1p1,23,non-face object,target present,16,TRUE,1981,FALSE
+1,ex1p1,23,face,target present,64,TRUE,704,FALSE
+1,ex1p1,23,face,target absent,32,TRUE,4457,FALSE
+1,ex1p1,23,non-face object,target absent,32,TRUE,7130,FALSE
+1,ex1p1,23,face,target absent,64,TRUE,5744,FALSE
+1,ex1p1,24,non-face object,target present,32,TRUE,1178,FALSE
+1,ex1p1,24,face,target present,16,TRUE,854,FALSE
+1,ex1p1,24,non-face object,target present,32,FALSE,5474,FALSE
+1,ex1p1,24,face,target present,16,TRUE,956,FALSE
+1,ex1p1,24,non-face object,target absent,32,TRUE,4225,FALSE
+1,ex1p1,25,non-face object,target present,16,TRUE,1407,FALSE
+1,ex1p1,25,non-face object,target present,64,TRUE,1122,FALSE
+1,ex1p1,25,non-face object,target present,64,TRUE,7732,FALSE
+1,ex1p1,25,non-face object,target present,64,TRUE,13121,FALSE
+1,ex1p1,25,non-face object,target present,16,TRUE,4119,FALSE
+1,ex1p1,26,non-face object,target absent,32,TRUE,3826,FALSE
+1,ex1p1,26,face,target absent,64,TRUE,6829,FALSE
+1,ex1p1,26,face,target absent,16,TRUE,2533,FALSE
+1,ex1p1,26,non-face object,target absent,32,TRUE,8805,FALSE
+1,ex1p1,26,non-face object,target absent,16,TRUE,3307,FALSE
+1,ex1p1,27,face,target present,32,TRUE,4198,FALSE
+1,ex1p1,27,non-face object,target absent,32,TRUE,5470,FALSE
+1,ex1p1,27,non-face object,target present,16,TRUE,3302,FALSE
+1,ex1p1,27,face,target present,64,TRUE,955,FALSE
+1,ex1p1,27,face,target present,32,TRUE,1589,FALSE
+1,ex1p1,28,non-face object,target present,16,FALSE,5526,FALSE
+1,ex1p1,28,face,target present,32,TRUE,1290,FALSE
+1,ex1p1,28,non-face object,target present,16,TRUE,3424,FALSE
+1,ex1p1,28,face,target present,32,TRUE,817,FALSE
+1,ex1p1,28,non-face object,target absent,16,TRUE,4086,FALSE
+1,ex1p1,29,non-face object,target absent,32,TRUE,7791,FALSE
+1,ex1p1,29,face,target absent,16,TRUE,2320,FALSE
+1,ex1p1,29,face,target present,32,TRUE,1557,FALSE
+1,ex1p1,29,face,target absent,32,TRUE,5012,FALSE
+1,ex1p1,29,face,target present,64,TRUE,2948,FALSE
+1,ex1p1,30,face,target present,32,TRUE,2073,FALSE
+1,ex1p1,30,face,target absent,64,TRUE,5674,FALSE
+1,ex1p1,30,non-face object,target absent,32,TRUE,6226,FALSE
+1,ex1p1,30,non-face object,target absent,32,TRUE,8237,FALSE
+1,ex1p1,30,non-face object,target absent,16,TRUE,2182,FALSE
+1,ex1p1,31,non-face object,target present,32,FALSE,9833,FALSE
+1,ex1p1,31,face,target absent,16,TRUE,5430,FALSE
+1,ex1p1,31,face,target absent,32,TRUE,7085,FALSE
+1,ex1p1,31,non-face object,target absent,64,TRUE,14696,FALSE
+1,ex1p1,31,non-face object,target absent,16,TRUE,2758,FALSE
+1,ex1p1,32,non-face object,target absent,16,TRUE,6967,FALSE
+1,ex1p1,32,non-face object,target absent,16,TRUE,3684,FALSE
+1,ex1p1,32,face,target absent,32,TRUE,5396,FALSE
+1,ex1p1,32,non-face object,target present,32,TRUE,7066,FALSE
+1,ex1p1,32,non-face object,target present,16,TRUE,1167,FALSE
+1,ex1p1,33,face,target present,16,TRUE,689,FALSE
+1,ex1p1,33,face,target absent,16,TRUE,3927,FALSE
+1,ex1p1,33,face,target present,16,FALSE,3756,FALSE
+1,ex1p1,33,face,target present,16,TRUE,779,FALSE
+1,ex1p1,33,non-face object,target present,16,TRUE,2238,FALSE
+1,ex1p1,34,face,target absent,32,TRUE,3753,FALSE
+1,ex1p1,34,non-face object,target present,16,FALSE,4508,FALSE
+1,ex1p1,34,non-face object,target present,16,TRUE,2993,FALSE
+1,ex1p1,34,face,target absent,64,TRUE,11053,FALSE
+1,ex1p1,34,non-face object,target absent,64,TRUE,3840,FALSE
+1,ex1p1,35,non-face object,target absent,16,TRUE,3423,FALSE
+1,ex1p1,35,face,target present,16,TRUE,3263,FALSE
+1,ex1p1,35,non-face object,target absent,32,TRUE,6855,FALSE
+1,ex1p1,35,non-face object,target absent,16,TRUE,4292,FALSE
+1,ex1p1,35,non-face object,target present,32,TRUE,1186,FALSE
+1,ex1p1,36,face,target absent,16,TRUE,4652,FALSE
+1,ex1p1,36,face,target absent,32,TRUE,5760,FALSE
+1,ex1p1,36,face,target absent,64,TRUE,9929,FALSE
+1,ex1p1,36,non-face object,target present,32,FALSE,6991,FALSE
+1,ex1p1,36,non-face object,target present,32,TRUE,1016,FALSE
+1,ex1p1,37,face,target absent,16,TRUE,4451,FALSE
+1,ex1p1,37,non-face object,target present,32,FALSE,8346,FALSE
+1,ex1p1,37,face,target present,16,TRUE,904,FALSE
+1,ex1p1,37,face,target present,64,TRUE,999,FALSE
+1,ex1p1,37,non-face object,target absent,64,TRUE,5808,FALSE
+1,ex1p1,38,non-face object,target present,16,FALSE,7545,FALSE
+1,ex1p1,38,non-face object,target present,32,TRUE,3424,FALSE
+1,ex1p1,38,non-face object,target absent,64,TRUE,9671,FALSE
+1,ex1p1,38,non-face object,target present,64,TRUE,4631,FALSE
+1,ex1p1,38,non-face object,target absent,32,TRUE,2337,FALSE
+1,ex1p1,39,non-face object,target absent,64,FALSE,3439,FALSE
+1,ex1p1,39,non-face object,target absent,64,TRUE,8274,FALSE
+1,ex1p1,39,non-face object,target present,64,TRUE,10485,FALSE
+1,ex1p1,39,face,target absent,16,TRUE,5300,FALSE
+1,ex1p1,39,face,target absent,16,TRUE,2616,FALSE
+1,ex1p1,40,non-face object,target present,64,TRUE,7875,FALSE
+1,ex1p1,40,non-face object,target present,64,FALSE,6834,FALSE
+1,ex1p1,40,non-face object,target absent,16,TRUE,4763,FALSE
+1,ex1p1,40,face,target absent,16,TRUE,4952,FALSE
+1,ex1p1,40,face,target present,64,TRUE,815,FALSE
+1,ex1p1,41,face,target absent,32,TRUE,4061,FALSE
+1,ex1p1,41,non-face object,target absent,16,TRUE,4252,FALSE
+1,ex1p1,41,face,target absent,32,TRUE,4666,FALSE
+1,ex1p1,41,non-face object,target present,32,TRUE,2774,FALSE
+1,ex1p1,41,non-face object,target present,32,TRUE,1309,FALSE
+1,ex1p1,42,face,target present,32,TRUE,1073,FALSE
+1,ex1p1,42,non-face object,target absent,16,TRUE,3272,FALSE
+1,ex1p1,42,face,target absent,16,TRUE,4870,FALSE
+1,ex1p1,42,face,target present,32,TRUE,1072,FALSE
+1,ex1p1,42,non-face object,target absent,16,TRUE,3166,FALSE
+1,ex1p1,43,face,target present,32,FALSE,7023,FALSE
+1,ex1p1,43,face,target present,64,TRUE,1287,FALSE
+1,ex1p1,43,non-face object,target absent,32,FALSE,5211,FALSE
+1,ex1p1,43,non-face object,target present,64,FALSE,4885,FALSE
+1,ex1p1,43,face,target absent,64,TRUE,2537,FALSE
+1,ex1p1,44,face,target absent,32,TRUE,8412,FALSE
+1,ex1p1,44,non-face object,target present,16,FALSE,2102,FALSE
+1,ex1p1,44,non-face object,target present,16,TRUE,2019,FALSE
+1,ex1p1,44,non-face object,target absent,64,TRUE,13245,FALSE
+1,ex1p1,44,non-face object,target present,16,TRUE,1704,FALSE
+1,ex1p1,45,face,target absent,16,TRUE,5353,FALSE
+1,ex1p1,45,face,target present,32,TRUE,3824,FALSE
+1,ex1p1,45,non-face object,target absent,16,TRUE,1749,FALSE
+1,ex1p1,45,face,target absent,64,TRUE,5433,FALSE
+1,ex1p1,45,face,target absent,32,TRUE,2563,FALSE
+1,ex1p1,46,non-face object,target present,64,FALSE,13922,FALSE
+1,ex1p1,46,face,target present,64,TRUE,2773,FALSE
+1,ex1p1,46,face,target absent,16,TRUE,2155,FALSE
+1,ex1p1,46,non-face object,target present,32,TRUE,6392,FALSE
+1,ex1p1,46,face,target absent,64,TRUE,2479,FALSE
+1,ex1p1,47,face,target absent,16,TRUE,5714,FALSE
+1,ex1p1,47,face,target absent,32,TRUE,4243,FALSE
+1,ex1p1,47,face,target absent,64,TRUE,7109,FALSE
+1,ex1p1,47,non-face object,target present,16,TRUE,2395,FALSE
+1,ex1p1,47,non-face object,target absent,16,TRUE,2815,FALSE
+1,ex1p1,48,face,target present,64,TRUE,1282,FALSE
+1,ex1p1,48,face,target absent,64,TRUE,6041,FALSE
+1,ex1p1,48,face,target present,32,TRUE,2345,FALSE
+1,ex1p1,48,non-face object,target present,32,TRUE,1562,FALSE
+1,ex1p1,48,non-face object,target present,32,TRUE,4344,FALSE
+1,ex1p1,49,face,target absent,16,TRUE,3784,FALSE
+1,ex1p1,49,non-face object,target present,32,TRUE,3325,FALSE
+1,ex1p1,49,face,target present,16,TRUE,616,FALSE
+1,ex1p1,49,face,target absent,64,TRUE,7649,FALSE
+1,ex1p1,49,face,target absent,16,TRUE,2373,FALSE
+1,ex1p1,50,face,target present,64,TRUE,1139,FALSE
+1,ex1p1,50,non-face object,target absent,32,TRUE,7687,FALSE
+1,ex1p1,50,face,target absent,64,TRUE,3116,FALSE
+1,ex1p1,50,non-face object,target absent,64,FALSE,12635,FALSE
+1,ex1p1,50,face,target absent,16,TRUE,1834,FALSE
+1,ex1p1,51,non-face object,target absent,16,TRUE,7536,FALSE
+1,ex1p1,51,non-face object,target present,64,TRUE,1147,FALSE
+1,ex1p1,51,face,target absent,32,FALSE,3877,FALSE
+1,ex1p1,51,non-face object,target absent,64,TRUE,2639,FALSE
+1,ex1p1,51,face,target present,64,TRUE,2766,FALSE
+1,ex1p1,52,non-face object,target absent,16,TRUE,3848,FALSE
+1,ex1p1,52,face,target absent,16,TRUE,5596,FALSE
+1,ex1p1,52,non-face object,target present,64,TRUE,6368,FALSE
+1,ex1p1,52,face,target absent,16,TRUE,2260,FALSE
+1,ex1p1,52,face,target absent,16,TRUE,2903,FALSE
+1,ex1p111,1,face,target present,16,TRUE,2254,FALSE
+1,ex1p111,2,non-face object,target present,64,FALSE,0,TRUE
+1,ex1p111,3,non-face object,target absent,32,TRUE,6353,FALSE
+1,ex1p111,4,face,target present,32,TRUE,1001,FALSE
+1,ex1p111,5,face,target present,64,TRUE,2213,FALSE
+1,ex1p111,6,face,target absent,16,TRUE,2417,FALSE
+1,ex1p111,7,non-face object,target present,16,TRUE,2472,FALSE
+1,ex1p111,8,non-face object,target absent,32,TRUE,7621,FALSE
+1,ex1p111,9,non-face object,target absent,32,TRUE,5842,FALSE
+1,ex1p111,10,non-face object,target present,64,FALSE,4596,FALSE
+1,ex1p111,11,non-face object,target absent,16,TRUE,2885,FALSE
+1,ex1p111,12,non-face object,target present,32,TRUE,1619,FALSE
+1,ex1p111,13,non-face object,target absent,16,FALSE,5697,FALSE
+1,ex1p111,14,non-face object,target present,16,TRUE,2133,FALSE
+1,ex1p111,15,non-face object,target present,16,TRUE,1098,FALSE
+1,ex1p111,16,non-face object,target absent,16,TRUE,5528,FALSE
+1,ex1p111,17,non-face object,target absent,64,TRUE,10496,FALSE
+1,ex1p111,18,face,target absent,32,TRUE,5638,FALSE
+1,ex1p111,19,non-face object,target present,16,TRUE,2359,FALSE
+1,ex1p111,20,non-face object,target present,64,TRUE,2600,FALSE
+1,ex1p111,21,non-face object,target present,64,TRUE,6478,FALSE
+1,ex1p111,22,non-face object,target absent,32,TRUE,6326,FALSE
+1,ex1p111,23,non-face object,target absent,16,TRUE,5277,FALSE
+1,ex1p111,24,non-face object,target absent,16,TRUE,5572,FALSE
+1,ex1p111,25,non-face object,target present,32,FALSE,8995,FALSE
+1,ex1p111,26,non-face object,target present,32,TRUE,1044,FALSE
+1,ex1p111,27,non-face object,target present,64,TRUE,8128,FALSE
+1,ex1p111,28,face,target present,64,TRUE,4612,FALSE
+1,ex1p111,29,non-face object,target present,32,TRUE,4708,FALSE
+1,ex1p111,30,face,target present,16,TRUE,1357,FALSE
+1,ex1p111,31,non-face object,target absent,32,TRUE,8961,FALSE
+1,ex1p111,32,face,target absent,32,TRUE,5710,FALSE
+1,ex1p111,33,non-face object,target absent,64,TRUE,10924,FALSE
+1,ex1p111,34,face,target absent,32,TRUE,6201,FALSE
+1,ex1p111,35,non-face object,target present,64,FALSE,10600,FALSE
+1,ex1p111,36,non-face object,target present,64,TRUE,3492,FALSE
+1,ex1p111,37,face,target present,64,TRUE,1535,FALSE
+1,ex1p111,38,non-face object,target absent,64,TRUE,7519,FALSE
+1,ex1p111,39,face,target present,32,TRUE,3299,FALSE
+1,ex1p111,40,face,target present,32,TRUE,2356,FALSE
+1,ex1p111,41,non-face object,target present,32,TRUE,9917,FALSE
+1,ex1p111,42,face,target present,16,TRUE,2058,FALSE
+1,ex1p111,43,face,target present,64,TRUE,1134,FALSE
+1,ex1p111,44,non-face object,target present,16,FALSE,5441,FALSE
+1,ex1p111,45,non-face object,target present,32,TRUE,4770,FALSE
+1,ex1p111,46,non-face object,target present,32,TRUE,3851,FALSE
+1,ex1p111,47,non-face object,target absent,16,TRUE,3987,FALSE
+1,ex1p111,48,face,target absent,64,TRUE,10581,FALSE
+1,ex1p111,49,face,target absent,16,TRUE,2770,FALSE
+1,ex1p111,50,face,target present,64,TRUE,9456,FALSE
+1,ex1p111,51,non-face object,target absent,64,TRUE,9281,FALSE
+1,ex1p111,52,face,target present,64,TRUE,2057,FALSE
+1,ex1p114514,1,non-face object,target present,64,FALSE,8713,FALSE
+1,ex1p114514,2,non-face object,target absent,64,TRUE,11817,FALSE
+1,ex1p114514,3,non-face object,target absent,32,TRUE,12697,FALSE
+1,ex1p114514,4,face,target absent,64,TRUE,14664,FALSE
+1,ex1p114514,5,face,target absent,64,FALSE,0,TRUE
+1,ex1p114514,6,face,target absent,16,TRUE,4288,FALSE
+1,ex1p114514,7,non-face object,target present,64,FALSE,10186,FALSE
+1,ex1p114514,8,non-face object,target present,16,TRUE,1020,FALSE
+1,ex1p114514,9,non-face object,target absent,16,TRUE,1957,FALSE
+1,ex1p114514,10,non-face object,target absent,32,TRUE,7092,FALSE
+1,ex1p114514,11,non-face object,target absent,16,TRUE,6520,FALSE
+1,ex1p114514,12,non-face object,target absent,32,TRUE,8711,FALSE
+1,ex1p114514,13,face,target absent,16,TRUE,4811,FALSE
+1,ex1p114514,14,face,target absent,64,TRUE,14167,FALSE
+1,ex1p114514,15,face,target present,16,TRUE,1183,FALSE
+1,ex1p114514,16,face,target absent,32,TRUE,2330,FALSE
+1,ex1p114514,17,non-face object,target present,32,TRUE,3042,FALSE
+1,ex1p114514,18,face,target absent,64,TRUE,5407,FALSE
+1,ex1p114514,19,face,target present,64,TRUE,2793,FALSE
+1,ex1p114514,20,non-face object,target present,32,TRUE,960,FALSE
+1,ex1p114514,21,face,target present,64,TRUE,1176,FALSE
+1,ex1p114514,22,face,target present,16,TRUE,2845,FALSE
+1,ex1p114514,23,face,target absent,16,TRUE,5003,FALSE
+1,ex1p114514,24,non-face object,target absent,32,TRUE,2904,FALSE
+1,ex1p114514,25,face,target present,16,TRUE,1572,FALSE
+1,ex1p114514,26,non-face object,target present,32,TRUE,5097,FALSE
+1,ex1p114514,27,non-face object,target absent,32,TRUE,8700,FALSE
+1,ex1p114514,28,non-face object,target present,32,TRUE,9583,FALSE
+1,ex1p114514,29,face,target absent,32,TRUE,12439,FALSE
+1,ex1p114514,30,non-face object,target present,16,TRUE,908,FALSE
+1,ex1p114514,31,face,target present,64,TRUE,995,FALSE
+1,ex1p114514,32,non-face object,target absent,16,TRUE,4274,FALSE
+1,ex1p114514,33,non-face object,target absent,64,TRUE,8447,FALSE
+1,ex1p114514,34,face,target present,32,TRUE,752,FALSE
+1,ex1p114514,35,non-face object,target present,32,TRUE,993,FALSE
+1,ex1p114514,36,face,target absent,16,TRUE,2352,FALSE
+1,ex1p114514,37,face,target present,16,TRUE,1290,FALSE
+1,ex1p114514,38,non-face object,target absent,16,TRUE,3511,FALSE
+1,ex1p114514,39,non-face object,target present,64,FALSE,6270,FALSE
+1,ex1p114514,40,face,target absent,16,TRUE,3299,FALSE
+1,ex1p114514,41,face,target present,64,TRUE,882,FALSE
+1,ex1p114514,42,face,target absent,32,TRUE,2830,FALSE
+1,ex1p114514,43,face,target absent,32,TRUE,3976,FALSE
+1,ex1p114514,44,face,target absent,32,TRUE,6806,FALSE
+1,ex1p114514,45,face,target present,32,TRUE,1237,FALSE
+1,ex1p114514,46,face,target present,16,TRUE,883,FALSE
+1,ex1p114514,47,face,target present,16,TRUE,1333,FALSE
+1,ex1p114514,48,non-face object,target present,32,FALSE,5556,FALSE
+1,ex1p114514,49,face,target present,16,TRUE,1812,FALSE
+1,ex1p114514,50,non-face object,target present,16,TRUE,1435,FALSE
+1,ex1p114514,51,face,target absent,64,TRUE,4442,FALSE
+1,ex1p114514,52,non-face object,target present,64,TRUE,4345,FALSE
+1,ex1p123,1,face,target present,64,FALSE,4880,FALSE
+1,ex1p123,1,face,target present,64,TRUE,7632,FALSE
+1,ex1p123,2,face,target absent,32,FALSE,6559,FALSE
+1,ex1p123,2,non-face object,target absent,32,TRUE,7097,FALSE
+1,ex1p123,3,face,target absent,32,FALSE,8863,FALSE
+1,ex1p123,3,face,target absent,32,TRUE,2484,FALSE
+1,ex1p123,4,non-face object,target present,32,FALSE,1752,FALSE
+1,ex1p123,4,non-face object,target absent,64,TRUE,6296,FALSE
+1,ex1p123,5,non-face object,target absent,32,FALSE,5812,FALSE
+1,ex1p123,5,non-face object,target absent,32,TRUE,4653,FALSE
+1,ex1p123,6,face,target absent,64,FALSE,6893,FALSE
+1,ex1p123,6,non-face object,target absent,16,TRUE,3601,FALSE
+1,ex1p123,7,non-face object,target present,16,FALSE,1111,FALSE
+1,ex1p123,7,face,target absent,16,TRUE,1630,FALSE
+1,ex1p123,8,face,target present,16,FALSE,2165,FALSE
+1,ex1p123,8,non-face object,target present,32,TRUE,2561,FALSE
+1,ex1p123,9,non-face object,target present,16,TRUE,810,FALSE
+1,ex1p123,9,non-face object,target present,16,TRUE,1110,FALSE
+1,ex1p123,10,non-face object,target absent,16,FALSE,3990,FALSE
+1,ex1p123,10,face,target absent,16,TRUE,2970,FALSE
+1,ex1p123,11,face,target present,64,FALSE,1807,FALSE
+1,ex1p123,11,face,target present,16,TRUE,1445,FALSE
+1,ex1p123,12,non-face object,target present,32,TRUE,5487,FALSE
+1,ex1p123,12,non-face object,target absent,32,TRUE,5458,FALSE
+1,ex1p123,13,non-face object,target absent,64,FALSE,4749,FALSE
+1,ex1p123,13,non-face object,target present,16,TRUE,1821,FALSE
+1,ex1p123,14,non-face object,target absent,16,FALSE,2029,FALSE
+1,ex1p123,14,non-face object,target present,32,FALSE,8254,FALSE
+1,ex1p123,15,face,target present,32,FALSE,998,FALSE
+1,ex1p123,15,face,target absent,32,TRUE,3165,FALSE
+1,ex1p123,16,face,target present,32,FALSE,786,FALSE
+1,ex1p123,16,face,target present,32,TRUE,1924,FALSE
+1,ex1p123,17,face,target absent,16,FALSE,1693,FALSE
+1,ex1p123,17,face,target absent,16,TRUE,1960,FALSE
+1,ex1p123,18,non-face object,target absent,32,FALSE,2786,FALSE
+1,ex1p123,18,non-face object,target present,16,FALSE,3252,FALSE
+1,ex1p123,19,non-face object,target present,64,FALSE,2682,FALSE
+1,ex1p123,19,face,target absent,32,TRUE,4427,FALSE
+1,ex1p123,20,non-face object,target present,32,TRUE,6748,FALSE
+1,ex1p123,20,non-face object,target present,32,TRUE,4680,FALSE
+1,ex1p123,21,non-face object,target present,32,TRUE,5101,FALSE
+1,ex1p123,21,non-face object,target absent,32,FALSE,8759,FALSE
+1,ex1p123,22,non-face object,target absent,32,FALSE,7961,FALSE
+1,ex1p123,22,face,target present,16,TRUE,1753,FALSE
+1,ex1p123,23,non-face object,target present,64,FALSE,1931,FALSE
+1,ex1p123,23,non-face object,target present,16,TRUE,1904,FALSE
+1,ex1p123,24,face,target present,32,FALSE,936,FALSE
+1,ex1p123,24,face,target absent,64,TRUE,6343,FALSE
+1,ex1p123,25,face,target present,16,FALSE,1108,FALSE
+1,ex1p123,25,face,target absent,16,TRUE,2947,FALSE
+1,ex1p123,26,face,target present,16,FALSE,998,FALSE
+1,ex1p123,26,non-face object,target present,64,FALSE,4488,FALSE
+1,ex1p123,27,face,target present,16,FALSE,1051,FALSE
+1,ex1p123,27,non-face object,target absent,16,TRUE,2745,FALSE
+1,ex1p123,28,face,target absent,16,FALSE,1556,FALSE
+1,ex1p123,28,non-face object,target present,32,TRUE,2313,FALSE
+1,ex1p123,29,non-face object,target absent,32,FALSE,4767,FALSE
+1,ex1p123,29,non-face object,target present,16,TRUE,1816,FALSE
+1,ex1p123,30,non-face object,target absent,64,FALSE,4976,FALSE
+1,ex1p123,30,non-face object,target absent,32,FALSE,3613,FALSE
+1,ex1p123,31,face,target absent,64,FALSE,3687,FALSE
+1,ex1p123,31,face,target absent,32,TRUE,3190,FALSE
+1,ex1p123,32,non-face object,target absent,64,FALSE,5898,FALSE
+1,ex1p123,32,face,target present,32,TRUE,2356,FALSE
+1,ex1p123,33,face,target absent,64,FALSE,5695,FALSE
+1,ex1p123,33,non-face object,target absent,32,TRUE,5095,FALSE
+1,ex1p123,34,non-face object,target present,16,TRUE,3641,FALSE
+1,ex1p123,34,non-face object,target absent,16,TRUE,2305,FALSE
+1,ex1p123,35,face,target present,64,FALSE,3750,FALSE
+1,ex1p123,35,non-face object,target absent,32,TRUE,4569,FALSE
+1,ex1p123,36,face,target present,64,TRUE,5932,FALSE
+1,ex1p123,36,face,target absent,16,TRUE,3543,FALSE
+1,ex1p123,37,non-face object,target present,16,FALSE,3106,FALSE
+1,ex1p123,37,non-face object,target present,64,TRUE,4844,FALSE
+1,ex1p123,38,non-face object,target absent,64,FALSE,7337,FALSE
+1,ex1p123,38,non-face object,target absent,32,TRUE,4745,FALSE
+1,ex1p123,39,face,target present,16,FALSE,1290,FALSE
+1,ex1p123,39,face,target absent,32,TRUE,3943,FALSE
+1,ex1p123,40,non-face object,target present,32,FALSE,4234,FALSE
+1,ex1p123,40,face,target absent,32,TRUE,3327,FALSE
+1,ex1p123,41,non-face object,target present,64,FALSE,2599,FALSE
+1,ex1p123,41,face,target present,64,TRUE,3822,FALSE
+1,ex1p123,42,face,target present,16,FALSE,1824,FALSE
+1,ex1p123,42,non-face object,target absent,64,TRUE,5830,FALSE
+1,ex1p123,43,face,target present,16,FALSE,670,FALSE
+1,ex1p123,43,face,target absent,32,TRUE,5022,FALSE
+1,ex1p123,44,face,target absent,32,FALSE,3131,FALSE
+1,ex1p123,44,face,target absent,32,TRUE,3304,FALSE
+1,ex1p123,45,face,target present,64,TRUE,1557,FALSE
+1,ex1p123,45,face,target absent,32,TRUE,2988,FALSE
+1,ex1p123,46,face,target absent,64,TRUE,4553,FALSE
+1,ex1p123,46,non-face object,target absent,32,TRUE,6845,FALSE
+1,ex1p123,47,face,target present,32,FALSE,1872,FALSE
+1,ex1p123,47,face,target present,64,TRUE,810,FALSE
+1,ex1p123,48,non-face object,target absent,16,FALSE,3470,FALSE
+1,ex1p123,48,face,target absent,16,TRUE,2876,FALSE
+1,ex1p123,49,non-face object,target absent,64,TRUE,1470,FALSE
+1,ex1p123,49,face,target absent,32,TRUE,1342,FALSE
+1,ex1p123,50,non-face object,target absent,16,FALSE,4916,FALSE
+1,ex1p123,50,face,target absent,32,TRUE,2968,FALSE
+1,ex1p123,51,face,target present,16,FALSE,1463,FALSE
+1,ex1p123,51,face,target present,64,TRUE,5609,FALSE
+1,ex1p123,52,face,target present,64,FALSE,3862,FALSE
+1,ex1p123,52,non-face object,target present,64,FALSE,4621,FALSE
+1,ex1p67,1,non-face object,target absent,16,TRUE,4756,FALSE
+1,ex1p67,2,face,target present,16,TRUE,1053,FALSE
+1,ex1p67,3,non-face object,target present,64,TRUE,5005,FALSE
+1,ex1p67,4,face,target absent,16,TRUE,7078,FALSE
+1,ex1p67,5,non-face object,target present,16,TRUE,1796,FALSE
+1,ex1p67,6,non-face object,target absent,16,TRUE,6897,FALSE
+1,ex1p67,7,face,target present,64,TRUE,2590,FALSE
+1,ex1p67,8,non-face object,target absent,16,TRUE,5635,FALSE
+1,ex1p67,9,non-face object,target present,32,TRUE,2343,FALSE
+1,ex1p67,10,face,target present,16,TRUE,3905,FALSE
+1,ex1p67,11,face,target present,32,FALSE,1143,FALSE
+1,ex1p67,12,face,target present,64,TRUE,1469,FALSE
+1,ex1p67,13,non-face object,target present,16,TRUE,1400,FALSE
+1,ex1p67,14,face,target present,32,TRUE,750,FALSE
+1,ex1p67,15,non-face object,target present,32,TRUE,1783,FALSE
+1,ex1p67,16,face,target present,16,TRUE,2159,FALSE
+1,ex1p67,17,face,target absent,16,TRUE,6283,FALSE
+1,ex1p67,18,non-face object,target absent,64,TRUE,12439,FALSE
+1,ex1p67,19,non-face object,target present,32,TRUE,3705,FALSE
+1,ex1p67,20,face,target absent,32,TRUE,7590,FALSE
+1,ex1p67,21,non-face object,target present,32,TRUE,1554,FALSE
+1,ex1p67,22,non-face object,target absent,32,TRUE,7489,FALSE
+1,ex1p67,23,non-face object,target absent,64,TRUE,8866,FALSE
+1,ex1p67,24,face,target present,32,TRUE,1188,FALSE
+1,ex1p67,25,face,target absent,32,TRUE,10326,FALSE
+1,ex1p67,26,non-face object,target absent,64,TRUE,13251,FALSE
+1,ex1p67,27,non-face object,target present,64,TRUE,1266,FALSE
+1,ex1p67,28,non-face object,target present,64,TRUE,3782,FALSE
+1,ex1p67,29,face,target absent,16,TRUE,5004,FALSE
+1,ex1p67,30,non-face object,target absent,32,TRUE,5702,FALSE
+1,ex1p67,31,non-face object,target present,32,TRUE,1984,FALSE
+1,ex1p67,32,face,target present,32,TRUE,3296,FALSE
+1,ex1p67,33,face,target absent,64,TRUE,8683,FALSE
+1,ex1p67,34,non-face object,target present,16,TRUE,1119,FALSE
+1,ex1p67,35,face,target absent,16,TRUE,6861,FALSE
+1,ex1p67,36,face,target present,64,TRUE,2687,FALSE
+1,ex1p67,37,non-face object,target present,64,TRUE,3306,FALSE
+1,ex1p67,38,face,target present,32,TRUE,1764,FALSE
+1,ex1p67,39,non-face object,target present,64,TRUE,1068,FALSE
+1,ex1p67,40,face,target absent,64,TRUE,8607,FALSE
+1,ex1p67,41,face,target present,64,TRUE,1483,FALSE
+1,ex1p67,42,non-face object,target present,16,FALSE,4637,FALSE
+1,ex1p67,43,non-face object,target absent,64,TRUE,3509,FALSE
+1,ex1p67,44,face,target present,64,TRUE,5203,FALSE
+1,ex1p67,45,face,target present,32,TRUE,4541,FALSE
+1,ex1p67,46,face,target absent,32,TRUE,6101,FALSE
+1,ex1p67,47,face,target absent,32,TRUE,6384,FALSE
+1,ex1p67,48,face,target absent,32,TRUE,8374,FALSE
+1,ex1p67,49,non-face object,target absent,32,TRUE,5126,FALSE
+1,ex1p67,50,non-face object,target absent,64,TRUE,7670,FALSE
+1,ex1p67,51,non-face object,target absent,32,TRUE,9547,FALSE
+1,ex1p67,52,face,target present,16,TRUE,814,FALSE
+1,ex1p88080,1,non-face object,target absent,16,TRUE,3703,FALSE
+1,ex1p88080,2,non-face object,target absent,32,TRUE,2377,FALSE
+1,ex1p88080,3,non-face object,target absent,64,FALSE,5717,FALSE
+1,ex1p88080,4,non-face object,target absent,32,TRUE,1766,FALSE
+1,ex1p88080,5,non-face object,target absent,16,TRUE,3881,FALSE
+1,ex1p88080,6,non-face object,target absent,32,TRUE,3461,FALSE
+1,ex1p88080,7,non-face object,target absent,64,TRUE,5261,FALSE
+1,ex1p88080,8,face,target present,16,TRUE,564,FALSE
+1,ex1p88080,9,face,target present,32,TRUE,889,FALSE
+1,ex1p88080,10,non-face object,target present,32,TRUE,1030,FALSE
+1,ex1p88080,11,face,target absent,16,TRUE,3365,FALSE
+1,ex1p88080,12,face,target absent,64,TRUE,3388,FALSE
+1,ex1p88080,13,non-face object,target absent,64,TRUE,7309,FALSE
+1,ex1p88080,14,face,target absent,64,TRUE,10570,FALSE
+1,ex1p88080,15,face,target present,64,TRUE,1060,FALSE
+1,ex1p88080,16,non-face object,target present,32,TRUE,1404,FALSE
+1,ex1p88080,17,face,target absent,16,TRUE,4047,FALSE
+1,ex1p88080,18,face,target absent,32,TRUE,6852,FALSE
+1,ex1p88080,19,non-face object,target present,32,TRUE,2285,FALSE
+1,ex1p88080,20,face,target present,32,TRUE,1220,FALSE
+1,ex1p88080,21,face,target present,32,TRUE,996,FALSE
+1,ex1p88080,22,face,target absent,64,TRUE,6712,FALSE
+1,ex1p88080,23,non-face object,target absent,16,TRUE,2749,FALSE
+1,ex1p88080,24,non-face object,target present,64,TRUE,1366,FALSE
+1,ex1p88080,25,face,target absent,32,TRUE,4168,FALSE
+1,ex1p88080,26,face,target present,32,TRUE,703,FALSE
+1,ex1p88080,27,face,target absent,16,TRUE,1537,FALSE
+1,ex1p88080,28,non-face object,target absent,32,TRUE,6111,FALSE
+1,ex1p88080,29,non-face object,target absent,32,TRUE,5916,FALSE
+1,ex1p88080,30,face,target absent,16,TRUE,3543,FALSE
+1,ex1p88080,31,face,target present,16,TRUE,779,FALSE
+1,ex1p88080,32,non-face object,target absent,16,TRUE,2355,FALSE
+1,ex1p88080,33,face,target absent,16,TRUE,1939,FALSE
+1,ex1p88080,34,face,target present,16,TRUE,568,FALSE
+1,ex1p88080,35,non-face object,target present,64,TRUE,2061,FALSE
+1,ex1p88080,36,face,target absent,64,FALSE,4580,FALSE
+1,ex1p88080,37,face,target present,16,TRUE,816,FALSE
+1,ex1p88080,38,non-face object,target present,16,TRUE,2278,FALSE
+1,ex1p88080,39,non-face object,target absent,16,TRUE,4126,FALSE
+1,ex1p88080,40,face,target absent,32,TRUE,3352,FALSE
+1,ex1p88080,41,non-face object,target absent,64,TRUE,5385,FALSE
+1,ex1p88080,42,face,target present,16,TRUE,571,FALSE
+1,ex1p88080,43,face,target present,32,TRUE,762,FALSE
+1,ex1p88080,44,non-face object,target present,32,TRUE,606,FALSE
+1,ex1p88080,45,non-face object,target present,16,TRUE,631,FALSE
+1,ex1p88080,46,non-face object,target present,64,FALSE,11043,FALSE
+1,ex1p88080,47,non-face object,target present,32,TRUE,1266,FALSE
+1,ex1p88080,48,face,target absent,64,TRUE,7252,FALSE
+1,ex1p88080,49,non-face object,target present,16,TRUE,815,FALSE
+1,ex1p88080,50,non-face object,target absent,32,TRUE,3597,FALSE
+1,ex1p88080,51,non-face object,target absent,16,TRUE,777,FALSE
+1,ex1p88080,52,face,target absent,16,TRUE,4775,FALSE
+1,ex1pImyxmh,1,face,target absent,32,TRUE,9153,FALSE
+1,ex1pImyxmh,2,face,target present,16,TRUE,1137,FALSE
+1,ex1pImyxmh,3,face,target absent,64,TRUE,9631,FALSE
+1,ex1pImyxmh,4,face,target present,64,TRUE,1701,FALSE
+1,ex1pImyxmh,5,face,target present,32,TRUE,1273,FALSE
+1,ex1pImyxmh,6,face,target absent,16,TRUE,3872,FALSE
+1,ex1pImyxmh,7,non-face object,target present,64,TRUE,6692,FALSE
+1,ex1pImyxmh,8,face,target absent,32,TRUE,5597,FALSE
+1,ex1pImyxmh,9,non-face object,target present,32,TRUE,1612,FALSE
+1,ex1pImyxmh,10,non-face object,target present,64,TRUE,2385,FALSE
+1,ex1pImyxmh,11,face,target absent,32,TRUE,5545,FALSE
+1,ex1pImyxmh,12,non-face object,target present,32,TRUE,5436,FALSE
+1,ex1pImyxmh,13,face,target absent,64,TRUE,5539,FALSE
+1,ex1pImyxmh,14,non-face object,target present,64,TRUE,1157,FALSE
+1,ex1pImyxmh,15,non-face object,target present,16,FALSE,4572,FALSE
+1,ex1pImyxmh,16,non-face object,target absent,64,TRUE,12094,FALSE
+1,ex1pImyxmh,17,face,target present,64,TRUE,2141,FALSE
+1,ex1pImyxmh,18,non-face object,target absent,16,TRUE,5619,FALSE
+1,ex1pImyxmh,19,face,target present,16,FALSE,3787,FALSE
+1,ex1pImyxmh,20,non-face object,target present,32,TRUE,3828,FALSE
+1,ex1pImyxmh,21,face,target present,64,TRUE,1800,FALSE
+1,ex1pImyxmh,22,face,target present,16,TRUE,2136,FALSE
+1,ex1pImyxmh,23,non-face object,target absent,32,TRUE,3790,FALSE
+1,ex1pImyxmh,24,face,target present,32,TRUE,1066,FALSE
+1,ex1pImyxmh,25,non-face object,target absent,16,TRUE,5111,FALSE
+1,ex1pImyxmh,26,non-face object,target present,16,TRUE,2001,FALSE
+1,ex1pImyxmh,27,non-face object,target absent,32,TRUE,5907,FALSE
+1,ex1pImyxmh,28,non-face object,target present,32,TRUE,1792,FALSE
+1,ex1pImyxmh,29,non-face object,target absent,64,TRUE,8458,FALSE
+1,ex1pImyxmh,30,face,target absent,16,TRUE,4388,FALSE
+1,ex1pImyxmh,31,non-face object,target absent,16,TRUE,6467,FALSE
+1,ex1pImyxmh,32,non-face object,target present,16,FALSE,6331,FALSE
+1,ex1pImyxmh,33,non-face object,target absent,32,TRUE,9389,FALSE
+1,ex1pImyxmh,34,non-face object,target present,32,FALSE,5771,FALSE
+1,ex1pImyxmh,35,face,target present,32,TRUE,1093,FALSE
+1,ex1pImyxmh,36,face,target absent,64,TRUE,4933,FALSE
+1,ex1pImyxmh,37,face,target absent,16,TRUE,6809,FALSE
+1,ex1pImyxmh,38,face,target absent,16,TRUE,3086,FALSE
+1,ex1pImyxmh,39,face,target absent,16,TRUE,3506,FALSE
+1,ex1pImyxmh,40,face,target present,16,TRUE,1214,FALSE
+1,ex1pImyxmh,41,non-face object,target present,32,TRUE,1569,FALSE
+1,ex1pImyxmh,42,non-face object,target absent,64,TRUE,13654,FALSE
+1,ex1pImyxmh,43,non-face object,target present,64,FALSE,6741,FALSE
+1,ex1pImyxmh,44,non-face object,target absent,64,TRUE,14070,FALSE
+1,ex1pImyxmh,45,non-face object,target absent,16,TRUE,8121,FALSE
+1,ex1pImyxmh,46,face,target present,32,TRUE,1058,FALSE
+1,ex1pImyxmh,47,face,target absent,16,TRUE,3670,FALSE
+1,ex1pImyxmh,48,non-face object,target present,16,TRUE,1620,FALSE
+1,ex1pImyxmh,49,face,target present,64,FALSE,6234,FALSE
+1,ex1pImyxmh,50,non-face object,target present,64,TRUE,2894,FALSE
+1,ex1pImyxmh,51,non-face object,target absent,64,TRUE,8322,FALSE
+1,ex1pImyxmh,52,non-face object,target present,64,TRUE,4491,FALSE
 2,1,1,face,target present,8,TRUE,1430,FALSE
 2,1,2,real face,target present,4,TRUE,625,FALSE
 2,1,3,non-face object,target present,8,FALSE,1656,FALSE
@@ -951,3 +951,1231 @@ experiment,participant,trialNumber,searchTarget,task,setSize,correctResponse,rt,
 2,nb,67,real face,target absent,8,TRUE,683,FALSE
 2,nb,68,face,target present,4,TRUE,491,FALSE
 2,nb,69,real face,target absent,8,TRUE,549,FALSE
+1,ex1p0000,1,non-face object,target absent,16,TRUE,4756,FALSE
+1,ex1p0000,2,face,target present,16,TRUE,1053,FALSE
+1,ex1p0000,3,non-face object,target present,64,TRUE,5005,FALSE
+1,ex1p0000,4,face,target absent,16,TRUE,7078,FALSE
+1,ex1p0000,5,non-face object,target present,16,TRUE,1796,FALSE
+1,ex1p0000,6,non-face object,target absent,16,TRUE,6897,FALSE
+1,ex1p0000,7,face,target present,64,TRUE,2590,FALSE
+1,ex1p0000,8,non-face object,target absent,16,TRUE,5635,FALSE
+1,ex1p0000,9,non-face object,target present,32,TRUE,2343,FALSE
+1,ex1p0000,10,face,target present,16,TRUE,3905,FALSE
+1,ex1p0000,11,face,target present,32,FALSE,1143,FALSE
+1,ex1p0000,12,face,target present,64,TRUE,1469,FALSE
+1,ex1p0000,13,non-face object,target present,16,TRUE,1400,FALSE
+1,ex1p0000,14,face,target present,32,TRUE,750,FALSE
+1,ex1p0000,15,non-face object,target present,32,TRUE,1783,FALSE
+1,ex1p0000,16,face,target present,16,TRUE,2159,FALSE
+1,ex1p0000,17,face,target absent,16,TRUE,6283,FALSE
+1,ex1p0000,18,non-face object,target absent,64,TRUE,12439,FALSE
+1,ex1p0000,19,non-face object,target present,32,TRUE,3705,FALSE
+1,ex1p0000,20,face,target absent,32,TRUE,7590,FALSE
+1,ex1p0000,21,non-face object,target present,32,TRUE,1554,FALSE
+1,ex1p0000,22,non-face object,target absent,32,TRUE,7489,FALSE
+1,ex1p0000,23,non-face object,target absent,64,TRUE,8866,FALSE
+1,ex1p0000,24,face,target present,32,TRUE,1188,FALSE
+1,ex1p0000,25,face,target absent,32,TRUE,10326,FALSE
+1,ex1p0000,26,non-face object,target absent,64,TRUE,13251,FALSE
+1,ex1p0000,27,non-face object,target present,64,TRUE,1266,FALSE
+1,ex1p0000,28,non-face object,target present,64,TRUE,3782,FALSE
+1,ex1p0000,29,face,target absent,16,TRUE,5004,FALSE
+1,ex1p0000,30,non-face object,target absent,32,TRUE,5702,FALSE
+1,ex1p0000,31,non-face object,target present,32,TRUE,1984,FALSE
+1,ex1p0000,32,face,target present,32,TRUE,3296,FALSE
+1,ex1p0000,33,face,target absent,64,TRUE,8683,FALSE
+1,ex1p0000,34,non-face object,target present,16,TRUE,1119,FALSE
+1,ex1p0000,35,face,target absent,16,TRUE,6861,FALSE
+1,ex1p0000,36,face,target present,64,TRUE,2687,FALSE
+1,ex1p0000,37,non-face object,target present,64,TRUE,3306,FALSE
+1,ex1p0000,38,face,target present,32,TRUE,1764,FALSE
+1,ex1p0000,39,non-face object,target present,64,TRUE,1068,FALSE
+1,ex1p0000,40,face,target absent,64,TRUE,8607,FALSE
+1,ex1p0000,41,face,target present,64,TRUE,1483,FALSE
+1,ex1p0000,42,non-face object,target present,16,FALSE,4637,FALSE
+1,ex1p0000,43,non-face object,target absent,64,TRUE,3509,FALSE
+1,ex1p0000,44,face,target present,64,TRUE,5203,FALSE
+1,ex1p0000,45,face,target present,32,TRUE,4541,FALSE
+1,ex1p0000,46,face,target absent,32,TRUE,6101,FALSE
+1,ex1p0000,47,face,target absent,32,TRUE,6384,FALSE
+1,ex1p0000,48,face,target absent,32,TRUE,8374,FALSE
+1,ex1p0000,49,non-face object,target absent,32,TRUE,5126,FALSE
+1,ex1p0000,50,non-face object,target absent,64,TRUE,7670,FALSE
+1,ex1p0000,51,non-face object,target absent,32,TRUE,9547,FALSE
+1,ex1p0000,52,face,target present,16,TRUE,814,FALSE
+1,ex1p0001,1,non-face object,target present,64,FALSE,8713,FALSE
+1,ex1p0001,2,non-face object,target absent,64,TRUE,11817,FALSE
+1,ex1p0001,3,non-face object,target absent,32,TRUE,12697,FALSE
+1,ex1p0001,4,face,target absent,64,TRUE,14664,FALSE
+1,ex1p0001,5,face,target absent,64,FALSE,0,TRUE
+1,ex1p0001,6,face,target absent,16,TRUE,4288,FALSE
+1,ex1p0001,7,non-face object,target present,64,FALSE,10186,FALSE
+1,ex1p0001,8,non-face object,target present,16,TRUE,1020,FALSE
+1,ex1p0001,9,non-face object,target absent,16,TRUE,1957,FALSE
+1,ex1p0001,10,non-face object,target absent,32,TRUE,7092,FALSE
+1,ex1p0001,11,non-face object,target absent,16,TRUE,6520,FALSE
+1,ex1p0001,12,non-face object,target absent,32,TRUE,8711,FALSE
+1,ex1p0001,13,face,target absent,16,TRUE,4811,FALSE
+1,ex1p0001,14,face,target absent,64,TRUE,14167,FALSE
+1,ex1p0001,15,face,target present,16,TRUE,1183,FALSE
+1,ex1p0001,16,face,target absent,32,TRUE,2330,FALSE
+1,ex1p0001,17,non-face object,target present,32,TRUE,3042,FALSE
+1,ex1p0001,18,face,target absent,64,TRUE,5407,FALSE
+1,ex1p0001,19,face,target present,64,TRUE,2793,FALSE
+1,ex1p0001,20,non-face object,target present,32,TRUE,960,FALSE
+1,ex1p0001,21,face,target present,64,TRUE,1176,FALSE
+1,ex1p0001,22,face,target present,16,TRUE,2845,FALSE
+1,ex1p0001,23,face,target absent,16,TRUE,5003,FALSE
+1,ex1p0001,24,non-face object,target absent,32,TRUE,2904,FALSE
+1,ex1p0001,25,face,target present,16,TRUE,1572,FALSE
+1,ex1p0001,26,non-face object,target present,32,TRUE,5097,FALSE
+1,ex1p0001,27,non-face object,target absent,32,TRUE,8700,FALSE
+1,ex1p0001,28,non-face object,target present,32,TRUE,9583,FALSE
+1,ex1p0001,29,face,target absent,32,TRUE,12439,FALSE
+1,ex1p0001,30,non-face object,target present,16,TRUE,908,FALSE
+1,ex1p0001,31,face,target present,64,TRUE,995,FALSE
+1,ex1p0001,32,non-face object,target absent,16,TRUE,4274,FALSE
+1,ex1p0001,33,non-face object,target absent,64,TRUE,8447,FALSE
+1,ex1p0001,34,face,target present,32,TRUE,752,FALSE
+1,ex1p0001,35,non-face object,target present,32,TRUE,993,FALSE
+1,ex1p0001,36,face,target absent,16,TRUE,2352,FALSE
+1,ex1p0001,37,face,target present,16,TRUE,1290,FALSE
+1,ex1p0001,38,non-face object,target absent,16,TRUE,3511,FALSE
+1,ex1p0001,39,non-face object,target present,64,FALSE,6270,FALSE
+1,ex1p0001,40,face,target absent,16,TRUE,3299,FALSE
+1,ex1p0001,41,face,target present,64,TRUE,882,FALSE
+1,ex1p0001,42,face,target absent,32,TRUE,2830,FALSE
+1,ex1p0001,43,face,target absent,32,TRUE,3976,FALSE
+1,ex1p0001,44,face,target absent,32,TRUE,6806,FALSE
+1,ex1p0001,45,face,target present,32,TRUE,1237,FALSE
+1,ex1p0001,46,face,target present,16,TRUE,883,FALSE
+1,ex1p0001,47,face,target present,16,TRUE,1333,FALSE
+1,ex1p0001,48,non-face object,target present,32,FALSE,5556,FALSE
+1,ex1p0001,49,face,target present,16,TRUE,1812,FALSE
+1,ex1p0001,50,non-face object,target present,16,TRUE,1435,FALSE
+1,ex1p0001,51,face,target absent,64,TRUE,4442,FALSE
+1,ex1p0001,52,non-face object,target present,64,TRUE,4345,FALSE
+1,ex1p0002,1,face,target present,16,TRUE,6545,FALSE
+1,ex1p0002,2,non-face object,target present,64,TRUE,3699,FALSE
+1,ex1p0002,3,non-face object,target absent,64,FALSE,0,TRUE
+1,ex1p0002,4,face,target absent,64,TRUE,6861,FALSE
+1,ex1p0002,5,face,target present,32,TRUE,1342,FALSE
+1,ex1p0002,6,face,target absent,64,FALSE,0,TRUE
+1,ex1p0002,7,non-face object,target present,32,FALSE,6265,FALSE
+1,ex1p0002,8,non-face object,target absent,16,TRUE,3059,FALSE
+1,ex1p0002,9,face,target present,32,TRUE,1328,FALSE
+1,ex1p0002,10,non-face object,target present,16,TRUE,4158,FALSE
+1,ex1p0002,11,non-face object,target absent,64,TRUE,10688,FALSE
+1,ex1p0002,12,non-face object,target absent,64,TRUE,8068,FALSE
+1,ex1p0002,13,non-face object,target present,32,FALSE,10099,FALSE
+1,ex1p0002,14,face,target absent,16,TRUE,4610,FALSE
+1,ex1p0002,15,face,target present,32,FALSE,11685,FALSE
+1,ex1p0002,16,face,target absent,32,FALSE,8056,FALSE
+1,ex1p0002,17,non-face object,target absent,16,TRUE,10108,FALSE
+1,ex1p0002,18,non-face object,target present,64,TRUE,1023,FALSE
+1,ex1p0002,19,face,target present,64,TRUE,3916,FALSE
+1,ex1p0002,20,face,target present,32,TRUE,1907,FALSE
+1,ex1p0002,21,non-face object,target absent,16,FALSE,2041,FALSE
+1,ex1p0002,22,non-face object,target absent,16,TRUE,4386,FALSE
+1,ex1p0002,23,non-face object,target present,16,TRUE,1981,FALSE
+1,ex1p0002,24,non-face object,target present,32,TRUE,1178,FALSE
+1,ex1p0002,25,non-face object,target present,16,TRUE,1407,FALSE
+1,ex1p0002,26,non-face object,target absent,32,TRUE,3826,FALSE
+1,ex1p0002,27,face,target present,32,TRUE,4198,FALSE
+1,ex1p0002,28,non-face object,target present,16,FALSE,5526,FALSE
+1,ex1p0002,29,non-face object,target absent,32,TRUE,7791,FALSE
+1,ex1p0002,30,face,target present,32,TRUE,2073,FALSE
+1,ex1p0002,31,non-face object,target present,32,FALSE,9833,FALSE
+1,ex1p0002,32,non-face object,target absent,16,TRUE,6967,FALSE
+1,ex1p0002,33,face,target present,16,TRUE,689,FALSE
+1,ex1p0002,34,face,target absent,32,TRUE,3753,FALSE
+1,ex1p0002,35,non-face object,target absent,16,TRUE,3423,FALSE
+1,ex1p0002,36,face,target absent,16,TRUE,4652,FALSE
+1,ex1p0002,37,face,target absent,16,TRUE,4451,FALSE
+1,ex1p0002,38,non-face object,target present,16,FALSE,7545,FALSE
+1,ex1p0002,39,non-face object,target absent,64,FALSE,3439,FALSE
+1,ex1p0002,40,non-face object,target present,64,TRUE,7875,FALSE
+1,ex1p0002,41,face,target absent,32,TRUE,4061,FALSE
+1,ex1p0002,42,face,target present,32,TRUE,1073,FALSE
+1,ex1p0002,43,face,target present,32,FALSE,7023,FALSE
+1,ex1p0002,44,face,target absent,32,TRUE,8412,FALSE
+1,ex1p0002,45,face,target absent,16,TRUE,5353,FALSE
+1,ex1p0002,46,non-face object,target present,64,FALSE,13922,FALSE
+1,ex1p0002,47,face,target absent,16,TRUE,5714,FALSE
+1,ex1p0002,48,face,target present,64,TRUE,1282,FALSE
+1,ex1p0002,49,face,target absent,16,TRUE,3784,FALSE
+1,ex1p0002,50,face,target present,64,TRUE,1139,FALSE
+1,ex1p0002,51,non-face object,target absent,16,TRUE,7536,FALSE
+1,ex1p0002,52,non-face object,target absent,16,TRUE,3848,FALSE
+1,ex1p0003,1,face,target present,16,TRUE,1845,FALSE
+1,ex1p0003,2,face,target present,16,TRUE,1945,FALSE
+1,ex1p0003,3,face,target absent,16,TRUE,1931,FALSE
+1,ex1p0003,4,non-face object,target present,64,TRUE,1992,FALSE
+1,ex1p0003,5,face,target absent,16,TRUE,1902,FALSE
+1,ex1p0003,6,non-face object,target present,64,FALSE,3930,FALSE
+1,ex1p0003,7,non-face object,target present,32,FALSE,7555,FALSE
+1,ex1p0003,8,non-face object,target present,32,TRUE,856,FALSE
+1,ex1p0003,9,face,target present,64,TRUE,1262,FALSE
+1,ex1p0003,10,non-face object,target present,32,TRUE,1279,FALSE
+1,ex1p0003,11,face,target present,64,TRUE,1564,FALSE
+1,ex1p0003,12,face,target present,64,TRUE,4700,FALSE
+1,ex1p0003,13,face,target present,64,TRUE,1075,FALSE
+1,ex1p0003,14,non-face object,target present,16,TRUE,2840,FALSE
+1,ex1p0003,15,face,target absent,64,TRUE,4862,FALSE
+1,ex1p0003,16,non-face object,target absent,32,TRUE,6165,FALSE
+1,ex1p0003,17,face,target absent,32,TRUE,4665,FALSE
+1,ex1p0003,18,non-face object,target absent,32,TRUE,2628,FALSE
+1,ex1p0003,19,face,target absent,32,TRUE,4642,FALSE
+1,ex1p0003,20,face,target present,32,TRUE,1527,FALSE
+1,ex1p0003,21,face,target present,16,TRUE,1959,FALSE
+1,ex1p0003,22,non-face object,target present,64,TRUE,1134,FALSE
+1,ex1p0003,23,face,target present,64,TRUE,704,FALSE
+1,ex1p0003,24,face,target present,16,TRUE,854,FALSE
+1,ex1p0003,25,non-face object,target present,64,TRUE,1122,FALSE
+1,ex1p0003,26,face,target absent,64,TRUE,6829,FALSE
+1,ex1p0003,27,non-face object,target absent,32,TRUE,5470,FALSE
+1,ex1p0003,28,face,target present,32,TRUE,1290,FALSE
+1,ex1p0003,29,face,target absent,16,TRUE,2320,FALSE
+1,ex1p0003,30,face,target absent,64,TRUE,5674,FALSE
+1,ex1p0003,31,face,target absent,16,TRUE,5430,FALSE
+1,ex1p0003,32,non-face object,target absent,16,TRUE,3684,FALSE
+1,ex1p0003,33,face,target absent,16,TRUE,3927,FALSE
+1,ex1p0003,34,non-face object,target present,16,FALSE,4508,FALSE
+1,ex1p0003,35,face,target present,16,TRUE,3263,FALSE
+1,ex1p0003,36,face,target absent,32,TRUE,5760,FALSE
+1,ex1p0003,37,non-face object,target present,32,FALSE,8346,FALSE
+1,ex1p0003,38,non-face object,target present,32,TRUE,3424,FALSE
+1,ex1p0003,39,non-face object,target absent,64,TRUE,8274,FALSE
+1,ex1p0003,40,non-face object,target present,64,FALSE,6834,FALSE
+1,ex1p0003,41,non-face object,target absent,16,TRUE,4252,FALSE
+1,ex1p0003,42,non-face object,target absent,16,TRUE,3272,FALSE
+1,ex1p0003,43,face,target present,64,TRUE,1287,FALSE
+1,ex1p0003,44,non-face object,target present,16,FALSE,2102,FALSE
+1,ex1p0003,45,face,target present,32,TRUE,3824,FALSE
+1,ex1p0003,46,face,target present,64,TRUE,2773,FALSE
+1,ex1p0003,47,face,target absent,32,TRUE,4243,FALSE
+1,ex1p0003,48,face,target absent,64,TRUE,6041,FALSE
+1,ex1p0003,49,non-face object,target present,32,TRUE,3325,FALSE
+1,ex1p0003,50,non-face object,target absent,32,TRUE,7687,FALSE
+1,ex1p0003,51,non-face object,target present,64,TRUE,1147,FALSE
+1,ex1p0003,52,face,target absent,16,TRUE,5596,FALSE
+1,ex1p0004,1,non-face object,target absent,16,TRUE,3703,FALSE
+1,ex1p0004,2,non-face object,target absent,32,TRUE,2377,FALSE
+1,ex1p0004,3,non-face object,target absent,64,FALSE,5717,FALSE
+1,ex1p0004,4,non-face object,target absent,32,TRUE,1766,FALSE
+1,ex1p0004,5,non-face object,target absent,16,TRUE,3881,FALSE
+1,ex1p0004,6,non-face object,target absent,32,TRUE,3461,FALSE
+1,ex1p0004,7,non-face object,target absent,64,TRUE,5261,FALSE
+1,ex1p0004,8,face,target present,16,TRUE,564,FALSE
+1,ex1p0004,9,face,target present,32,TRUE,889,FALSE
+1,ex1p0004,10,non-face object,target present,32,TRUE,1030,FALSE
+1,ex1p0004,11,face,target absent,16,TRUE,3365,FALSE
+1,ex1p0004,12,face,target absent,64,TRUE,3388,FALSE
+1,ex1p0004,13,non-face object,target absent,64,TRUE,7309,FALSE
+1,ex1p0004,14,face,target absent,64,TRUE,10570,FALSE
+1,ex1p0004,15,face,target present,64,TRUE,1060,FALSE
+1,ex1p0004,16,non-face object,target present,32,TRUE,1404,FALSE
+1,ex1p0004,17,face,target absent,16,TRUE,4047,FALSE
+1,ex1p0004,18,face,target absent,32,TRUE,6852,FALSE
+1,ex1p0004,19,non-face object,target present,32,TRUE,2285,FALSE
+1,ex1p0004,20,face,target present,32,TRUE,1220,FALSE
+1,ex1p0004,21,face,target present,32,TRUE,996,FALSE
+1,ex1p0004,22,face,target absent,64,TRUE,6712,FALSE
+1,ex1p0004,23,non-face object,target absent,16,TRUE,2749,FALSE
+1,ex1p0004,24,non-face object,target present,64,TRUE,1366,FALSE
+1,ex1p0004,25,face,target absent,32,TRUE,4168,FALSE
+1,ex1p0004,26,face,target present,32,TRUE,703,FALSE
+1,ex1p0004,27,face,target absent,16,TRUE,1537,FALSE
+1,ex1p0004,28,non-face object,target absent,32,TRUE,6111,FALSE
+1,ex1p0004,29,non-face object,target absent,32,TRUE,5916,FALSE
+1,ex1p0004,30,face,target absent,16,TRUE,3543,FALSE
+1,ex1p0004,31,face,target present,16,TRUE,779,FALSE
+1,ex1p0004,32,non-face object,target absent,16,TRUE,2355,FALSE
+1,ex1p0004,33,face,target absent,16,TRUE,1939,FALSE
+1,ex1p0004,34,face,target present,16,TRUE,568,FALSE
+1,ex1p0004,35,non-face object,target present,64,TRUE,2061,FALSE
+1,ex1p0004,36,face,target absent,64,FALSE,4580,FALSE
+1,ex1p0004,37,face,target present,16,TRUE,816,FALSE
+1,ex1p0004,38,non-face object,target present,16,TRUE,2278,FALSE
+1,ex1p0004,39,non-face object,target absent,16,TRUE,4126,FALSE
+1,ex1p0004,40,face,target absent,32,TRUE,3352,FALSE
+1,ex1p0004,41,non-face object,target absent,64,TRUE,5385,FALSE
+1,ex1p0004,42,face,target present,16,TRUE,571,FALSE
+1,ex1p0004,43,face,target present,32,TRUE,762,FALSE
+1,ex1p0004,44,non-face object,target present,32,TRUE,606,FALSE
+1,ex1p0004,45,non-face object,target present,16,TRUE,631,FALSE
+1,ex1p0004,46,non-face object,target present,64,FALSE,11043,FALSE
+1,ex1p0004,47,non-face object,target present,32,TRUE,1266,FALSE
+1,ex1p0004,48,face,target absent,64,TRUE,7252,FALSE
+1,ex1p0004,49,non-face object,target present,16,TRUE,815,FALSE
+1,ex1p0004,50,non-face object,target absent,32,TRUE,3597,FALSE
+1,ex1p0004,51,non-face object,target absent,16,TRUE,777,FALSE
+1,ex1p0004,52,face,target absent,16,TRUE,4775,FALSE
+1,ex1p0005,1,non-face object,target present,64,TRUE,5017,FALSE
+1,ex1p0005,2,non-face object,target absent,32,TRUE,6700,FALSE
+1,ex1p0005,3,non-face object,target present,16,TRUE,4082,FALSE
+1,ex1p0005,4,non-face object,target absent,64,TRUE,7202,FALSE
+1,ex1p0005,5,non-face object,target absent,32,TRUE,6584,FALSE
+1,ex1p0005,6,face,target absent,32,TRUE,3450,FALSE
+1,ex1p0005,7,face,target present,64,TRUE,2234,FALSE
+1,ex1p0005,8,face,target present,64,TRUE,2049,FALSE
+1,ex1p0005,9,face,target absent,16,TRUE,2814,FALSE
+1,ex1p0005,10,face,target absent,64,TRUE,7846,FALSE
+1,ex1p0005,11,face,target present,16,TRUE,1119,FALSE
+1,ex1p0005,12,non-face object,target absent,32,TRUE,7185,FALSE
+1,ex1p0005,13,face,target present,64,FALSE,6996,FALSE
+1,ex1p0005,14,non-face object,target absent,64,TRUE,10258,FALSE
+1,ex1p0005,15,non-face object,target absent,64,FALSE,0,TRUE
+1,ex1p0005,16,non-face object,target present,64,FALSE,7966,FALSE
+1,ex1p0005,17,face,target absent,64,TRUE,8131,FALSE
+1,ex1p0005,18,non-face object,target absent,32,TRUE,8170,FALSE
+1,ex1p0005,19,face,target absent,16,TRUE,3865,FALSE
+1,ex1p0005,20,face,target absent,32,TRUE,5303,FALSE
+1,ex1p0005,21,non-face object,target absent,16,TRUE,4248,FALSE
+1,ex1p0005,22,face,target absent,16,TRUE,3333,FALSE
+1,ex1p0005,23,face,target absent,32,TRUE,4457,FALSE
+1,ex1p0005,24,non-face object,target present,32,FALSE,5474,FALSE
+1,ex1p0005,25,non-face object,target present,64,TRUE,7732,FALSE
+1,ex1p0005,26,face,target absent,16,TRUE,2533,FALSE
+1,ex1p0005,27,non-face object,target present,16,TRUE,3302,FALSE
+1,ex1p0005,28,non-face object,target present,16,TRUE,3424,FALSE
+1,ex1p0005,29,face,target present,32,TRUE,1557,FALSE
+1,ex1p0005,30,non-face object,target absent,32,TRUE,6226,FALSE
+1,ex1p0005,31,face,target absent,32,TRUE,7085,FALSE
+1,ex1p0005,32,face,target absent,32,TRUE,5396,FALSE
+1,ex1p0005,33,face,target present,16,FALSE,3756,FALSE
+1,ex1p0005,34,non-face object,target present,16,TRUE,2993,FALSE
+1,ex1p0005,35,non-face object,target absent,32,TRUE,6855,FALSE
+1,ex1p0005,36,face,target absent,64,TRUE,9929,FALSE
+1,ex1p0005,37,face,target present,16,TRUE,904,FALSE
+1,ex1p0005,38,non-face object,target absent,64,TRUE,9671,FALSE
+1,ex1p0005,39,non-face object,target present,64,TRUE,10485,FALSE
+1,ex1p0005,40,non-face object,target absent,16,TRUE,4763,FALSE
+1,ex1p0005,41,face,target absent,32,TRUE,4666,FALSE
+1,ex1p0005,42,face,target absent,16,TRUE,4870,FALSE
+1,ex1p0005,43,non-face object,target absent,32,FALSE,5211,FALSE
+1,ex1p0005,44,non-face object,target present,16,TRUE,2019,FALSE
+1,ex1p0005,45,non-face object,target absent,16,TRUE,1749,FALSE
+1,ex1p0005,46,face,target absent,16,TRUE,2155,FALSE
+1,ex1p0005,47,face,target absent,64,TRUE,7109,FALSE
+1,ex1p0005,48,face,target present,32,TRUE,2345,FALSE
+1,ex1p0005,49,face,target present,16,TRUE,616,FALSE
+1,ex1p0005,50,face,target absent,64,TRUE,3116,FALSE
+1,ex1p0005,51,face,target absent,32,FALSE,3877,FALSE
+1,ex1p0005,52,non-face object,target present,64,TRUE,6368,FALSE
+1,ex1p0006,1,face,target absent,32,TRUE,5874,FALSE
+1,ex1p0006,2,non-face object,target present,32,TRUE,4878,FALSE
+1,ex1p0006,3,non-face object,target absent,64,TRUE,11604,FALSE
+1,ex1p0006,4,face,target absent,16,TRUE,5267,FALSE
+1,ex1p0006,5,face,target absent,32,TRUE,2391,FALSE
+1,ex1p0006,6,face,target present,64,TRUE,8418,FALSE
+1,ex1p0006,7,non-face object,target present,32,TRUE,1082,FALSE
+1,ex1p0006,8,non-face object,target present,64,TRUE,2353,FALSE
+1,ex1p0006,9,face,target present,64,TRUE,1723,FALSE
+1,ex1p0006,10,non-face object,target present,16,TRUE,2927,FALSE
+1,ex1p0006,11,face,target absent,16,TRUE,3810,FALSE
+1,ex1p0006,12,face,target absent,16,TRUE,5472,FALSE
+1,ex1p0006,13,non-face object,target absent,16,TRUE,4889,FALSE
+1,ex1p0006,14,non-face object,target absent,16,TRUE,4915,FALSE
+1,ex1p0006,15,face,target absent,64,TRUE,11199,FALSE
+1,ex1p0006,16,face,target present,64,TRUE,6514,FALSE
+1,ex1p0006,17,face,target absent,32,TRUE,8003,FALSE
+1,ex1p0006,18,non-face object,target present,64,TRUE,5587,FALSE
+1,ex1p0006,19,non-face object,target absent,32,TRUE,9043,FALSE
+1,ex1p0006,20,non-face object,target absent,32,TRUE,11925,FALSE
+1,ex1p0006,21,face,target absent,64,TRUE,7151,FALSE
+1,ex1p0006,22,face,target present,32,TRUE,1949,FALSE
+1,ex1p0006,23,non-face object,target absent,32,TRUE,7130,FALSE
+1,ex1p0006,24,face,target present,16,TRUE,956,FALSE
+1,ex1p0006,25,non-face object,target present,64,TRUE,13121,FALSE
+1,ex1p0006,26,non-face object,target absent,32,TRUE,8805,FALSE
+1,ex1p0006,27,face,target present,64,TRUE,955,FALSE
+1,ex1p0006,28,face,target present,32,TRUE,817,FALSE
+1,ex1p0006,29,face,target absent,32,TRUE,5012,FALSE
+1,ex1p0006,30,non-face object,target absent,32,TRUE,8237,FALSE
+1,ex1p0006,31,non-face object,target absent,64,TRUE,14696,FALSE
+1,ex1p0006,32,non-face object,target present,32,TRUE,7066,FALSE
+1,ex1p0006,33,face,target present,16,TRUE,779,FALSE
+1,ex1p0006,34,face,target absent,64,TRUE,11053,FALSE
+1,ex1p0006,35,non-face object,target absent,16,TRUE,4292,FALSE
+1,ex1p0006,36,non-face object,target present,32,FALSE,6991,FALSE
+1,ex1p0006,37,face,target present,64,TRUE,999,FALSE
+1,ex1p0006,38,non-face object,target present,64,TRUE,4631,FALSE
+1,ex1p0006,39,face,target absent,16,TRUE,5300,FALSE
+1,ex1p0006,40,face,target absent,16,TRUE,4952,FALSE
+1,ex1p0006,41,non-face object,target present,32,TRUE,2774,FALSE
+1,ex1p0006,42,face,target present,32,TRUE,1072,FALSE
+1,ex1p0006,43,non-face object,target present,64,FALSE,4885,FALSE
+1,ex1p0006,44,non-face object,target absent,64,TRUE,13245,FALSE
+1,ex1p0006,45,face,target absent,64,TRUE,5433,FALSE
+1,ex1p0006,46,non-face object,target present,32,TRUE,6392,FALSE
+1,ex1p0006,47,non-face object,target present,16,TRUE,2395,FALSE
+1,ex1p0006,48,non-face object,target present,32,TRUE,1562,FALSE
+1,ex1p0006,49,face,target absent,64,TRUE,7649,FALSE
+1,ex1p0006,50,non-face object,target absent,64,FALSE,12635,FALSE
+1,ex1p0006,51,non-face object,target absent,64,TRUE,2639,FALSE
+1,ex1p0006,52,face,target absent,16,TRUE,2260,FALSE
+1,ex1p0007,1,non-face object,target absent,64,TRUE,8738,FALSE
+1,ex1p0007,2,non-face object,target absent,32,TRUE,11177,FALSE
+1,ex1p0007,3,non-face object,target present,32,TRUE,4169,FALSE
+1,ex1p0007,4,face,target present,16,TRUE,2981,FALSE
+1,ex1p0007,5,non-face object,target present,32,TRUE,4693,FALSE
+1,ex1p0007,6,face,target present,32,TRUE,1921,FALSE
+1,ex1p0007,7,non-face object,target absent,64,FALSE,7796,FALSE
+1,ex1p0007,8,face,target present,16,TRUE,990,FALSE
+1,ex1p0007,9,non-face object,target present,64,TRUE,2284,FALSE
+1,ex1p0007,10,face,target absent,16,TRUE,5782,FALSE
+1,ex1p0007,11,non-face object,target present,32,FALSE,1235,FALSE
+1,ex1p0007,12,face,target absent,16,TRUE,4156,FALSE
+1,ex1p0007,13,face,target present,64,TRUE,4853,FALSE
+1,ex1p0007,14,non-face object,target present,32,FALSE,9171,FALSE
+1,ex1p0007,15,face,target absent,32,TRUE,3881,FALSE
+1,ex1p0007,16,face,target absent,32,TRUE,6076,FALSE
+1,ex1p0007,17,non-face object,target present,16,TRUE,4085,FALSE
+1,ex1p0007,18,face,target present,64,TRUE,1779,FALSE
+1,ex1p0007,19,face,target present,32,TRUE,2298,FALSE
+1,ex1p0007,20,face,target present,16,TRUE,1570,FALSE
+1,ex1p0007,21,non-face object,target present,64,TRUE,1141,FALSE
+1,ex1p0007,22,non-face object,target present,64,FALSE,9615,FALSE
+1,ex1p0007,23,face,target absent,32,TRUE,6432,FALSE
+1,ex1p0007,24,face,target absent,16,TRUE,9041,FALSE
+1,ex1p0007,25,face,target absent,64,TRUE,9156,FALSE
+1,ex1p0007,26,face,target present,64,TRUE,7793,FALSE
+1,ex1p0007,27,face,target present,16,TRUE,2308,FALSE
+1,ex1p0007,28,non-face object,target present,16,TRUE,870,FALSE
+1,ex1p0007,29,non-face object,target absent,64,TRUE,12925,FALSE
+1,ex1p0007,30,non-face object,target present,16,TRUE,3303,FALSE
+1,ex1p0007,31,non-face object,target absent,32,TRUE,6191,FALSE
+1,ex1p0007,32,face,target absent,64,TRUE,13415,FALSE
+1,ex1p0007,33,non-face object,target absent,32,TRUE,6201,FALSE
+1,ex1p0007,34,non-face object,target absent,64,TRUE,6126,FALSE
+1,ex1p0007,35,non-face object,target present,32,FALSE,6706,FALSE
+1,ex1p0007,36,non-face object,target present,64,FALSE,7492,FALSE
+1,ex1p0007,37,face,target present,64,TRUE,3481,FALSE
+1,ex1p0007,38,non-face object,target present,16,TRUE,1474,FALSE
+1,ex1p0007,39,face,target present,16,TRUE,1416,FALSE
+1,ex1p0007,40,face,target present,32,TRUE,2295,FALSE
+1,ex1p0007,41,non-face object,target absent,16,TRUE,4367,FALSE
+1,ex1p0007,42,face,target present,16,TRUE,1587,FALSE
+1,ex1p0007,43,non-face object,target absent,32,TRUE,7707,FALSE
+1,ex1p0007,44,non-face object,target present,16,FALSE,3425,FALSE
+1,ex1p0007,45,non-face object,target present,64,TRUE,9766,FALSE
+1,ex1p0007,46,face,target absent,16,TRUE,1966,FALSE
+1,ex1p0007,47,non-face object,target present,32,FALSE,5433,FALSE
+1,ex1p0007,48,non-face object,target present,32,TRUE,2098,FALSE
+1,ex1p0007,49,non-face object,target absent,64,TRUE,9039,FALSE
+1,ex1p0007,50,face,target absent,16,TRUE,3228,FALSE
+1,ex1p0007,51,face,target absent,32,TRUE,4806,FALSE
+1,ex1p0007,52,face,target absent,32,TRUE,4169,FALSE
+1,ex1p0009,1,face,target absent,64,TRUE,5582,FALSE
+1,ex1p0009,2,face,target present,64,TRUE,2166,FALSE
+1,ex1p0009,3,non-face object,target present,16,TRUE,3236,FALSE
+1,ex1p0009,4,face,target absent,16,TRUE,3684,FALSE
+1,ex1p0009,5,non-face object,target absent,32,TRUE,5646,FALSE
+1,ex1p0009,6,face,target absent,16,TRUE,3775,FALSE
+1,ex1p0009,7,non-face object,target present,16,TRUE,1843,FALSE
+1,ex1p0009,8,face,target present,32,TRUE,1687,FALSE
+1,ex1p0009,9,non-face object,target absent,16,TRUE,2094,FALSE
+1,ex1p0009,10,face,target absent,32,TRUE,3888,FALSE
+1,ex1p0009,11,non-face object,target absent,64,TRUE,5167,FALSE
+1,ex1p0009,12,face,target absent,16,TRUE,1041,FALSE
+1,ex1p0009,13,face,target absent,64,TRUE,4476,FALSE
+1,ex1p0009,14,non-face object,target present,16,TRUE,4558,FALSE
+1,ex1p0009,15,non-face object,target present,32,TRUE,2075,FALSE
+1,ex1p0009,16,non-face object,target absent,32,TRUE,6111,FALSE
+1,ex1p0009,17,non-face object,target present,64,FALSE,5912,FALSE
+1,ex1p0009,18,non-face object,target absent,64,FALSE,3046,FALSE
+1,ex1p0009,19,face,target present,64,FALSE,3129,FALSE
+1,ex1p0009,20,non-face object,target absent,16,TRUE,2239,FALSE
+1,ex1p0009,21,non-face object,target absent,32,TRUE,3721,FALSE
+1,ex1p0009,22,non-face object,target absent,64,TRUE,4359,FALSE
+1,ex1p0009,23,face,target absent,64,TRUE,5744,FALSE
+1,ex1p0009,24,non-face object,target absent,32,TRUE,4225,FALSE
+1,ex1p0009,25,non-face object,target present,16,TRUE,4119,FALSE
+1,ex1p0009,26,non-face object,target absent,16,TRUE,3307,FALSE
+1,ex1p0009,27,face,target present,32,TRUE,1589,FALSE
+1,ex1p0009,28,non-face object,target absent,16,TRUE,4086,FALSE
+1,ex1p0009,29,face,target present,64,TRUE,2948,FALSE
+1,ex1p0009,30,non-face object,target absent,16,TRUE,2182,FALSE
+1,ex1p0009,31,non-face object,target absent,16,TRUE,2758,FALSE
+1,ex1p0009,32,non-face object,target present,16,TRUE,1167,FALSE
+1,ex1p0009,33,non-face object,target present,16,TRUE,2238,FALSE
+1,ex1p0009,34,non-face object,target absent,64,TRUE,3840,FALSE
+1,ex1p0009,35,non-face object,target present,32,TRUE,1186,FALSE
+1,ex1p0009,36,non-face object,target present,32,TRUE,1016,FALSE
+1,ex1p0009,37,non-face object,target absent,64,TRUE,5808,FALSE
+1,ex1p0009,38,non-face object,target absent,32,TRUE,2337,FALSE
+1,ex1p0009,39,face,target absent,16,TRUE,2616,FALSE
+1,ex1p0009,40,face,target present,64,TRUE,815,FALSE
+1,ex1p0009,41,non-face object,target present,32,TRUE,1309,FALSE
+1,ex1p0009,42,non-face object,target absent,16,TRUE,3166,FALSE
+1,ex1p0009,43,face,target absent,64,TRUE,2537,FALSE
+1,ex1p0009,44,non-face object,target present,16,TRUE,1704,FALSE
+1,ex1p0009,45,face,target absent,32,TRUE,2563,FALSE
+1,ex1p0009,46,face,target absent,64,TRUE,2479,FALSE
+1,ex1p0009,47,non-face object,target absent,16,TRUE,2815,FALSE
+1,ex1p0009,48,non-face object,target present,32,TRUE,4344,FALSE
+1,ex1p0009,49,face,target absent,16,TRUE,2373,FALSE
+1,ex1p0009,50,face,target absent,16,TRUE,1834,FALSE
+1,ex1p0009,51,face,target present,64,TRUE,2766,FALSE
+1,ex1p0009,52,face,target absent,16,TRUE,2903,FALSE
+1,ex1p0010,1,face,target present,64,FALSE,4880,FALSE
+1,ex1p0010,1,face,target present,64,TRUE,7632,FALSE
+1,ex1p0010,2,face,target absent,32,FALSE,6559,FALSE
+1,ex1p0010,2,non-face object,target absent,32,TRUE,7097,FALSE
+1,ex1p0010,3,face,target absent,32,FALSE,8863,FALSE
+1,ex1p0010,3,face,target absent,32,TRUE,2484,FALSE
+1,ex1p0010,4,non-face object,target present,32,FALSE,1752,FALSE
+1,ex1p0010,4,non-face object,target absent,64,TRUE,6296,FALSE
+1,ex1p0010,5,non-face object,target absent,32,FALSE,5812,FALSE
+1,ex1p0010,5,non-face object,target absent,32,TRUE,4653,FALSE
+1,ex1p0010,6,face,target absent,64,FALSE,6893,FALSE
+1,ex1p0010,6,non-face object,target absent,16,TRUE,3601,FALSE
+1,ex1p0010,7,non-face object,target present,16,FALSE,1111,FALSE
+1,ex1p0010,7,face,target absent,16,TRUE,1630,FALSE
+1,ex1p0010,8,face,target present,16,FALSE,2165,FALSE
+1,ex1p0010,8,non-face object,target present,32,TRUE,2561,FALSE
+1,ex1p0010,9,non-face object,target present,16,TRUE,810,FALSE
+1,ex1p0010,9,non-face object,target present,16,TRUE,1110,FALSE
+1,ex1p0010,10,non-face object,target absent,16,FALSE,3990,FALSE
+1,ex1p0010,10,face,target absent,16,TRUE,2970,FALSE
+1,ex1p0010,11,face,target present,64,FALSE,1807,FALSE
+1,ex1p0010,11,face,target present,16,TRUE,1445,FALSE
+1,ex1p0010,12,non-face object,target present,32,TRUE,5487,FALSE
+1,ex1p0010,12,non-face object,target absent,32,TRUE,5458,FALSE
+1,ex1p0010,13,non-face object,target absent,64,FALSE,4749,FALSE
+1,ex1p0010,13,non-face object,target present,16,TRUE,1821,FALSE
+1,ex1p0010,14,non-face object,target absent,16,FALSE,2029,FALSE
+1,ex1p0010,14,non-face object,target present,32,FALSE,8254,FALSE
+1,ex1p0010,15,face,target present,32,FALSE,998,FALSE
+1,ex1p0010,15,face,target absent,32,TRUE,3165,FALSE
+1,ex1p0010,16,face,target present,32,FALSE,786,FALSE
+1,ex1p0010,16,face,target present,32,TRUE,1924,FALSE
+1,ex1p0010,17,face,target absent,16,FALSE,1693,FALSE
+1,ex1p0010,17,face,target absent,16,TRUE,1960,FALSE
+1,ex1p0010,18,non-face object,target absent,32,FALSE,2786,FALSE
+1,ex1p0010,18,non-face object,target present,16,FALSE,3252,FALSE
+1,ex1p0010,19,non-face object,target present,64,FALSE,2682,FALSE
+1,ex1p0010,19,face,target absent,32,TRUE,4427,FALSE
+1,ex1p0010,20,non-face object,target present,32,TRUE,6748,FALSE
+1,ex1p0010,20,non-face object,target present,32,TRUE,4680,FALSE
+1,ex1p0010,21,non-face object,target present,32,TRUE,5101,FALSE
+1,ex1p0010,21,non-face object,target absent,32,FALSE,8759,FALSE
+1,ex1p0010,22,non-face object,target absent,32,FALSE,7961,FALSE
+1,ex1p0010,22,face,target present,16,TRUE,1753,FALSE
+1,ex1p0010,23,non-face object,target present,64,FALSE,1931,FALSE
+1,ex1p0010,23,non-face object,target present,16,TRUE,1904,FALSE
+1,ex1p0010,24,face,target present,32,FALSE,936,FALSE
+1,ex1p0010,24,face,target absent,64,TRUE,6343,FALSE
+1,ex1p0010,25,face,target present,16,FALSE,1108,FALSE
+1,ex1p0010,25,face,target absent,16,TRUE,2947,FALSE
+1,ex1p0010,26,face,target present,16,FALSE,998,FALSE
+1,ex1p0010,26,non-face object,target present,64,FALSE,4488,FALSE
+1,ex1p0010,27,face,target present,16,FALSE,1051,FALSE
+1,ex1p0010,27,non-face object,target absent,16,TRUE,2745,FALSE
+1,ex1p0010,28,face,target absent,16,FALSE,1556,FALSE
+1,ex1p0010,28,non-face object,target present,32,TRUE,2313,FALSE
+1,ex1p0010,29,non-face object,target absent,32,FALSE,4767,FALSE
+1,ex1p0010,29,non-face object,target present,16,TRUE,1816,FALSE
+1,ex1p0010,30,non-face object,target absent,64,FALSE,4976,FALSE
+1,ex1p0010,30,non-face object,target absent,32,FALSE,3613,FALSE
+1,ex1p0010,31,face,target absent,64,FALSE,3687,FALSE
+1,ex1p0010,31,face,target absent,32,TRUE,3190,FALSE
+1,ex1p0010,32,non-face object,target absent,64,FALSE,5898,FALSE
+1,ex1p0010,32,face,target present,32,TRUE,2356,FALSE
+1,ex1p0010,33,face,target absent,64,FALSE,5695,FALSE
+1,ex1p0010,33,non-face object,target absent,32,TRUE,5095,FALSE
+1,ex1p0010,34,non-face object,target present,16,TRUE,3641,FALSE
+1,ex1p0010,34,non-face object,target absent,16,TRUE,2305,FALSE
+1,ex1p0010,35,face,target present,64,FALSE,3750,FALSE
+1,ex1p0010,35,non-face object,target absent,32,TRUE,4569,FALSE
+1,ex1p0010,36,face,target present,64,TRUE,5932,FALSE
+1,ex1p0010,36,face,target absent,16,TRUE,3543,FALSE
+1,ex1p0010,37,non-face object,target present,16,FALSE,3106,FALSE
+1,ex1p0010,37,non-face object,target present,64,TRUE,4844,FALSE
+1,ex1p0010,38,non-face object,target absent,64,FALSE,7337,FALSE
+1,ex1p0010,38,non-face object,target absent,32,TRUE,4745,FALSE
+1,ex1p0010,39,face,target present,16,FALSE,1290,FALSE
+1,ex1p0010,39,face,target absent,32,TRUE,3943,FALSE
+1,ex1p0010,40,non-face object,target present,32,FALSE,4234,FALSE
+1,ex1p0010,40,face,target absent,32,TRUE,3327,FALSE
+1,ex1p0010,41,non-face object,target present,64,FALSE,2599,FALSE
+1,ex1p0010,41,face,target present,64,TRUE,3822,FALSE
+1,ex1p0010,42,face,target present,16,FALSE,1824,FALSE
+1,ex1p0010,42,non-face object,target absent,64,TRUE,5830,FALSE
+1,ex1p0010,43,face,target present,16,FALSE,670,FALSE
+1,ex1p0010,43,face,target absent,32,TRUE,5022,FALSE
+1,ex1p0010,44,face,target absent,32,FALSE,3131,FALSE
+1,ex1p0010,44,face,target absent,32,TRUE,3304,FALSE
+1,ex1p0010,45,face,target present,64,TRUE,1557,FALSE
+1,ex1p0010,45,face,target absent,32,TRUE,2988,FALSE
+1,ex1p0010,46,face,target absent,64,TRUE,4553,FALSE
+1,ex1p0010,46,non-face object,target absent,32,TRUE,6845,FALSE
+1,ex1p0010,47,face,target present,32,FALSE,1872,FALSE
+1,ex1p0010,47,face,target present,64,TRUE,810,FALSE
+1,ex1p0010,48,non-face object,target absent,16,FALSE,3470,FALSE
+1,ex1p0010,48,face,target absent,16,TRUE,2876,FALSE
+1,ex1p0010,49,non-face object,target absent,64,TRUE,1470,FALSE
+1,ex1p0010,49,face,target absent,32,TRUE,1342,FALSE
+1,ex1p0010,50,non-face object,target absent,16,FALSE,4916,FALSE
+1,ex1p0010,50,face,target absent,32,TRUE,2968,FALSE
+1,ex1p0010,51,face,target present,16,FALSE,1463,FALSE
+1,ex1p0010,51,face,target present,64,TRUE,5609,FALSE
+1,ex1p0010,52,face,target present,64,FALSE,3862,FALSE
+1,ex1p0010,52,non-face object,target present,64,FALSE,4621,FALSE
+1,ex1p0011,1,face,target present,16,TRUE,2254,FALSE
+1,ex1p0011,2,non-face object,target present,64,FALSE,0,TRUE
+1,ex1p0011,3,non-face object,target absent,32,TRUE,6353,FALSE
+1,ex1p0011,4,face,target present,32,TRUE,1001,FALSE
+1,ex1p0011,5,face,target present,64,TRUE,2213,FALSE
+1,ex1p0011,6,face,target absent,16,TRUE,2417,FALSE
+1,ex1p0011,7,non-face object,target present,16,TRUE,2472,FALSE
+1,ex1p0011,8,non-face object,target absent,32,TRUE,7621,FALSE
+1,ex1p0011,9,non-face object,target absent,32,TRUE,5842,FALSE
+1,ex1p0011,10,non-face object,target present,64,FALSE,4596,FALSE
+1,ex1p0011,11,non-face object,target absent,16,TRUE,2885,FALSE
+1,ex1p0011,12,non-face object,target present,32,TRUE,1619,FALSE
+1,ex1p0011,13,non-face object,target absent,16,FALSE,5697,FALSE
+1,ex1p0011,14,non-face object,target present,16,TRUE,2133,FALSE
+1,ex1p0011,15,non-face object,target present,16,TRUE,1098,FALSE
+1,ex1p0011,16,non-face object,target absent,16,TRUE,5528,FALSE
+1,ex1p0011,17,non-face object,target absent,64,TRUE,10496,FALSE
+1,ex1p0011,18,face,target absent,32,TRUE,5638,FALSE
+1,ex1p0011,19,non-face object,target present,16,TRUE,2359,FALSE
+1,ex1p0011,20,non-face object,target present,64,TRUE,2600,FALSE
+1,ex1p0011,21,non-face object,target present,64,TRUE,6478,FALSE
+1,ex1p0011,22,non-face object,target absent,32,TRUE,6326,FALSE
+1,ex1p0011,23,non-face object,target absent,16,TRUE,5277,FALSE
+1,ex1p0011,24,non-face object,target absent,16,TRUE,5572,FALSE
+1,ex1p0011,25,non-face object,target present,32,FALSE,8995,FALSE
+1,ex1p0011,26,non-face object,target present,32,TRUE,1044,FALSE
+1,ex1p0011,27,non-face object,target present,64,TRUE,8128,FALSE
+1,ex1p0011,28,face,target present,64,TRUE,4612,FALSE
+1,ex1p0011,29,non-face object,target present,32,TRUE,4708,FALSE
+1,ex1p0011,30,face,target present,16,TRUE,1357,FALSE
+1,ex1p0011,31,non-face object,target absent,32,TRUE,8961,FALSE
+1,ex1p0011,32,face,target absent,32,TRUE,5710,FALSE
+1,ex1p0011,33,non-face object,target absent,64,TRUE,10924,FALSE
+1,ex1p0011,34,face,target absent,32,TRUE,6201,FALSE
+1,ex1p0011,35,non-face object,target present,64,FALSE,10600,FALSE
+1,ex1p0011,36,non-face object,target present,64,TRUE,3492,FALSE
+1,ex1p0011,37,face,target present,64,TRUE,1535,FALSE
+1,ex1p0011,38,non-face object,target absent,64,TRUE,7519,FALSE
+1,ex1p0011,39,face,target present,32,TRUE,3299,FALSE
+1,ex1p0011,40,face,target present,32,TRUE,2356,FALSE
+1,ex1p0011,41,non-face object,target present,32,TRUE,9917,FALSE
+1,ex1p0011,42,face,target present,16,TRUE,2058,FALSE
+1,ex1p0011,43,face,target present,64,TRUE,1134,FALSE
+1,ex1p0011,44,non-face object,target present,16,FALSE,5441,FALSE
+1,ex1p0011,45,non-face object,target present,32,TRUE,4770,FALSE
+1,ex1p0011,46,non-face object,target present,32,TRUE,3851,FALSE
+1,ex1p0011,47,non-face object,target absent,16,TRUE,3987,FALSE
+1,ex1p0011,48,face,target absent,64,TRUE,10581,FALSE
+1,ex1p0011,49,face,target absent,16,TRUE,2770,FALSE
+1,ex1p0011,50,face,target present,64,TRUE,9456,FALSE
+1,ex1p0011,51,non-face object,target absent,64,TRUE,9281,FALSE
+1,ex1p0011,52,face,target present,64,TRUE,2057,FALSE
+1,ex1p0012,1,face,target absent,32,TRUE,9153,FALSE
+1,ex1p0012,2,face,target present,16,TRUE,1137,FALSE
+1,ex1p0012,3,face,target absent,64,TRUE,9631,FALSE
+1,ex1p0012,4,face,target present,64,TRUE,1701,FALSE
+1,ex1p0012,5,face,target present,32,TRUE,1273,FALSE
+1,ex1p0012,6,face,target absent,16,TRUE,3872,FALSE
+1,ex1p0012,7,non-face object,target present,64,TRUE,6692,FALSE
+1,ex1p0012,8,face,target absent,32,TRUE,5597,FALSE
+1,ex1p0012,9,non-face object,target present,32,TRUE,1612,FALSE
+1,ex1p0012,10,non-face object,target present,64,TRUE,2385,FALSE
+1,ex1p0012,11,face,target absent,32,TRUE,5545,FALSE
+1,ex1p0012,12,non-face object,target present,32,TRUE,5436,FALSE
+1,ex1p0012,13,face,target absent,64,TRUE,5539,FALSE
+1,ex1p0012,14,non-face object,target present,64,TRUE,1157,FALSE
+1,ex1p0012,15,non-face object,target present,16,FALSE,4572,FALSE
+1,ex1p0012,16,non-face object,target absent,64,TRUE,12094,FALSE
+1,ex1p0012,17,face,target present,64,TRUE,2141,FALSE
+1,ex1p0012,18,non-face object,target absent,16,TRUE,5619,FALSE
+1,ex1p0012,19,face,target present,16,FALSE,3787,FALSE
+1,ex1p0012,20,non-face object,target present,32,TRUE,3828,FALSE
+1,ex1p0012,21,face,target present,64,TRUE,1800,FALSE
+1,ex1p0012,22,face,target present,16,TRUE,2136,FALSE
+1,ex1p0012,23,non-face object,target absent,32,TRUE,3790,FALSE
+1,ex1p0012,24,face,target present,32,TRUE,1066,FALSE
+1,ex1p0012,25,non-face object,target absent,16,TRUE,5111,FALSE
+1,ex1p0012,26,non-face object,target present,16,TRUE,2001,FALSE
+1,ex1p0012,27,non-face object,target absent,32,TRUE,5907,FALSE
+1,ex1p0012,28,non-face object,target present,32,TRUE,1792,FALSE
+1,ex1p0012,29,non-face object,target absent,64,TRUE,8458,FALSE
+1,ex1p0012,30,face,target absent,16,TRUE,4388,FALSE
+1,ex1p0012,31,non-face object,target absent,16,TRUE,6467,FALSE
+1,ex1p0012,32,non-face object,target present,16,FALSE,6331,FALSE
+1,ex1p0012,33,non-face object,target absent,32,TRUE,9389,FALSE
+1,ex1p0012,34,non-face object,target present,32,FALSE,5771,FALSE
+1,ex1p0012,35,face,target present,32,TRUE,1093,FALSE
+1,ex1p0012,36,face,target absent,64,TRUE,4933,FALSE
+1,ex1p0012,37,face,target absent,16,TRUE,6809,FALSE
+1,ex1p0012,38,face,target absent,16,TRUE,3086,FALSE
+1,ex1p0012,39,face,target absent,16,TRUE,3506,FALSE
+1,ex1p0012,40,face,target present,16,TRUE,1214,FALSE
+1,ex1p0012,41,non-face object,target present,32,TRUE,1569,FALSE
+1,ex1p0012,42,non-face object,target absent,64,TRUE,13654,FALSE
+1,ex1p0012,43,non-face object,target present,64,FALSE,6741,FALSE
+1,ex1p0012,44,non-face object,target absent,64,TRUE,14070,FALSE
+1,ex1p0012,45,non-face object,target absent,16,TRUE,8121,FALSE
+1,ex1p0012,46,face,target present,32,TRUE,1058,FALSE
+1,ex1p0012,47,face,target absent,16,TRUE,3670,FALSE
+1,ex1p0012,48,non-face object,target present,16,TRUE,1620,FALSE
+1,ex1p0012,49,face,target present,64,FALSE,6234,FALSE
+1,ex1p0012,50,non-face object,target present,64,TRUE,2894,FALSE
+1,ex1p0012,51,non-face object,target absent,64,TRUE,8322,FALSE
+1,ex1p0012,52,non-face object,target present,64,TRUE,4491,FALSE
+2,ex2p0000,1,face,target present,8,TRUE,1430,FALSE
+2,ex2p0000,2,real face,target present,4,TRUE,625,FALSE
+2,ex2p0000,3,non-face object,target present,8,FALSE,1656,FALSE
+2,ex2p0000,4,real face,target present,16,TRUE,1004,FALSE
+2,ex2p0000,5,real face,target present,16,TRUE,485,FALSE
+2,ex2p0000,6,real face,target absent,4,TRUE,1185,FALSE
+2,ex2p0000,7,real face,target absent,8,TRUE,1475,FALSE
+2,ex2p0000,8,face,target present,16,TRUE,1408,FALSE
+2,ex2p0000,9,face,target present,4,TRUE,1033,FALSE
+2,ex2p0000,10,non-face object,target present,16,TRUE,965,FALSE
+2,ex2p0000,11,face,target present,16,TRUE,537,FALSE
+2,ex2p0000,12,face,target absent,4,TRUE,890,FALSE
+2,ex2p0000,13,non-face object,target absent,8,TRUE,1982,FALSE
+2,ex2p0000,14,non-face object,target present,8,FALSE,659,FALSE
+2,ex2p0000,15,face,target absent,4,TRUE,954,FALSE
+2,ex2p0000,16,face,target present,16,TRUE,740,FALSE
+2,ex2p0000,17,non-face object,target present,16,TRUE,982,FALSE
+2,ex2p0000,18,real face,target absent,16,TRUE,1452,FALSE
+2,ex2p0000,19,face,target absent,8,TRUE,1314,FALSE
+2,ex2p0000,20,non-face object,target absent,4,TRUE,1020,FALSE
+2,ex2p0000,21,non-face object,target present,4,TRUE,819,FALSE
+2,ex2p0000,22,real face,target present,8,TRUE,712,FALSE
+2,ex2p0000,23,face,target present,8,TRUE,675,FALSE
+2,ex2p0000,24,non-face object,target present,16,TRUE,1038,FALSE
+2,ex2p0000,25,real face,target absent,4,TRUE,1501,FALSE
+2,ex2p0000,26,real face,target present,16,TRUE,577,FALSE
+2,ex2p0000,27,face,target present,16,TRUE,732,FALSE
+2,ex2p0000,28,non-face object,target absent,8,TRUE,1246,FALSE
+2,ex2p0000,29,non-face object,target present,4,TRUE,692,FALSE
+2,ex2p0000,30,real face,target present,8,TRUE,516,FALSE
+2,ex2p0000,31,face,target absent,16,TRUE,1378,FALSE
+2,ex2p0000,32,face,target absent,16,TRUE,1275,FALSE
+2,ex2p0000,33,face,target absent,8,TRUE,1373,FALSE
+2,ex2p0000,34,real face,target absent,8,TRUE,1259,FALSE
+2,ex2p0000,35,real face,target absent,8,TRUE,961,FALSE
+2,ex2p0000,36,non-face object,target present,16,TRUE,1629,FALSE
+2,ex2p0000,37,face,target present,8,TRUE,528,FALSE
+2,ex2p0000,38,face,target absent,4,TRUE,660,FALSE
+2,ex2p0000,39,non-face object,target present,16,FALSE,1731,FALSE
+2,ex2p0000,40,non-face object,target absent,16,TRUE,2660,FALSE
+2,ex2p0000,41,non-face object,target absent,4,TRUE,1093,FALSE
+2,ex2p0000,42,real face,target absent,16,TRUE,2866,FALSE
+2,ex2p0000,43,non-face object,target absent,4,TRUE,1707,FALSE
+2,ex2p0000,44,real face,target present,8,TRUE,672,FALSE
+2,ex2p0000,45,face,target absent,16,TRUE,1622,FALSE
+2,ex2p0000,46,non-face object,target absent,4,TRUE,1341,FALSE
+2,ex2p0000,47,non-face object,target absent,8,TRUE,1233,FALSE
+2,ex2p0000,48,non-face object,target absent,8,TRUE,1393,FALSE
+2,ex2p0000,49,real face,target present,8,TRUE,919,FALSE
+2,ex2p0000,50,face,target absent,8,TRUE,859,FALSE
+2,ex2p0000,51,face,target present,16,FALSE,1821,FALSE
+2,ex2p0000,52,face,target present,16,TRUE,740,FALSE
+2,ex2p0000,53,face,target present,8,TRUE,592,FALSE
+2,ex2p0000,54,real face,target present,8,TRUE,773,FALSE
+2,ex2p0000,55,face,target absent,4,TRUE,672,FALSE
+2,ex2p0000,56,non-face object,target present,16,TRUE,1583,FALSE
+2,ex2p0000,57,face,target present,8,TRUE,1619,FALSE
+2,ex2p0000,58,face,target absent,8,TRUE,1551,FALSE
+2,ex2p0000,59,real face,target absent,4,TRUE,873,FALSE
+2,ex2p0000,60,face,target absent,8,TRUE,1332,FALSE
+2,ex2p0000,61,non-face object,target absent,8,TRUE,1203,FALSE
+2,ex2p0000,62,real face,target present,16,TRUE,1129,FALSE
+2,ex2p0000,63,non-face object,target present,16,TRUE,1557,FALSE
+2,ex2p0000,64,real face,target present,8,TRUE,728,FALSE
+2,ex2p0000,65,face,target present,16,TRUE,672,FALSE
+2,ex2p0000,66,real face,target present,16,TRUE,606,FALSE
+2,ex2p0000,67,real face,target absent,4,TRUE,687,FALSE
+2,ex2p0000,68,non-face object,target present,8,TRUE,612,FALSE
+2,ex2p0000,69,face,target present,16,TRUE,749,FALSE
+2,ex2p0001,1,face,target absent,16,TRUE,2612,FALSE
+2,ex2p0001,2,non-face object,target absent,16,TRUE,2549,FALSE
+2,ex2p0001,3,real face,target present,4,TRUE,461,FALSE
+2,ex2p0001,4,non-face object,target present,8,TRUE,628,FALSE
+2,ex2p0001,5,real face,target present,8,TRUE,429,FALSE
+2,ex2p0001,6,non-face object,target absent,8,TRUE,942,FALSE
+2,ex2p0001,7,face,target absent,4,TRUE,1315,FALSE
+2,ex2p0001,8,real face,target absent,8,TRUE,1023,FALSE
+2,ex2p0001,9,non-face object,target absent,4,TRUE,960,FALSE
+2,ex2p0001,10,face,target absent,4,TRUE,933,FALSE
+2,ex2p0001,11,real face,target absent,4,TRUE,591,FALSE
+2,ex2p0001,12,non-face object,target absent,8,TRUE,866,FALSE
+2,ex2p0001,13,face,target present,16,FALSE,1088,FALSE
+2,ex2p0001,14,face,target absent,8,FALSE,359,FALSE
+2,ex2p0001,15,face,target absent,8,TRUE,1080,FALSE
+2,ex2p0001,16,real face,target absent,4,TRUE,597,FALSE
+2,ex2p0001,17,real face,target present,16,FALSE,879,FALSE
+2,ex2p0001,18,face,target present,16,TRUE,1665,FALSE
+2,ex2p0001,19,real face,target present,4,TRUE,470,FALSE
+2,ex2p0001,20,face,target present,16,TRUE,1268,FALSE
+2,ex2p0001,21,non-face object,target present,16,TRUE,829,FALSE
+2,ex2p0001,22,real face,target absent,16,TRUE,1178,FALSE
+2,ex2p0001,23,face,target absent,4,TRUE,930,FALSE
+2,ex2p0001,24,face,target absent,4,TRUE,903,FALSE
+2,ex2p0001,25,non-face object,target present,8,TRUE,768,FALSE
+2,ex2p0001,26,real face,target present,16,TRUE,585,FALSE
+2,ex2p0001,27,face,target present,16,TRUE,1295,FALSE
+2,ex2p0001,28,real face,target present,8,TRUE,511,FALSE
+2,ex2p0001,29,real face,target present,4,TRUE,462,FALSE
+2,ex2p0001,30,face,target absent,4,FALSE,812,FALSE
+2,ex2p0001,31,real face,target absent,4,FALSE,584,FALSE
+2,ex2p0001,32,real face,target absent,16,FALSE,1013,FALSE
+2,ex2p0001,33,non-face object,target present,4,TRUE,772,FALSE
+2,ex2p0001,34,face,target absent,4,TRUE,1557,FALSE
+2,ex2p0001,35,non-face object,target present,4,FALSE,469,FALSE
+2,ex2p0001,36,non-face object,target present,16,TRUE,1770,FALSE
+2,ex2p0001,37,face,target present,4,TRUE,507,FALSE
+2,ex2p0001,38,non-face object,target absent,16,TRUE,2079,FALSE
+2,ex2p0001,39,face,target present,8,TRUE,521,FALSE
+2,ex2p0001,40,face,target absent,4,TRUE,1093,FALSE
+2,ex2p0001,41,real face,target present,8,TRUE,598,FALSE
+2,ex2p0001,42,real face,target absent,8,TRUE,992,FALSE
+2,ex2p0001,43,real face,target absent,4,TRUE,616,FALSE
+2,ex2p0001,44,face,target present,8,TRUE,740,FALSE
+2,ex2p0001,45,real face,target present,8,TRUE,617,FALSE
+2,ex2p0001,46,face,target present,4,TRUE,1652,FALSE
+2,ex2p0001,47,non-face object,target absent,4,TRUE,1194,FALSE
+2,ex2p0001,48,face,target absent,4,FALSE,1016,FALSE
+2,ex2p0001,49,face,target present,8,TRUE,1343,FALSE
+2,ex2p0001,50,non-face object,target present,8,TRUE,1654,FALSE
+2,ex2p0001,51,real face,target absent,8,TRUE,1953,FALSE
+2,ex2p0001,52,non-face object,target present,8,TRUE,601,FALSE
+2,ex2p0001,53,face,target present,16,TRUE,625,FALSE
+2,ex2p0001,54,real face,target absent,16,TRUE,1098,FALSE
+2,ex2p0001,55,real face,target present,8,TRUE,677,FALSE
+2,ex2p0001,56,face,target absent,16,TRUE,2012,FALSE
+2,ex2p0001,57,face,target present,16,TRUE,600,FALSE
+2,ex2p0001,58,real face,target present,16,TRUE,620,FALSE
+2,ex2p0001,59,real face,target present,8,TRUE,535,FALSE
+2,ex2p0001,60,non-face object,target absent,4,TRUE,796,FALSE
+2,ex2p0001,61,face,target present,4,FALSE,520,FALSE
+2,ex2p0001,62,real face,target present,4,TRUE,474,FALSE
+2,ex2p0001,63,real face,target present,4,TRUE,603,FALSE
+2,ex2p0001,64,face,target present,8,TRUE,493,FALSE
+2,ex2p0001,65,face,target absent,16,TRUE,1176,FALSE
+2,ex2p0001,66,real face,target present,8,TRUE,508,FALSE
+2,ex2p0001,67,real face,target present,16,TRUE,642,FALSE
+2,ex2p0001,68,non-face object,target absent,4,TRUE,949,FALSE
+2,ex2p0001,69,non-face object,target absent,16,TRUE,2075,FALSE
+2,ex2p0002,1,face,target absent,4,TRUE,792,FALSE
+2,ex2p0002,2,real face,target absent,4,TRUE,563,FALSE
+2,ex2p0002,3,non-face object,target absent,4,TRUE,626,FALSE
+2,ex2p0002,4,non-face object,target present,16,FALSE,1447,FALSE
+2,ex2p0002,5,real face,target absent,4,TRUE,639,FALSE
+2,ex2p0002,6,real face,target absent,4,TRUE,548,FALSE
+2,ex2p0002,7,non-face object,target present,4,TRUE,779,FALSE
+2,ex2p0002,8,face,target absent,4,TRUE,528,FALSE
+2,ex2p0002,9,non-face object,target present,8,TRUE,994,FALSE
+2,ex2p0002,10,non-face object,target present,16,FALSE,1318,FALSE
+2,ex2p0002,11,real face,target absent,16,TRUE,883,FALSE
+2,ex2p0002,12,non-face object,target absent,8,TRUE,1224,FALSE
+2,ex2p0002,13,non-face object,target absent,8,TRUE,1538,FALSE
+2,ex2p0002,14,face,target absent,16,TRUE,1782,FALSE
+2,ex2p0002,15,face,target present,8,TRUE,523,FALSE
+2,ex2p0002,16,real face,target present,8,TRUE,573,FALSE
+2,ex2p0002,17,real face,target present,4,TRUE,765,FALSE
+2,ex2p0002,18,real face,target present,8,TRUE,576,FALSE
+2,ex2p0002,19,non-face object,target present,8,FALSE,1747,FALSE
+2,ex2p0002,20,non-face object,target absent,8,TRUE,1378,FALSE
+2,ex2p0002,21,real face,target absent,16,TRUE,1372,FALSE
+2,ex2p0002,22,non-face object,target present,4,TRUE,626,FALSE
+2,ex2p0002,23,real face,target present,4,TRUE,462,FALSE
+2,ex2p0002,24,real face,target absent,4,TRUE,716,FALSE
+2,ex2p0002,25,real face,target absent,16,TRUE,1078,FALSE
+2,ex2p0002,26,non-face object,target present,16,TRUE,762,FALSE
+2,ex2p0002,27,non-face object,target present,8,TRUE,1490,FALSE
+2,ex2p0002,28,non-face object,target absent,8,TRUE,970,FALSE
+2,ex2p0002,29,non-face object,target absent,4,TRUE,970,FALSE
+2,ex2p0002,30,real face,target present,8,TRUE,510,FALSE
+2,ex2p0002,31,non-face object,target present,4,TRUE,526,FALSE
+2,ex2p0002,32,real face,target present,8,TRUE,714,FALSE
+2,ex2p0002,33,face,target present,16,FALSE,820,FALSE
+2,ex2p0002,34,real face,target present,8,TRUE,611,FALSE
+2,ex2p0002,35,real face,target present,8,TRUE,427,FALSE
+2,ex2p0002,36,real face,target absent,8,TRUE,875,FALSE
+2,ex2p0002,37,face,target absent,16,TRUE,1038,FALSE
+2,ex2p0002,38,non-face object,target absent,4,TRUE,680,FALSE
+2,ex2p0002,39,real face,target present,8,TRUE,519,FALSE
+2,ex2p0002,40,face,target present,16,FALSE,1097,FALSE
+2,ex2p0002,41,face,target present,8,TRUE,707,FALSE
+2,ex2p0002,42,face,target present,8,FALSE,1139,FALSE
+2,ex2p0002,43,face,target present,4,TRUE,762,FALSE
+2,ex2p0002,44,real face,target present,4,TRUE,428,FALSE
+2,ex2p0002,45,face,target absent,8,FALSE,1518,FALSE
+2,ex2p0002,46,non-face object,target absent,4,TRUE,1171,FALSE
+2,ex2p0002,47,real face,target present,16,FALSE,996,FALSE
+2,ex2p0002,48,real face,target absent,16,TRUE,1136,FALSE
+2,ex2p0002,49,face,target absent,8,TRUE,1462,FALSE
+2,ex2p0002,50,face,target present,8,TRUE,544,FALSE
+2,ex2p0002,51,real face,target absent,4,TRUE,781,FALSE
+2,ex2p0002,52,non-face object,target absent,4,FALSE,1099,FALSE
+2,ex2p0002,53,non-face object,target present,16,TRUE,1063,FALSE
+2,ex2p0002,54,face,target absent,4,TRUE,721,FALSE
+2,ex2p0002,55,face,target present,4,TRUE,495,FALSE
+2,ex2p0002,56,real face,target present,8,TRUE,928,FALSE
+2,ex2p0002,57,non-face object,target present,4,TRUE,677,FALSE
+2,ex2p0002,58,non-face object,target present,16,TRUE,484,FALSE
+2,ex2p0002,59,real face,target absent,8,TRUE,1054,FALSE
+2,ex2p0002,60,non-face object,target absent,8,TRUE,1201,FALSE
+2,ex2p0002,61,non-face object,target present,4,TRUE,607,FALSE
+2,ex2p0002,62,real face,target absent,16,TRUE,1080,FALSE
+2,ex2p0002,63,face,target present,16,TRUE,763,FALSE
+2,ex2p0002,64,real face,target absent,8,TRUE,1144,FALSE
+2,ex2p0002,65,real face,target absent,16,TRUE,1043,FALSE
+2,ex2p0002,66,face,target present,8,TRUE,1055,FALSE
+2,ex2p0002,67,real face,target absent,4,TRUE,988,FALSE
+2,ex2p0002,68,face,target absent,8,FALSE,1096,FALSE
+2,ex2p0002,69,non-face object,target present,16,TRUE,758,FALSE
+2,ex2p0003,1,non-face object,target present,16,FALSE,1577,FALSE
+2,ex2p0003,2,non-face object,target absent,4,TRUE,745,FALSE
+2,ex2p0003,3,non-face object,target present,4,TRUE,612,FALSE
+2,ex2p0003,4,real face,target present,8,TRUE,507,FALSE
+2,ex2p0003,5,real face,target absent,8,TRUE,1030,FALSE
+2,ex2p0003,6,face,target present,16,TRUE,614,FALSE
+2,ex2p0003,7,real face,target absent,16,TRUE,1243,FALSE
+2,ex2p0003,8,non-face object,target absent,8,TRUE,2336,FALSE
+2,ex2p0003,9,face,target present,16,TRUE,1461,FALSE
+2,ex2p0003,10,face,target present,4,TRUE,640,FALSE
+2,ex2p0003,11,real face,target present,16,TRUE,759,FALSE
+2,ex2p0003,12,non-face object,target present,4,TRUE,1327,FALSE
+2,ex2p0003,13,non-face object,target absent,16,TRUE,2565,FALSE
+2,ex2p0003,14,real face,target absent,16,TRUE,1389,FALSE
+2,ex2p0003,15,non-face object,target absent,16,FALSE,1921,FALSE
+2,ex2p0003,16,face,target present,4,TRUE,658,FALSE
+2,ex2p0003,17,real face,target present,4,TRUE,2959,FALSE
+2,ex2p0003,18,face,target absent,4,TRUE,1373,FALSE
+2,ex2p0003,19,non-face object,target absent,16,TRUE,1535,FALSE
+2,ex2p0003,20,real face,target absent,4,TRUE,842,FALSE
+2,ex2p0003,21,non-face object,target present,4,TRUE,1165,FALSE
+2,ex2p0003,22,face,target absent,4,TRUE,1180,FALSE
+2,ex2p0003,23,non-face object,target absent,4,TRUE,1433,FALSE
+2,ex2p0003,24,face,target absent,16,TRUE,1794,FALSE
+2,ex2p0003,25,non-face object,target absent,16,TRUE,1582,FALSE
+2,ex2p0003,26,face,target absent,16,TRUE,1742,FALSE
+2,ex2p0003,27,real face,target present,8,TRUE,564,FALSE
+2,ex2p0003,28,face,target absent,8,TRUE,1176,FALSE
+2,ex2p0003,29,face,target present,16,TRUE,1249,FALSE
+2,ex2p0003,30,real face,target present,4,TRUE,607,FALSE
+2,ex2p0003,31,real face,target present,4,TRUE,582,FALSE
+2,ex2p0003,32,face,target present,16,FALSE,878,FALSE
+2,ex2p0003,33,real face,target present,16,FALSE,1514,FALSE
+2,ex2p0003,34,real face,target absent,4,TRUE,831,FALSE
+2,ex2p0003,35,non-face object,target present,4,TRUE,534,FALSE
+2,ex2p0003,36,face,target present,4,TRUE,628,FALSE
+2,ex2p0003,37,real face,target present,16,TRUE,1142,FALSE
+2,ex2p0003,38,non-face object,target present,16,FALSE,1689,FALSE
+2,ex2p0003,39,face,target present,4,TRUE,787,FALSE
+2,ex2p0003,40,non-face object,target absent,4,TRUE,984,FALSE
+2,ex2p0003,41,face,target absent,8,TRUE,1292,FALSE
+2,ex2p0003,42,face,target absent,16,TRUE,1046,FALSE
+2,ex2p0003,43,non-face object,target present,8,TRUE,1291,FALSE
+2,ex2p0003,44,non-face object,target absent,4,TRUE,902,FALSE
+2,ex2p0003,45,real face,target present,4,TRUE,598,FALSE
+2,ex2p0003,46,non-face object,target present,8,FALSE,2103,FALSE
+2,ex2p0003,47,non-face object,target absent,4,TRUE,1164,FALSE
+2,ex2p0003,48,real face,target present,8,TRUE,522,FALSE
+2,ex2p0003,49,non-face object,target present,8,TRUE,667,FALSE
+2,ex2p0003,50,face,target absent,8,TRUE,903,FALSE
+2,ex2p0003,51,face,target present,16,TRUE,1167,FALSE
+2,ex2p0003,52,real face,target absent,16,TRUE,1024,FALSE
+2,ex2p0003,53,real face,target present,16,TRUE,576,FALSE
+2,ex2p0003,54,real face,target absent,4,TRUE,551,FALSE
+2,ex2p0003,55,face,target absent,8,TRUE,1634,FALSE
+2,ex2p0003,56,real face,target absent,4,TRUE,639,FALSE
+2,ex2p0003,57,face,target present,16,TRUE,615,FALSE
+2,ex2p0003,58,real face,target absent,8,TRUE,792,FALSE
+2,ex2p0003,59,real face,target absent,4,TRUE,591,FALSE
+2,ex2p0003,60,non-face object,target absent,4,TRUE,705,FALSE
+2,ex2p0003,61,face,target absent,8,TRUE,640,FALSE
+2,ex2p0003,62,face,target absent,4,TRUE,624,FALSE
+2,ex2p0003,63,real face,target present,16,TRUE,640,FALSE
+2,ex2p0003,64,face,target present,8,TRUE,1553,FALSE
+2,ex2p0003,65,non-face object,target absent,4,TRUE,1169,FALSE
+2,ex2p0003,66,real face,target present,16,TRUE,896,FALSE
+2,ex2p0003,67,real face,target present,4,TRUE,426,FALSE
+2,ex2p0003,68,face,target present,8,TRUE,1006,FALSE
+2,ex2p0003,69,real face,target absent,8,TRUE,602,FALSE
+2,ex2p0004,1,face,target present,4,TRUE,865,FALSE
+2,ex2p0004,2,real face,target present,8,TRUE,970,FALSE
+2,ex2p0004,3,real face,target absent,8,TRUE,947,FALSE
+2,ex2p0004,4,non-face object,target absent,4,TRUE,902,FALSE
+2,ex2p0004,5,face,target absent,8,FALSE,518,FALSE
+2,ex2p0004,6,non-face object,target present,8,FALSE,969,FALSE
+2,ex2p0004,7,face,target present,4,TRUE,539,FALSE
+2,ex2p0004,8,non-face object,target present,8,TRUE,830,FALSE
+2,ex2p0004,9,face,target absent,8,TRUE,960,FALSE
+2,ex2p0004,10,real face,target absent,8,TRUE,1234,FALSE
+2,ex2p0004,11,face,target present,4,TRUE,759,FALSE
+2,ex2p0004,12,non-face object,target present,16,TRUE,658,FALSE
+2,ex2p0004,13,face,target present,4,TRUE,960,FALSE
+2,ex2p0004,14,face,target absent,8,TRUE,950,FALSE
+2,ex2p0004,15,non-face object,target absent,4,TRUE,1039,FALSE
+2,ex2p0004,16,real face,target present,8,TRUE,914,FALSE
+2,ex2p0004,17,real face,target present,8,TRUE,507,FALSE
+2,ex2p0004,18,face,target present,4,TRUE,416,FALSE
+2,ex2p0004,19,non-face object,target present,8,TRUE,676,FALSE
+2,ex2p0004,20,real face,target absent,16,TRUE,1109,FALSE
+2,ex2p0004,21,non-face object,target absent,16,TRUE,1454,FALSE
+2,ex2p0004,22,non-face object,target absent,16,TRUE,1395,FALSE
+2,ex2p0004,23,face,target present,16,FALSE,1346,FALSE
+2,ex2p0004,24,face,target present,8,TRUE,487,FALSE
+2,ex2p0004,25,real face,target absent,16,TRUE,1081,FALSE
+2,ex2p0004,26,face,target absent,16,TRUE,1272,FALSE
+2,ex2p0004,27,real face,target present,4,TRUE,599,FALSE
+2,ex2p0004,28,real face,target present,16,TRUE,700,FALSE
+2,ex2p0004,29,non-face object,target present,4,TRUE,866,FALSE
+2,ex2p0004,30,non-face object,target absent,8,TRUE,931,FALSE
+2,ex2p0004,31,non-face object,target present,4,TRUE,441,FALSE
+2,ex2p0004,32,non-face object,target present,16,TRUE,985,FALSE
+2,ex2p0004,33,real face,target absent,16,TRUE,1294,FALSE
+2,ex2p0004,34,non-face object,target present,4,TRUE,661,FALSE
+2,ex2p0004,35,face,target absent,16,TRUE,846,FALSE
+2,ex2p0004,36,real face,target present,16,TRUE,558,FALSE
+2,ex2p0004,37,non-face object,target present,16,FALSE,926,FALSE
+2,ex2p0004,38,non-face object,target present,4,TRUE,580,FALSE
+2,ex2p0004,39,face,target present,8,TRUE,1347,FALSE
+2,ex2p0004,40,real face,target present,16,TRUE,643,FALSE
+2,ex2p0004,41,real face,target absent,8,TRUE,855,FALSE
+2,ex2p0004,42,face,target present,16,FALSE,1409,FALSE
+2,ex2p0004,43,non-face object,target absent,4,FALSE,888,FALSE
+2,ex2p0004,44,non-face object,target present,4,TRUE,433,FALSE
+2,ex2p0004,45,face,target present,8,TRUE,1241,FALSE
+2,ex2p0004,46,face,target absent,4,TRUE,1174,FALSE
+2,ex2p0004,47,non-face object,target present,8,FALSE,781,FALSE
+2,ex2p0004,48,non-face object,target absent,8,FALSE,469,FALSE
+2,ex2p0004,49,non-face object,target absent,4,TRUE,806,FALSE
+2,ex2p0004,50,non-face object,target absent,8,TRUE,1274,FALSE
+2,ex2p0004,51,non-face object,target absent,16,TRUE,1395,FALSE
+2,ex2p0004,52,face,target absent,16,TRUE,962,FALSE
+2,ex2p0004,53,real face,target absent,16,TRUE,1318,FALSE
+2,ex2p0004,54,real face,target absent,8,TRUE,1171,FALSE
+2,ex2p0004,55,face,target present,16,TRUE,753,FALSE
+2,ex2p0004,56,non-face object,target present,4,TRUE,676,FALSE
+2,ex2p0004,57,real face,target present,8,TRUE,582,FALSE
+2,ex2p0004,58,non-face object,target absent,16,TRUE,2656,FALSE
+2,ex2p0004,59,face,target absent,16,FALSE,1264,FALSE
+2,ex2p0004,60,non-face object,target absent,4,TRUE,1076,FALSE
+2,ex2p0004,61,non-face object,target absent,8,FALSE,1241,FALSE
+2,ex2p0004,62,face,target present,16,TRUE,507,FALSE
+2,ex2p0004,63,non-face object,target present,4,TRUE,568,FALSE
+2,ex2p0004,64,real face,target absent,16,TRUE,1117,FALSE
+2,ex2p0004,65,real face,target present,8,TRUE,523,FALSE
+2,ex2p0004,66,face,target absent,16,TRUE,1555,FALSE
+2,ex2p0004,67,real face,target present,8,TRUE,436,FALSE
+2,ex2p0004,68,non-face object,target present,8,FALSE,1499,FALSE
+2,ex2p0004,69,non-face object,target present,8,TRUE,807,FALSE
+2,ex2p0005,1,face,target present,16,TRUE,573,FALSE
+2,ex2p0005,2,non-face object,target absent,16,TRUE,937,FALSE
+2,ex2p0005,3,real face,target present,16,TRUE,552,FALSE
+2,ex2p0005,4,real face,target absent,16,TRUE,1060,FALSE
+2,ex2p0005,5,face,target absent,16,FALSE,1546,FALSE
+2,ex2p0005,6,non-face object,target present,8,TRUE,794,FALSE
+2,ex2p0005,7,face,target absent,16,TRUE,1023,FALSE
+2,ex2p0005,8,non-face object,target present,8,TRUE,802,FALSE
+2,ex2p0005,9,non-face object,target absent,8,TRUE,1412,FALSE
+2,ex2p0005,10,face,target absent,8,TRUE,971,FALSE
+2,ex2p0005,11,real face,target absent,4,TRUE,581,FALSE
+2,ex2p0005,12,real face,target absent,16,TRUE,761,FALSE
+2,ex2p0005,13,face,target present,4,TRUE,567,FALSE
+2,ex2p0005,14,non-face object,target absent,4,TRUE,849,FALSE
+2,ex2p0005,15,non-face object,target absent,4,TRUE,505,FALSE
+2,ex2p0005,16,face,target absent,8,TRUE,909,FALSE
+2,ex2p0005,17,face,target absent,8,TRUE,819,FALSE
+2,ex2p0005,18,real face,target present,4,TRUE,750,FALSE
+2,ex2p0005,19,face,target present,4,TRUE,481,FALSE
+2,ex2p0005,20,non-face object,target present,16,TRUE,1099,FALSE
+2,ex2p0005,21,face,target absent,4,TRUE,849,FALSE
+2,ex2p0005,22,real face,target present,4,TRUE,710,FALSE
+2,ex2p0005,23,non-face object,target absent,4,TRUE,909,FALSE
+2,ex2p0005,24,real face,target absent,4,TRUE,880,FALSE
+2,ex2p0005,25,non-face object,target present,4,TRUE,921,FALSE
+2,ex2p0005,26,real face,target present,4,TRUE,409,FALSE
+2,ex2p0005,27,non-face object,target present,4,TRUE,686,FALSE
+2,ex2p0005,28,face,target absent,16,TRUE,1190,FALSE
+2,ex2p0005,29,non-face object,target absent,16,TRUE,1483,FALSE
+2,ex2p0005,30,real face,target present,16,TRUE,568,FALSE
+2,ex2p0005,31,real face,target absent,16,TRUE,932,FALSE
+2,ex2p0005,32,real face,target absent,16,TRUE,792,FALSE
+2,ex2p0005,33,real face,target present,8,TRUE,721,FALSE
+2,ex2p0005,34,real face,target absent,16,TRUE,630,FALSE
+2,ex2p0005,35,real face,target absent,4,TRUE,753,FALSE
+2,ex2p0005,36,real face,target absent,4,TRUE,582,FALSE
+2,ex2p0005,37,face,target present,4,TRUE,739,FALSE
+2,ex2p0005,38,real face,target absent,16,TRUE,757,FALSE
+2,ex2p0005,39,real face,target absent,8,TRUE,624,FALSE
+2,ex2p0005,40,real face,target absent,4,FALSE,504,FALSE
+2,ex2p0005,41,face,target present,4,TRUE,739,FALSE
+2,ex2p0005,42,real face,target absent,16,TRUE,900,FALSE
+2,ex2p0005,43,real face,target absent,4,FALSE,560,FALSE
+2,ex2p0005,44,non-face object,target present,4,TRUE,719,FALSE
+2,ex2p0005,45,real face,target present,8,TRUE,552,FALSE
+2,ex2p0005,46,face,target absent,8,FALSE,793,FALSE
+2,ex2p0005,47,face,target absent,8,FALSE,927,FALSE
+2,ex2p0005,48,face,target present,8,TRUE,461,FALSE
+2,ex2p0005,49,face,target absent,16,TRUE,1120,FALSE
+2,ex2p0005,50,real face,target absent,4,TRUE,703,FALSE
+2,ex2p0005,51,real face,target present,16,TRUE,796,FALSE
+2,ex2p0005,52,face,target present,16,TRUE,1482,FALSE
+2,ex2p0005,53,non-face object,target absent,8,TRUE,934,FALSE
+2,ex2p0005,54,real face,target present,4,TRUE,570,FALSE
+2,ex2p0005,55,non-face object,target absent,8,TRUE,1143,FALSE
+2,ex2p0005,56,face,target present,8,TRUE,896,FALSE
+2,ex2p0005,57,face,target absent,16,TRUE,1017,FALSE
+2,ex2p0005,58,face,target absent,16,TRUE,1154,FALSE
+2,ex2p0005,59,non-face object,target absent,16,TRUE,1525,FALSE
+2,ex2p0005,60,face,target absent,16,TRUE,1029,FALSE
+2,ex2p0005,61,non-face object,target present,4,TRUE,917,FALSE
+2,ex2p0005,62,face,target absent,4,TRUE,657,FALSE
+2,ex2p0005,63,non-face object,target present,8,TRUE,1160,FALSE
+2,ex2p0005,64,non-face object,target present,8,TRUE,1014,FALSE
+2,ex2p0005,65,face,target present,8,TRUE,642,FALSE
+2,ex2p0005,66,non-face object,target present,4,TRUE,619,FALSE
+2,ex2p0005,67,real face,target absent,16,TRUE,1205,FALSE
+2,ex2p0005,68,non-face object,target present,16,FALSE,874,FALSE
+2,ex2p0005,69,face,target present,16,TRUE,1011,FALSE
+2,ex2p0006,1,face,target present,8,TRUE,594,FALSE
+2,ex2p0006,2,non-face object,target present,16,FALSE,1864,FALSE
+2,ex2p0006,3,non-face object,target present,4,TRUE,473,FALSE
+2,ex2p0006,4,real face,target absent,8,TRUE,698,FALSE
+2,ex2p0006,5,non-face object,target absent,16,TRUE,2191,FALSE
+2,ex2p0006,6,real face,target present,16,TRUE,1292,FALSE
+2,ex2p0006,7,non-face object,target present,8,TRUE,641,FALSE
+2,ex2p0006,8,real face,target present,16,TRUE,559,FALSE
+2,ex2p0006,9,face,target present,16,FALSE,1075,FALSE
+2,ex2p0006,10,face,target absent,4,TRUE,856,FALSE
+2,ex2p0006,11,face,target present,8,TRUE,748,FALSE
+2,ex2p0006,12,face,target absent,8,TRUE,1372,FALSE
+2,ex2p0006,13,non-face object,target absent,16,TRUE,2246,FALSE
+2,ex2p0006,14,face,target present,4,FALSE,1166,FALSE
+2,ex2p0006,15,non-face object,target absent,8,TRUE,1351,FALSE
+2,ex2p0006,16,real face,target absent,4,TRUE,622,FALSE
+2,ex2p0006,17,real face,target absent,8,FALSE,572,FALSE
+2,ex2p0006,18,face,target absent,4,TRUE,1080,FALSE
+2,ex2p0006,19,face,target absent,16,TRUE,1186,FALSE
+2,ex2p0006,20,real face,target present,16,TRUE,762,FALSE
+2,ex2p0006,21,face,target present,4,TRUE,1206,FALSE
+2,ex2p0006,22,non-face object,target absent,8,TRUE,877,FALSE
+2,ex2p0006,23,face,target absent,16,TRUE,1710,FALSE
+2,ex2p0006,24,non-face object,target present,8,FALSE,909,FALSE
+2,ex2p0006,25,face,target absent,4,TRUE,758,FALSE
+2,ex2p0006,26,real face,target absent,16,TRUE,1101,FALSE
+2,ex2p0006,27,real face,target absent,8,TRUE,773,FALSE
+2,ex2p0006,28,non-face object,target absent,8,TRUE,1428,FALSE
+2,ex2p0006,29,real face,target present,4,TRUE,638,FALSE
+2,ex2p0006,30,face,target present,4,TRUE,811,FALSE
+2,ex2p0006,31,real face,target absent,8,TRUE,1327,FALSE
+2,ex2p0006,32,real face,target present,4,TRUE,419,FALSE
+2,ex2p0006,33,face,target present,8,TRUE,375,FALSE
+2,ex2p0006,34,face,target absent,16,TRUE,1716,FALSE
+2,ex2p0006,35,non-face object,target present,4,TRUE,470,FALSE
+2,ex2p0006,36,non-face object,target present,4,TRUE,491,FALSE
+2,ex2p0006,37,real face,target present,4,TRUE,557,FALSE
+2,ex2p0006,38,real face,target absent,4,FALSE,4690,FALSE
+2,ex2p0006,39,real face,target absent,8,FALSE,1265,FALSE
+2,ex2p0006,40,non-face object,target present,4,TRUE,1217,FALSE
+2,ex2p0006,41,face,target absent,16,TRUE,1547,FALSE
+2,ex2p0006,42,face,target absent,8,FALSE,1391,FALSE
+2,ex2p0006,43,real face,target present,16,TRUE,542,FALSE
+2,ex2p0006,44,real face,target present,4,TRUE,617,FALSE
+2,ex2p0006,45,non-face object,target absent,4,TRUE,1222,FALSE
+2,ex2p0006,46,face,target present,8,TRUE,933,FALSE
+2,ex2p0006,47,non-face object,target absent,8,TRUE,2713,FALSE
+2,ex2p0006,48,face,target absent,8,TRUE,849,FALSE
+2,ex2p0006,49,face,target present,16,TRUE,882,FALSE
+2,ex2p0006,50,real face,target present,8,TRUE,812,FALSE
+2,ex2p0006,51,real face,target absent,8,TRUE,1647,FALSE
+2,ex2p0006,52,non-face object,target absent,16,TRUE,2426,FALSE
+2,ex2p0006,53,non-face object,target absent,4,TRUE,3458,FALSE
+2,ex2p0006,54,face,target absent,8,TRUE,1390,FALSE
+2,ex2p0006,55,non-face object,target present,4,TRUE,1716,FALSE
+2,ex2p0006,56,non-face object,target present,8,FALSE,1012,FALSE
+2,ex2p0006,57,face,target absent,8,FALSE,1852,FALSE
+2,ex2p0006,58,face,target absent,16,FALSE,1066,FALSE
+2,ex2p0006,59,face,target absent,16,TRUE,592,FALSE
+2,ex2p0006,60,non-face object,target absent,16,FALSE,1320,FALSE
+2,ex2p0006,61,real face,target absent,16,TRUE,896,FALSE
+2,ex2p0006,62,non-face object,target absent,4,TRUE,1216,FALSE
+2,ex2p0006,63,face,target absent,4,TRUE,987,FALSE
+2,ex2p0006,64,real face,target absent,16,FALSE,2138,FALSE
+2,ex2p0006,65,real face,target present,8,FALSE,2985,FALSE
+2,ex2p0006,66,face,target absent,16,FALSE,703,FALSE
+2,ex2p0006,67,face,target present,8,TRUE,1086,FALSE
+2,ex2p0006,68,non-face object,target present,8,TRUE,879,FALSE
+2,ex2p0006,69,real face,target present,8,TRUE,605,FALSE
+2,ex2p0010,1,non-face object,target present,4,TRUE,704,FALSE
+2,ex2p0010,2,real face,target present,4,TRUE,588,FALSE
+2,ex2p0010,3,face,target present,16,TRUE,827,FALSE
+2,ex2p0010,4,real face,target absent,4,TRUE,688,FALSE
+2,ex2p0010,5,non-face object,target present,16,FALSE,1752,FALSE
+2,ex2p0010,6,face,target absent,4,TRUE,1273,FALSE
+2,ex2p0010,7,real face,target absent,4,TRUE,787,FALSE
+2,ex2p0010,8,real face,target present,16,TRUE,717,FALSE
+2,ex2p0010,9,non-face object,target absent,8,TRUE,1530,FALSE
+2,ex2p0010,10,face,target absent,4,TRUE,776,FALSE
+2,ex2p0010,11,face,target present,4,TRUE,888,FALSE
+2,ex2p0010,12,face,target absent,4,TRUE,1284,FALSE
+2,ex2p0010,13,real face,target present,16,TRUE,802,FALSE
+2,ex2p0010,14,non-face object,target absent,16,FALSE,955,FALSE
+2,ex2p0010,15,non-face object,target present,16,TRUE,1507,FALSE
+2,ex2p0010,16,real face,target present,8,TRUE,626,FALSE
+2,ex2p0010,17,non-face object,target absent,16,TRUE,1659,FALSE
+2,ex2p0010,18,real face,target absent,16,TRUE,1076,FALSE
+2,ex2p0010,19,face,target present,8,TRUE,488,FALSE
+2,ex2p0010,20,non-face object,target present,4,TRUE,933,FALSE
+2,ex2p0010,21,face,target present,16,TRUE,1188,FALSE
+2,ex2p0010,22,real face,target absent,4,TRUE,910,FALSE
+2,ex2p0010,23,face,target present,8,TRUE,616,FALSE
+2,ex2p0010,24,non-face object,target present,16,TRUE,1590,FALSE
+2,ex2p0010,25,non-face object,target present,4,TRUE,645,FALSE
+2,ex2p0010,26,real face,target absent,4,TRUE,943,FALSE
+2,ex2p0010,27,face,target present,16,TRUE,571,FALSE
+2,ex2p0010,28,real face,target present,8,TRUE,524,FALSE
+2,ex2p0010,29,non-face object,target present,8,TRUE,436,FALSE
+2,ex2p0010,30,real face,target present,16,TRUE,450,FALSE
+2,ex2p0010,31,face,target absent,8,TRUE,1103,FALSE
+2,ex2p0010,32,non-face object,target present,4,TRUE,576,FALSE
+2,ex2p0010,33,non-face object,target absent,4,TRUE,928,FALSE
+2,ex2p0010,34,face,target present,4,TRUE,379,FALSE
+2,ex2p0010,35,real face,target present,16,TRUE,543,FALSE
+2,ex2p0010,36,real face,target present,8,TRUE,477,FALSE
+2,ex2p0010,37,non-face object,target present,16,TRUE,649,FALSE
+2,ex2p0010,38,non-face object,target absent,16,TRUE,1539,FALSE
+2,ex2p0010,39,real face,target present,4,TRUE,488,FALSE
+2,ex2p0010,40,real face,target absent,16,TRUE,1216,FALSE
+2,ex2p0010,41,non-face object,target absent,8,TRUE,1408,FALSE
+2,ex2p0010,42,non-face object,target absent,4,TRUE,1309,FALSE
+2,ex2p0010,43,non-face object,target present,4,TRUE,496,FALSE
+2,ex2p0010,44,non-face object,target present,4,TRUE,798,FALSE
+2,ex2p0010,45,real face,target absent,8,TRUE,988,FALSE
+2,ex2p0010,46,non-face object,target present,8,TRUE,1029,FALSE
+2,ex2p0010,47,non-face object,target absent,16,TRUE,1747,FALSE
+2,ex2p0010,48,face,target absent,16,TRUE,2162,FALSE
+2,ex2p0010,49,non-face object,target absent,16,TRUE,1684,FALSE
+2,ex2p0010,50,non-face object,target absent,8,TRUE,923,FALSE
+2,ex2p0010,51,non-face object,target present,4,TRUE,592,FALSE
+2,ex2p0010,52,non-face object,target absent,16,TRUE,1107,FALSE
+2,ex2p0010,53,face,target present,4,TRUE,488,FALSE
+2,ex2p0010,54,face,target present,16,TRUE,509,FALSE
+2,ex2p0010,55,face,target present,8,TRUE,634,FALSE
+2,ex2p0010,56,face,target present,8,TRUE,484,FALSE
+2,ex2p0010,57,non-face object,target present,16,TRUE,1056,FALSE
+2,ex2p0010,58,non-face object,target present,16,TRUE,1247,FALSE
+2,ex2p0010,59,non-face object,target absent,8,TRUE,1448,FALSE
+2,ex2p0010,60,real face,target absent,4,TRUE,1051,FALSE
+2,ex2p0010,61,non-face object,target present,4,TRUE,996,FALSE
+2,ex2p0010,62,non-face object,target present,16,TRUE,1492,FALSE
+2,ex2p0010,63,face,target present,8,TRUE,606,FALSE
+2,ex2p0010,64,face,target absent,16,TRUE,1719,FALSE
+2,ex2p0010,65,real face,target absent,8,TRUE,835,FALSE
+2,ex2p0010,66,real face,target absent,4,TRUE,780,FALSE
+2,ex2p0010,67,face,target absent,8,TRUE,1407,FALSE
+2,ex2p0010,68,real face,target present,4,TRUE,706,FALSE
+2,ex2p0010,69,real face,target absent,8,TRUE,814,FALSE
