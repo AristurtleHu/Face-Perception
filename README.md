@@ -8,18 +8,37 @@ This project implements two visual search experiments using **Python (pygame)** 
 
 ## Contents
 
-- [Quick Start](#quick-start)
-- [Stimulus Materials](#stimulus-materials)
-- [Results Summary (Current Data)](#results-summary-current-data)
-- [Experiment Design](#experiment-design)
-- [Experimental Pipeline](#experimental-pipeline)
-- [Output Format](#output-format)
-- [Code Architecture](#code-architecture)
-- [Response Keys](#response-keys)
-- [Citation](#citation)
+- [Face Pareidolia Visual Search Task – Python Implementation](#face-pareidolia-visual-search-task--python-implementation)
+  - [Project Overview](#project-overview)
+  - [Contents](#contents)
+    - [Original Reference](#original-reference)
+  - [Quick Start](#quick-start)
+    - [Installation](#installation)
+    - [Running the Experiments](#running-the-experiments)
+  - [Stimulus Materials](#stimulus-materials)
+  - [Results Summary (Current Data)](#results-summary-current-data)
+  - [Experiment Design](#experiment-design)
+    - [Experiment 1: Grid Layout (Homogeneous Distractors)](#experiment-1-grid-layout-homogeneous-distractors)
+      - [Experiment 1 Examples](#experiment-1-examples)
+    - [Experiment 2: Circular Layout (Heterogeneous Distractors)](#experiment-2-circular-layout-heterogeneous-distractors)
+      - [Experiment 2 Examples](#experiment-2-examples)
+  - [Experimental Pipeline](#experimental-pipeline)
+  - [Output Format](#output-format)
+    - [CSV Output Columns (Ex1)](#csv-output-columns-ex1)
+    - [CSV Output Columns (Ex2)](#csv-output-columns-ex2)
+  - [Code Architecture](#code-architecture)
+  - [Diffusion Decision Modeling (DDM)](#diffusion-decision-modeling-ddm)
+    - [Model Overview](#model-overview)
+    - [Key Findings](#key-findings)
+    - [Running DDM Fitting](#running-ddm-fitting)
+    - [Core Modules](#core-modules)
+    - [Visualization \& Results](#visualization--results)
+  - [Response Keys](#response-keys)
+  - [Citation](#citation)
 
 ### Original Reference
-> Keys, R.T., Taubert, J. & Wardle, S.G. A visual search advantage for illusory faces in objects. Atten Percept Psychophys 83, 1942–1953 (2021)  
+
+> Keys, R.T., Taubert, J. & Wardle, S.G. A visual search advantage for illusory faces in objects. Atten Percept Psychophys 83, 1942–1953 (2021)
 > https://doi.org/10.3758/s13414-021-02267-4
 
 ## Quick Start
@@ -55,6 +74,7 @@ https://osf.io/rf3v6/files/osfstorage
 ```
 
 After downloading, place all materials in:
+
 ```
 docs/materials/
 ├── experiment1materials/
@@ -70,6 +90,7 @@ docs/materials/
 ```
 
 **Tip:** Remove macOS metadata files:
+
 ```bash
 find . -name ".DS_Store" -type f -delete
 ```
@@ -98,13 +119,14 @@ Based on the current aggregated results in `results.csv` and the plots in `viz/o
 | Categories       | 26 unique object types             |
 | Trial Types      | 12 per category (312 total trials) |
 | Set Sizes        | 16, 32, 64                         |
-| Layout           | 8×8 invisible grid                 |
+| Layout           | 8×8 invisible grid                |
 | Target Duration  | 1.6 s                              |
-| Fixation Jitter  | 400–600 ms                         |
+| Fixation Jitter  | 400–600 ms                        |
 | Response Timeout | 15 s                               |
 | Break Points     | Trials 52, 104, 156, 208, 260      |
 
 **Factors manipulated:**
+
 - **Target Type**: pFace (object with illusory face) vs. nonFace (matched object without face)
 - **Target Presence**: Present or Absent
 - **Set Size**: 16, 32, or 64 distractors (all from same object category)
@@ -140,11 +162,12 @@ Based on the current aggregated results in `results.csv` and the plots in `viz/o
 | Set Sizes        | 4, 8, 16                           |
 | Layout           | Equidistant circular array         |
 | Target Duration  | 1.6 s                              |
-| Fixation Jitter  | 400–600 ms                         |
+| Fixation Jitter  | 400–600 ms                        |
 | Response Timeout | 15 s                               |
 | Break Points     | Trials 69, 138, 207, 276, 345      |
 
 **Factors manipulated:**
+
 - **Target Type**: nonFace, pFace, or realFace (human face)
 - **Target Presence**: Present or Absent
 
@@ -206,9 +229,9 @@ output/
 
 | Column                 | Description                                |
 | ---------------------- | ------------------------------------------ |
-| trialNumber            | Sequential trial identifier (1–312)        |
-| type                   | Trial type (1–12)                          |
-| stimulusCategory       | Object category (1–26)                     |
+| trialNumber            | Sequential trial identifier (1–312)       |
+| type                   | Trial type (1–12)                         |
+| stimulusCategory       | Object category (1–26)                    |
 | PFstimulus             | Target type: 1=pFace, 0=nonFace            |
 | setSize                | Number of distractors (16, 32, or 64)      |
 | targetPresent          | 1=Present, 0=Absent                        |
@@ -216,15 +239,15 @@ output/
 | rt                     | Response time in milliseconds              |
 | timeoutOrKeyNotPressed | 1=Timeout (no response), 0=Normal response |
 | targetYokedImageSource | Distractor image index (always 20 for Ex1) |
-| targetArrayLocation    | Position of target in search array (1–64)  |
+| targetArrayLocation    | Position of target in search array (1–64) |
 
 ### CSV Output Columns (Ex2)
 
 | Column                 | Description                                |
 | ---------------------- | ------------------------------------------ |
-| trialNumber            | Sequential trial identifier (1–414)        |
-| type                   | Trial type (1–18)                          |
-| stimulusCategory       | Object category (1–23)                     |
+| trialNumber            | Sequential trial identifier (1–414)       |
+| type                   | Trial type (1–18)                         |
+| stimulusCategory       | Object category (1–23)                    |
 | nonFace                | 1 if target is nonFace, 0 otherwise        |
 | pFace                  | 1 if target is pFace, 0 otherwise          |
 | realFace               | 1 if target is realFace, 0 otherwise       |
@@ -242,12 +265,71 @@ output/
 ├── viz/                          # Analysis + plotting package
 │   ├── outputs/                  # Generated figures
 │   └── requirements.txt          # Viz-only dependencies
+├── DDM/
+│   ├── ddm_fit.py              # DDM model fitting script (PyDDM)
+│   └── ddm_outputs/            # Fitted model outputs
+│       ├── exp1/               # Experiment 1 DDM results & figures
+│       └── exp2/               # Experiment 2 DDM results & figures
 ├── docs/                         # Report + slides + images
 ├── output/                       # Per-participant raw results
 ├── results.csv                   # Aggregated results for analysis
 ├── generate_visualizations.py    # Build plots from results.csv
 └── update_results_from_output.py # Merge output/ CSVs into results.csv
 ```
+
+## Diffusion Decision Modeling (DDM)
+
+To investigate the cognitive mechanisms underlying the visual search advantage for illusory faces, we applied **diffusion decision modeling (DDM)** to trial-level reaction time distributions.
+
+### Model Overview
+
+We compared two competing model structures for each condition:
+
+| Model             | Drift Rate (v)                      | Boundary Separation (a) | Interpretation                                                             |
+| ----------------- | ----------------------------------- | ----------------------- | -------------------------------------------------------------------------- |
+| **Model A** | Varies with set size (log function) | Fixed across set sizes  | Set-size effects driven by**evidence accumulation efficiency**       |
+| **Model B** | Varies with set size (log function) | Varies with set size    | Set-size effects driven by**evidence efficiency + response caution** |
+
+- **Drift rate** (*v*): Speed of evidence accumulation toward a decision
+- **Boundary separation** (*a*): Response caution / speed-accuracy tradeoff
+- **Non-decision time** (*T_er*): Perceptual and motor delays
+
+### Key Findings
+
+- **Target-present trials**: Model A provided better fit (AIC/BIC), indicating set-size effects are primarily driven by **decreased drift rate** (reduced evidence efficiency) as arrays grow larger.
+- **Target-absent trials**: Model B provided better fit, indicating participants adopt **more conservative boundaries** (increased response caution) when exhaustive search is required.
+- **Target-type hierarchy**: Real faces &gt; illusory faces &gt; non-face objects in drift rate, suggesting partial recruitment of face-related perceptual processing for illusory faces.
+
+### Running DDM Fitting
+
+```bash
+# Install PyDDM dependency
+pip install pyddm
+
+# Run DDM fitting on aggregated results
+cd DDM
+python ddm_fit.py --csv ../results.csv --out ddm_outputs
+
+# Run DDM fitting on aggregated results
+cd DDM
+python ddm_fit.py --csv ../results.csv --out ddm_outputs
+
+```
+
+ddm_outputs/
+├── exp1/
+│   ├── model_comparison.csv          # AIC/BIC comparison table
+│   ├── drift_params_model_a_*.png    # Drift rate bar plots
+│   ├── rt_by_setsize_model_a_*.png   # Observed vs. simulated RT by set size
+│   └── rt_overall_model_a_*.png      # Overall RT distribution fits
+└── exp2/
+    └── ... (same structure)
+
+**Diffusion Decision Modeling:**
+
+- Target-present decisions are driven by changes in **drift rate** (evidence accumulation efficiency), with illusory faces showing higher drift rates than non-face objects.
+- Target-absent decisions are driven by increases in **boundary separation** (response caution).
+- Real faces produce the highest drift rates, followed by illusory faces, then non-face objects.
 
 ### Core Modules
 
