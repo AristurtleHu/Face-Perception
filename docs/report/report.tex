@@ -1,11 +1,9 @@
-\documentclass[11pt, a4paper]{article}
+\documentclass[stu,12pt,floatsintext]{apa7}
 
 % --- Packages ---
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{float}
-\usepackage{geometry}
-\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
 \usepackage{amsmath, amssymb}
 \usepackage{graphicx}
 % Support graphics with complex filenames and set default image search path
@@ -18,6 +16,16 @@
 \usepackage{setspace}
 \usepackage{listings}
 \usepackage{xcolor}
+\usepackage{subfig}
+
+\usepackage[american]{babel}
+\usepackage{csquotes}
+\usepackage[style=apa, backend=biber]{biblatex}
+
+\addbibresource{references.bib}
+
+\newcommand{\exponepath}{../../DDM/ddm_outputs/exp1/} 
+\newcommand{\exptwopath}{../../DDM/ddm_outputs/exp2/} 
 
 % --- Code Listing Style ---
 \definecolor{codegreen}{rgb}{0,0.6,0}
@@ -49,40 +57,37 @@
 }
 
 % --- Document Information ---
-\title{\textbf{Technical Report: A Computational Reproduction of Visual Search Advantage for Illusory Faces} \\
-\large Python Implementation of Keys, Taubert, \& Wardle (2021)}
-\author{
-    Implemented in Python with Pygame
+\title{Reproducing the Visual Search Advantage for Illusory Faces: A Behavioral and Diffusion Decision Modeling Study}%Python Implementation of Keys, Taubert, \& Wardle (2021)%
+\shorttitle{Illusory Face Search}
+\authorsnames{Xiemohan Yue and Renyi Yang}
+\authorsaffiliations{Grenoble INP - Phelma}
+\professor{Marion Dohen, Nathalie Guyader, and Ronald Phlypo}
+\course{VPMDLP11 Lab project I}
+\duedate{\today}
+\abstract{
+	This report presents a Python/Pygame reproduction and computational extension of the visual search experiments reported by \textcite{Keys2021}, which investigated whether illusory faces in everyday objects confer a visual search advantage. Behavioral results replicated the primary findings of the original study: reaction times increased with set size, target-absent trials were slower than target-present trials, and illusory faces were detected more efficiently than non-face objects. In Experiment 2, real faces produced the fastest responses overall.
+	
+	To investigate the underlying decision mechanisms, diffusion decision modeling (DDM) was applied to reaction time distributions across conditions. Model comparisons indicated that target-present trials were primarily explained by changes in drift rate, suggesting reduced evidence accumulation efficiency at larger set sizes. Real faces showed the highest drift rates, illusory faces showed intermediate drift rates, and non-face objects showed the lowest drift rates. By contrast, target-absent trials were better explained by increases in boundary separation, consistent with increasingly cautious search termination decisions.
+	
+	These findings demonstrate that illusory faces confer a measurable perceptual advantage during visual search and show how DDM can dissociate evidence accumulation from response caution in face-related visual search tasks.
 }
-\date{\today}
 
+\keywords{visual search, illusory faces, pareidolia, diffusion decision model, reaction time}
 \begin{document}
-
-% Relax strictness on line breaking to reduce overfull boxes
-\sloppy
-
 \maketitle
-
-\begin{abstract}
-    This technical report documents a complete Python/Pygame reproduction of the psychophysical experiments conducted by Keys, Taubert, and Wardle (2021), which investigate whether illusory faces in everyday objects confer a visual search advantage. The original experiments were implemented in MATLAB with Psychtoolbox-3; this reproduction maintains strict fidelity to the experimental design while providing a cross-platform, open-source implementation. We detail the computational methods, stimulus presentation algorithms, trial randomization logic, and data collection framework. The Python-based system successfully replicates the temporal constraints, spatial layouts, and response measurement protocols of the original paradigm.
-\end{abstract}
-
-\newpage
-
-\tableofcontents
-\newpage
+\sloppy
 
 \section{Introduction}
 
 \subsection{Background: Face Detection and Visual Search}
 
-The human visual system prioritizes the detection of faces in cluttered environments. This attentional bias reflects both the ecological importance of face detection in human social cognition and the evolutionary cost of missing a conspecific in a naturalistic setting. Substantial evidence demonstrates that human faces are detected faster and more efficiently than non-face objects in visual search tasks (e.g., Hershler \& Hochstein, 2005; Wolfe, 2001).
+The human visual system prioritizes the detection of faces in cluttered environments. This attentional bias reflects both the ecological importance of face detection in human social cognition and the evolutionary cost of missing a conspecific in a naturalistic setting. Substantial evidence demonstrates that human faces are detected faster and more efficiently than non-face objects in visual search tasks (e.g., \textcite{Hershler2005,Wolfe2001}).
 
 A fascinating and well-documented phenomenon is \textit{face pareidolia}—the spontaneous perception of faces in inanimate objects, such as electrical sockets, toast, or tree trunks. Critically, these illusory face perceptions occur despite the absence of canonical facial features (e.g., skin texture, stereotypic face geometry). This raises an intriguing question: does the illusory face percept leverage the same rapid detection mechanism as real faces?
 
 \subsection{The Keys et al. (2021) Study}
 
-Keys, Taubert, and Wardle (2021) addressed this question using a classic visual search paradigm implemented in MATLAB with Psychtoolbox-3 (PTB-3). They conducted two experiments:
+\textcite{Keys2021} addressed this question using a classic visual search paradigm implemented in MATLAB with Psychtoolbox-3 (PTB-3). They conducted two experiments:
 
 \begin{enumerate}
     \item \textbf{Experiment 1 (Grid Search)}: Participants searched for objects containing illusory faces among homogeneous distractors (all items from the same object category). Set sizes ranged from 16 to 64 items arranged on an invisible $8 \times 8$ grid.
@@ -99,13 +104,14 @@ The present work translates the MATLAB/PTB-3 implementation into Python with Pyg
 \begin{itemize}
     \item \textbf{Platform independence}: The code runs identically on Windows, macOS, and Linux.
     \item \textbf{Open-source accessibility}: No proprietary software is required.
-    \item \textbf{Maintainability}: Python code is typically more readable and easier to extend than MATLAB.
     \item \textbf{Reproducibility}: The implementation is public and version-controlled.
 \end{itemize}
 
 The goal is \textit{strict methodological fidelity}: we replicate all timing parameters, spatial layouts, stimulus presentation protocols, randomization schemes, and data recording formats of the original study.
 
-\section{Experimental Design}
+To clarify the mechanism behind any search advantage, we supplemented descriptive performance measures with diffusion decision modeling (DDM; \textcite{Ratcliff2008}). Standard analyses of mean reaction times and accuracy cannot disentangle whether faster responses reflect more efficient evidence accumulation or shifts in response caution. DDM addresses this limitation by decomposing choice and reaction time distributions into psychologically interpretable components, allowing us to test whether set size and target type influence evidence quality, decision thresholds, or nondecision processes. This modeling approach is particularly appropriate for visual search, where increasing array size may reduce evidence efficiency, increase cautiousness, or both.
+
+\section{Method}
 
 \subsection{Experiment 1: Grid Layout (Homogeneous Distractors)}
 
@@ -140,6 +146,8 @@ Three factors are manipulated in a fully-crossed design:
         \bottomrule
     \end{tabular}
 \end{table}
+
+Twenty-six participants completed Experiment 1. Participants were university students aged 20–22 years. Gender information was not recorded. All participants had normal or corrected-to-normal vision and provided informed consent. The dataset contains 1352 trial rows, with 52 trials per participant.
 
 \subsubsection{Trial Type Definition}
 
@@ -202,6 +210,8 @@ The trial sequence mirrors Experiment 1 with key spatial differences:
     \end{tabular}
 \end{table}
 
+Twelve participants completed Experiment 2. Participants were university students aged 20–22 years. Gender information was not recorded. All participants had normal or corrected-to-normal vision and provided informed consent. The dataset contains 828 trial rows, with 69 trials per participant.
+
 \subsubsection{Heterogeneous Distractors}
 
 Unlike Experiment 1, distractors in Experiment 2 come from \textbf{diverse object categories}, not the target's category. This increases task difficulty and allows differentiation between search slopes for different target types.
@@ -220,16 +230,27 @@ Unlike Experiment 1, distractors in Experiment 2 come from \textbf{diverse objec
     \label{fig:ex2_array}
 \end{figure}
 
-\section{Results Summary (Current Data)}
+Due to the limited testing time available for each participant, we did not repeat the 12 (Experiment 1) or 18 (Experiment 2) trial types across multiple category blocks. Instead, Experiment 1 and Experiment 2 each used a single mixed trial set in which all condition combinations (set size $\times$ target presence $\times$ target type) were randomly interleaved. This adjustment changes only the repetition and blocking structure, while preserving the original factorial design and condition contrasts.
 
-The current aggregated dataset and visualization outputs indicate the following trends:
+For data preprocessing, only correct-response trials were included in the analysis. Across all trials, 1,130 out of 1,352 trials were correct in Experiment 1, and 742 out of 828 trials were correct in Experiment 2. 
 
-\begin{itemize}
-    \item \textbf{Set size effect}: Reaction time increases with larger set sizes in both experiments.
-    \item \textbf{Presence effect}: Target-absent trials are slower than target-present trials.
-    \item \textbf{Experiment 1 target type}: Illusory faces (pFace) are detected faster than non-face objects.
-    \item \textbf{Experiment 2 target type}: Real faces are fastest, followed by illusory faces, then non-face objects.
-\end{itemize}
+\subsection{Data Analysis: Diffusion Decision Modeling}
+
+We analyzed trial-level reaction times (RTs) and binary present/absent responses using the diffusion decision model (DDM), implemented in Python with PyDDM. In DDM, decisions arise from noisy accumulation of evidence toward two response boundaries. Drift rate ($v$) reflects evidence accumulation efficiency, boundary separation ($a$) reflects response caution (speed--accuracy tradeoff), and nondecision time ($T_{er}$) captures perceptual and motor delays outside the decision process. Modeling full RT distributions provides stronger inference about underlying cognitive mechanisms than mean RTs alone.
+
+Preprocessing followed standard psychophysical practice. Trials with missing RTs or timeouts were excluded, RTs were converted to seconds, and extreme RTs (below 0.20 s or above 10.00 s) were removed to reduce anticipatory responses and lapses. Reaction time preprocessing further excluded trials with response times exceeding 10,000 ms, consistent with standard psychophysical practice for removing lapses and delayed responses. After this additional exclusion, 1,072 trials remained in Experiment 1, while no additional trials were removed in Experiment 2 under this criterion. Models were fit to correct trials only, and responses were coded as present versus absent based on the trial condition and accuracy. These decisions focus the model on decision-related variability while minimizing contamination from nondecision artifacts.
+
+Model fitting was conducted separately for each experiment, and within each experiment for target presence (present vs. absent) and target type. This separation reflects the expectation that target-absent trials can involve more exhaustive search and may rely on distinct decision processes. Two model structures were compared. Model A allowed drift rate to vary with set size while holding boundary separation constant, testing the hypothesis that larger arrays primarily reduce evidence efficiency. Model B allowed both drift rate and boundary separation to vary with set size, allowing response caution to increase with task difficulty. Drift rate was parameterized as a logarithmic function of set size, $v = v_0 + v_s \log(\text{set size})$, with a negative slope constraint to capture decreasing efficiency as arrays grow. Models were estimated by maximum-likelihood optimization and compared using log likelihood, Akaike Information Criterion (AIC; \parencite{Akaike1974}), and Bayesian Information Criterion (BIC; \parencite{Schwarz1978}), where lower values indicate better model fit after accounting for model complexity.
+
+The logarithmic transformation of set size was chosen based on established properties of visual search behavior, where increases in display size produce diminishing marginal costs on performance \parencite{Wolfe1998}. Empirically, reaction time functions in visual search are often better described by sublinear or logarithmic scaling rather than linear growth. From a modeling perspective, the log transform ensures that drift rate decreases monotonically with set size while avoiding unrealistic linear extrapolation at larger set sizes. This formulation is consistent with sequential sampling accounts of decision-making, in which increasing display complexity reduces evidence quality in a saturating rather than strictly proportional manner \parencite{Ratcliff2008}.
+
+\section{Results}
+
+\subsection{Behavioral Results}
+
+Behavioral analyses revealed reliable effects of set size, target presence, and target category across both experiments. Reaction times increased systematically with larger set sizes, indicating increased search difficulty as visual competition increased. Target-absent trials were consistently slower than target-present trials, suggesting an additional cost associated with exhaustive search termination.
+
+In Experiment 1, illusory-face targets were detected faster than matched nonface objects across conditions. In Experiment 2, reaction times followed a clear target-type hierarchy, with real faces producing the fastest responses, followed by illusory faces and then nonface objects. Accuracy remained relatively high across conditions, with only modest decreases at larger set sizes, indicating that the reaction-time effects were not driven by a speed–accuracy tradeoff.
 
 Figure \ref{fig:rt_by_setsize} shows the reaction time slopes by set size and target presence. The increase in reaction time with larger arrays is consistent with a serial visual search component, and the target-absent panels are uniformly higher, reflecting the cost of exhaustive search when the target is missing.
 
@@ -276,166 +297,331 @@ Finally, Figure \ref{fig:exp_comparison} contrasts overall reaction time and acc
     \label{fig:exp_comparison}
 \end{figure}
 
-\section{Computational Implementation}
+\subsection{Experiment 1: Diffusion Decision Modeling Results}
 
-\subsection{Software Architecture}
+Across target-present conditions, Model A consistently provided superior fit relative to Model B (Table \ref{tab:all-conditions}), indicating that set-size effects were primarily driven by changes in drift rate rather than boundary separation. Drift rates decreased monotonically as set size increased for both illusory-face and nonface-object targets, suggesting that evidence accumulation became progressively less efficient under higher visual competition.
 
-The Python implementation is organized into five core modules:
+% ========== Table 1: 4 conditions (v16/v32/v64) ==========
+\begin{table}[H]
+\centering
+\caption{Model Comparison Results by Condition}
+\label{tab:all-conditions}
 
-\begin{enumerate}
-    \item \textbf{cli.py}: Command-line interface for experiment selection and participant ID input.
-    \item \textbf{config.py}: Immutable configuration container with experiment-specific parameters.
-    \item \textbf{trials.py}: Trial specification generation with randomization logic.
-    \item \textbf{stimuli.py}: Image loading, layout computation, and drawing utilities.
-    \item \textbf{runner.py}: Main experiment controller, display management, response collection, and data serialization.
-\end{enumerate}
+% Subtable 1
+\subfloat[Target Present --- Illusory Face ($n=262$)]{%
+\label{subtab:tp-illusory}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{cccccccccc}
+\hline
+Model & AIC & BIC & Fixed Boundary (a) & \multicolumn{3}{c}{Drift Rate (v)} & \multicolumn{3}{c}{Boundary Separation (a)} \\
+ &  &  &  & 16 & 32 & 64 & 16 & 32 & 64 \\
+\hline
+A & $730.9324773$ & $745.2058553$ & $2.1079478$ & $1.48769021$ & $1.171704727$ & $0.855719244$ & & & \\
+B & $732.1767936$ & $753.5868606$ & & $1.349100359$ & $1.120738176$ & $0.892375992$ & $1.83969183$ & $1.919181736$ & $2.164598956$ \\
+\hline
+\end{tabular}%
+}
+}
 
-\subsection{Trial Specification Generation}
+\vspace{0.8em}
 
-Trial specifications are generated deterministically from a random seed. The key innovation is ensuring category orders without adjacent repeats and trial type randomization within each category:
+% Subtable 2
+\subfloat[Target Present --- Nonface Object ($n=250$)]{%
+\label{subtab:tp-nonface}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{cccccccccc}
+\hline
+Model & AIC & BIC & Fixed Boundary (a) & \multicolumn{3}{c}{Drift Rate (v)} & \multicolumn{3}{c}{Boundary Separation (a)} \\
+ &  &  &  & 16 & 32 & 64 & 16 & 32 & 64 \\
+\hline
+A & $888.1125174$ & $902.1983611$ & $2.450479721$ & $1.149582513$ & $0.917655053$ & $0.685727593$ & & & \\
+B & $892.0648127$ & $913.1935782$ & & $1.125841962$ & $0.912405545$ & $0.698969129$ & $2.405688133$ & $2.404304095$ & $2.509238217$ \\
+\hline
+\end{tabular}%
+}
+}
 
-\begin{lstlisting}[style=pythoncode, caption={Experiment 1 trial generation (simplified).}, label={lst:trial_gen}]
-def build_experiment1_trials(rng: Random) -> list[TrialSpec]:
-    category_order = _category_sequence(26, 12, rng)
-    trial_type_orders = {c: list(range(1, 13)) for c in range(1, 27)}
-    for order in trial_type_orders.values():
-        rng.shuffle(order)
-    
-    specs = []
-    for trial_number, category in enumerate(category_order, start=1):
-        trial_type = trial_type_orders[category][category_counts[category]]
-        target_present = trial_type in {1, 2, 3, 7, 8, 9}
-        target_variant = "pFace" if trial_type <= 6 else "nonFace"
-        specs.append(TrialSpec(...))
-    return specs
-\end{lstlisting}
+\vspace{0.8em}
 
-\subsection{Grid Layout Computation}
+% Subtable 3
+\subfloat[Target Absent --- Illusory Face ($n=286$)]{%
+\label{subtab:ta-illusory}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{cccccccccc}
+\hline
+Model & AIC & BIC & Fixed Boundary (a) & \multicolumn{3}{c}{Drift Rate (v)} & \multicolumn{3}{c}{Boundary Separation (a)} \\
+ &  &  &  & 16 & 32 & 64 & 16 & 32 & 64 \\
+\hline
+A & $1190.122353$ & $1204.746321$ & $3$ & $-0.760385571$ & $-0.760386264$ & $-0.760386957$ & & & \\
+B & $1183.294047$ & $1205.229998$ & & $-0.732168914$ & $-0.732169607$ & $-0.732170301$ & $2.509129713$ & $3$ & $3$ \\
+\hline
+\end{tabular}%
+}
+}
 
-For Experiment 1, grid positions are computed from a base set of coordinates for an $8 \times 8$ grid with 120 px stimulus size and 12 px spacing:
+\vspace{0.8em}
 
-\begin{lstlisting}[style=pythoncode, caption={Grid offset computation.}, label={lst:grid}]
-def build_grid_offsets(stim_width: int = 120, stim_space: int = 12):
-    coords = [
-        *(((stim_width + stim_space) * n - stim_space/2) * -1 
-          for n in [4, 3, 2, 1]),
-        *(((stim_width + stim_space) * n + stim_space/2) 
-          for n in [0, 1, 2, 3]),
-    ]
-    return [(x, y) for y in coords for x in coords]
-\end{lstlisting}
+% Subtable 4
+\subfloat[Target Absent --- Nonface Object ($n=244$)]{%
+\label{subtab:ta-nonface}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{cccccccccc}
+\hline
+Model & AIC & BIC & Fixed Boundary (a) & \multicolumn{3}{c}{Drift Rate (v)} & \multicolumn{3}{c}{Boundary Separation (a)} \\
+ &  &  &  & 16 & 32 & 64 & 16 & 32 & 64 \\
+\hline
+A & $1148.613928$ & $1162.602601$ & $3$ & $-0.613250632$ & $-0.613251325$ & $-0.613252018$ & & & \\
+B & $1149.023122$ & $1170.006131$ & & $-0.596934775$ & $-0.596935468$ & $-0.596936161$ & $2.715069377$ & $3$ & $3$ \\
+\hline
+\end{tabular}%
+}
+}
 
-\subsection{Circular Layout Computation}
+\vspace{0.4em}
+{\footnotesize\textit{Note.} Lower AIC and BIC values indicate better model fit.\\
+$v$ = drift rate; $a$ = boundary separation.\\
+$v_{16}$, $v_{32}$, and $v_{64}$ represent estimated drift rates for set sizes 16, 32, and 64, respectively.\\
+Fixed Boundary ($a$) indicates a single boundary parameter shared across set sizes in Model A, whereas $a_{16}$, $a_{32}$, and $a_{64}$ represent boundary estimates that varied with set size in Model B.}
+\end{table}
 
-For Experiment 2, positions are computed trigonometrically:
+Importantly, illusory-face targets produced consistently higher drift rates than nonface-object targets across all set sizes. This pattern suggests that illusory faces benefited from enhanced evidence accumulation relative to matched nonface objects, consistent with partial recruitment of face-related perceptual processing during visual search.
 
-\begin{lstlisting}[style=pythoncode, caption={Circular layout computation.}, label={lst:circle}]
-def build_circle_offsets(set_size: int, radius: int = 400):
-    theta = (2 * pi) / set_size
-    return [
-        (int(round(cos(i * theta) * radius)),
-         int(round(sin(i * theta) * radius)))
-        for i in range(1, set_size + 1)
-    ]
-\end{lstlisting}
+Boundary estimates in Model B showed comparatively weak or inconsistent modulation across set sizes in target-present conditions. Moreover, Model B did not improve model fit according to either AIC or BIC, further supporting a drift-dominated account of target-present decisions.
 
-\subsection{Image Loading and Masking}
+Observed-versus-simulated RT distributions for the target-present conditions are shown in Figures \ref{fig:ex1_rt_by_setsize_model_a_target_present_illusory_face}--\ref{fig:ex1_rt_by_setsize_model_a_target_present_nonface_object}.
 
-Images are loaded using PIL and converted to pygame surfaces. For Experiment 2, circular masking is applied:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{\exponepath rt_by_setsize_model_a_target_present_illusory_face.png}
+	\caption{Simulated and Observed target present illusory face plot.}
+	\label{fig:ex1_rt_by_setsize_model_a_target_present_illusory_face}
+\end{figure}
 
-\begin{lstlisting}[style=pythoncode, caption={Image loading with circular masking.}, label={lst:mask}]
-def load_surface(path_str: str, mask_path_str: str | None = None):
-    image = Image.open(path_str).convert("RGBA")
-    if mask_path_str is not None:
-        mask = Image.open(mask_path_str).convert("L")
-        if mask.size != image.size:
-            mask = mask.resize(image.size, Image.Resampling.LANCZOS)
-        image.putalpha(mask)
-    surface = pygame.image.fromstring(image.tobytes(), image.size, "RGBA")
-    return surface.convert_alpha()
-\end{lstlisting}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{\exponepath rt_by_setsize_model_a_target_present_nonface_object.png}
+	\caption{Simulated and Observed target present nonface object plot.}
+	\label{fig:ex1_rt_by_setsize_model_a_target_present_nonface_object}
+\end{figure}
 
-\subsection{Response Collection and Timing}
+In contrast, target-absent conditions showed a different computational pattern. Drift estimates remained largely stable across set sizes, whereas boundary separation increased substantially in Model B. In both target categories, Model B yielded lower AIC values than Model A, suggesting that target-absent decisions were better characterized by increased response caution than by changes in evidence accumulation efficiency.
 
-Response collection uses pygame's event system with high-precision timing via \texttt{time.perf\_counter()}:
+Boundary estimates approached the upper fitting limit at larger set sizes in the target-absent conditions, consistent with increasingly conservative search termination processes when no target evidence was detected.
 
-\begin{lstlisting}[style=pythoncode, caption={Response collection.}, label={lst:response}]
-def _wait_for_response(self, search_onset: float, timeout_seconds: float):
-    while True:
-        for event in pygame.event.get():
-            if event.type == pygame.KEYDOWN:
-                if event.key in PRESENT_KEYS:
-                    rt_ms = int((time.perf_counter() - search_onset) * 1000)
-                    return "p", rt_ms, False
-                elif event.key in ABSENT_KEYS:
-                    return "a", int((time.perf_counter() - search_onset) * 1000), False
-        if time.perf_counter() - search_onset > timeout_seconds:
-            return "x", 0, True
-        self.clock.tick(120)
-\end{lstlisting}
+Observed-versus-simulated RT distributions for the target-absent conditions are shown in Figures \ref{fig:ex1_rt_by_setsize_model_b_target_absent_illusory_face}--\ref{fig:ex1_rt_by_setsize_model_b_target_absent_nonface_object}.
 
-\section{Data Output Format}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{\exponepath rt_by_setsize_model_b_target_absent_illusory_face.png}
+	\caption{Simulated and Observed target absent illusory face plot.}
+	\label{fig:ex1_rt_by_setsize_model_b_target_absent_illusory_face}
+\end{figure}
 
-Results are saved as CSV with standard psychophysical columns plus a JSON manifest containing the trial order and random seed for full reproducibility.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{\exponepath rt_by_setsize_model_b_target_absent_nonface_object.png}
+	\caption{Simulated and Observed target absent nonface object plot.}
+	\label{fig:ex1_rt_by_setsize_model_b_target_absent_nonface_object}
+\end{figure}
 
-\section{Validation and Reproducibility}
+\subsection{Experiment 2: Diffusion Decision Modeling Results}
 
-\subsection{Random Seed Control}
+Across target-present conditions, model comparison consistently favored Model A over Model B (Table \ref{tab:all-conditions-2}), indicating that set-size effects were primarily drift-driven rather than boundary-driven. Drift rates decreased monotonically with set size for all three target categories, demonstrating reduced evidence accumulation efficiency as visual competition increased.
 
-The implementation supports full reproducibility: a random seed is either provided at runtime or generated from system time. This seed is stored in the manifest JSON, enabling replication of trial sequences.
+% ========== Table 2: 6 conditions (v4/v8/v16) ==========
+\begin{table}[H]
+\centering
+\caption{Model Comparison Results by Condition (Set 2)}
+\label{tab:all-conditions-2}
 
-\subsection{Timing Precision}
+% Subtable 1
+\subfloat[Target Present --- Illusory Face ($n=130$)]{%
+\label{subtab:2-tp-illusory}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{cccccccccc}
+\hline
+Model & AIC & BIC & Fixed Boundary (a) & \multicolumn{3}{c}{Drift Rate (v)} & \multicolumn{3}{c}{Boundary Separation (a)} \\
+ &  &  &  & 4 & 8 & 16 & 4 & 8 & 16 \\
+\hline
+A & $48.62839018$ & $60.09852798$ & $1.803553248$ & $2.793189578$ & $2.575624927$ & $2.358060277$ & & & \\
+B & $50.22100134$ & $67.42620804$ & & $2.892086336$ & $2.607235933$ & $2.322385531$ & $1.942302779$ & $1.700413432$ & $1.840539119$ \\
+\hline
+\end{tabular}%
+}
+}
 
-The implementation uses \texttt{time.perf\_counter()} (nanosecond precision) for response timing and maintains a 120\,Hz event-polling loop to minimize latency jitter.
+\vspace{0.6em}
 
-\section{Comparison to Original MATLAB Implementation}
+% Subtable 2
+\subfloat[Target Present --- Nonface Object ($n=119$)]{%
+\label{subtab:2-tp-nonface}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{cccccccccc}
+\hline
+Model & AIC & BIC & Fixed Boundary (a) & \multicolumn{3}{c}{Drift Rate (v)} & \multicolumn{3}{c}{Boundary Separation (a)} \\
+ &  &  &  & 4 & 8 & 16 & 4 & 8 & 16 \\
+\hline
+A & $41.50293775$ & $52.61943172$ & $2.108337841$ & $3.450788945$ & $2.779340413$ & $2.107891881$ & & & \\
+B & $45.30006326$ & $61.97480422$ & & $3.400118355$ & $2.777470247$ & $2.154822139$ & $2.089532818$ & $2.062038859$ & $2.171331687$ \\
+\hline
+\end{tabular}%
+}
+}
 
-\subsection{Similarities}
-- Identical experimental design, factors, and trial sequences
-- Same temporal parameters (target duration 1.6 s, fixation jitter 400–600 ms, timeout 15 s)
-- Same spatial layouts (grid and circular arrays)
-- Identical randomization constraints
+\vspace{0.6em}
 
-\subsection{Differences}
-- Platform: Python/Pygame instead of MATLAB/Psychtoolbox-3
-- Response keys: Arrow/letter keys instead of custom button box
-- Window size: Default 1600×1200, configurable to 1920×1080
+% Subtable 3
+\subfloat[Target Present --- Real Face ($n=127$)]{%
+\label{subtab:2-tp-realface}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{cccccccccc}
+\hline
+Model & AIC & BIC & Fixed Boundary (a) & \multicolumn{3}{c}{Drift Rate (v)} & \multicolumn{3}{c}{Boundary Separation (a)} \\
+ &  &  &  & 4 & 8 & 16 & 4 & 8 & 16 \\
+\hline
+A & $-99.11420672$ & $-87.73745837$ & $1.012435469$ & $3.426455892$ & $3.011325965$ & $2.596196039$ & & & \\
+B & $-97.56207146$ & $-80.49694894$ & & $3.111453981$ & $2.991914583$ & $2.872375185$ & $0.892056771$ & $1.008847184$ & $1.104410646$ \\
+\hline
+\end{tabular}%
+}
+}
 
-\subsection{Expected Behavioral Equivalence}
+\vspace{0.6em}
 
-Experimental outcomes should be equivalent because trial sequences are generated identically, timing parameters are numerically matched, and response collection uses equivalent high-precision timing.
+% Subtable 4
+\subfloat[Target Absent --- Illusory Face ($n=119$)]{%
+\label{subtab:2-ta-illusory}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{cccccccccc}
+\hline
+Model & AIC & BIC & Fixed Boundary (a) & \multicolumn{3}{c}{Drift Rate (v)} & \multicolumn{3}{c}{Boundary Separation (a)} \\
+ &  &  &  & 4 & 8 & 16 & 4 & 8 & 16 \\
+\hline
+A & $170.7697812$ & $181.8862752$ & $2.073019173$ & $-1.893574628$ & $-1.893575321$ & $-1.893576014$ & & & \\
+B & $165.0858815$ & $181.7606225$ & & $-1.984095415$ & $-1.984096109$ & $-1.984096802$ & $1.902936725$ & $2.0618256$ & $2.510511442$ \\
+\hline
+\end{tabular}%
+}
+}
 
+\vspace{0.6em}
+
+% Subtable 5
+\subfloat[Target Absent --- Nonface Object ($n=115$)]{%
+\label{subtab:2-ta-nonface}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{cccccccccc}
+\hline
+Model & AIC & BIC & Fixed Boundary (a) & \multicolumn{3}{c}{Drift Rate (v)} & \multicolumn{3}{c}{Boundary Separation (a)} \\
+ &  &  &  & 4 & 8 & 16 & 4 & 8 & 16 \\
+\hline
+A & $168.3542647$ & $179.3339932$ & $2.145092637$ & $-1.867076819$ & $-1.867077513$ & $-1.867078206$ & & & \\
+B & $130.9772599$ & $147.4468527$ & & $-2.054250928$ & $-2.054251621$ & $-2.054252314$ & $1.540439938$ & $2.106553621$ & $3$ \\
+\hline
+\end{tabular}%
+}
+}
+
+\vspace{0.6em}
+
+% Subtable 6
+\subfloat[Target Absent --- Real Face ($n=132$)]{%
+\label{subtab:2-ta-realface}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{cccccccccc}
+\hline
+Model & AIC & BIC & Fixed Boundary (a) & \multicolumn{3}{c}{Drift Rate (v)} & \multicolumn{3}{c}{Boundary Separation (a)} \\
+ &  &  &  & 4 & 8 & 16 & 4 & 8 & 16 \\
+\hline
+A & $72.75185046$ & $84.28305815$ & $1.655677944$ & $-2.304984501$ & $-2.304985194$ & $-2.304985887$ & & & \\
+B & $23.9942143$ & $41.29102583$ & & $-2.573665499$ & $-2.573666192$ & $-2.573666885$ & $1.096156743$ & $1.716749431$ & $2.118693971$ \\
+\hline
+\end{tabular}%
+}
+}
+
+\vspace{0.4em}
+{\footnotesize\textit{Note.} Lower AIC and BIC values indicate better model fit.\\
+$v$ = drift rate; $a$ = boundary separation.\\
+$v_{4}$, $v_{8}$, and $v_{16}$ represent estimated drift rates for set sizes 4, 8, and 16, respectively.\\
+Fixed Boundary ($a$) indicates a single boundary parameter shared across set sizes in Model A, whereas $a_{4}$, $a_{8}$, and $a_{16}$ represent boundary estimates that varied with set size in Model B.}
+\end{table}
+
+Importantly, drift estimates revealed a clear target-type hierarchy. Real faces produced the highest drift rates across all set sizes, followed by illusory faces and then nonface objects. Real-face drift rates remained comparatively high even at the largest set size, suggesting the strongest robustness to increasing search difficulty. Illusory faces showed intermediate drift rates, indicating partial recruitment of face-related perceptual processing, whereas nonface objects exhibited the lowest drift rates and the steepest decline as set size increased.
+
+Boundary estimates in Model B showed no consistent monotonic pattern across target-present conditions, and Model B did not improve model fit relative to Model A. Together, these findings support a drift-dominated account of target-present search decisions in Experiment 2.
+
+Observed-versus-simulated RT distributions for the three target-present conditions are shown in Figures \ref{fig：ex2_rt_by_setsize_model_a_target_present_illusory_face}--\ref{fig：ex2_rt_by_setsize_model_a_target_present_real_face}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{\exptwopath rt_by_setsize_model_a_target_present_illusory_face.png}
+	\caption{Simulated and Observed target present nonface object plot.}
+	\label{fig：ex2_rt_by_setsize_model_a_target_present_illusory_face}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{\exptwopath rt_by_setsize_model_a_target_present_nonface_object.png}
+	\caption{Simulated and Observed target present nonface object plot.}
+	\label{fig：ex2_rt_by_setsize_model_a_target_present_nonface_object}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{\exptwopath rt_by_setsize_model_a_target_present_real_face.png}
+	\caption{This figure shows observed vs. Model B–simulated RT distributions across set sizes in the target-present, real face condition.}
+	\label{fig：ex2_rt_by_setsize_model_a_target_present_real_face}
+\end{figure}
+
+In contrast, target-absent conditions showed a different pattern. Across all three target categories, Model B generally provided superior fit metrics compared with Model A (Table \ref{tab:all-conditions-2}). Drift estimates remained relatively stable across set sizes, whereas boundary separation increased systematically as array size increased. This pattern suggests that target-absent judgments were governed primarily by increasingly conservative response criteria rather than changes in evidence accumulation efficiency.
+
+The strongest boundary modulation was observed for real-face and nonface-object target-absent conditions, in which boundary estimates approached the upper fitting limit at larger set sizes. This finding is consistent with a cautious search termination process in the absence of detectable target evidence.
+
+Observed-versus-simulated RT distributions for the target-absent conditions under Model B are shown in Figures \ref{fig:ex2_rt_by_setsize_model_b_target_absent_illusory_face}--\ref{fig:ex2_rt_by_setsize_model_b_target_absent_real_face}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{\exptwopath rt_by_setsize_model_b_target_absent_illusory_face.png}
+    \caption{Observed and simulated RT distributions across set sizes for the target-absent illusory-face condition under Model B.}
+    \label{fig:ex2_rt_by_setsize_model_b_target_absent_illusory_face}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{\exptwopath rt_by_setsize_model_b_target_absent_nonface_object.png}
+    \caption{Observed and simulated RT distributions across set sizes for the target-absent nonface-object condition under Model B.}
+    \label{fig:ex2_rt_by_setsize_model_b_target_absent_nonface_object}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{\exptwopath rt_by_setsize_model_b_target_absent_real_face.png}
+    \caption{Observed and simulated RT distributions across set sizes for the target-absent real-face condition under Model B.}
+    \label{fig:ex2_rt_by_setsize_model_b_target_absent_real_face}
+\end{figure}
 \section{Conclusion}
 
-This technical report documents a faithful, open-source implementation of the Keys et al. (2021) visual search paradigm in Python. The reproduction maintains strict experimental fidelity while offering cross-platform compatibility and maintainability benefits.
+This report reproduced the visual-search paradigm of \textcite{Keys2021} and extended the original behavioral analysis using diffusion decision modeling (DDM). Across both experiments, behavioral results showed reliable effects of set size and target presence, with larger search arrays producing slower responses and target-absent trials generating additional search costs.
 
-Key technical innovations include:
-\begin{itemize}
-    \item Deterministic trial generation with full reproducibility via random seeds
-    \item Efficient grid and circular layout computations
-    \item High-precision response timing using \texttt{time.perf\_counter()}
-    \item Modular architecture enabling future extensions
-    \item Complete data provenance (manifest JSON + seed storage)
-\end{itemize}
+Importantly, DDM analyses revealed distinct computational mechanisms underlying target-present and target-absent decisions. In target-present conditions, set-size effects were primarily associated with reductions in drift rate, indicating less efficient evidence accumulation as visual competition increased. Illusory faces consistently produced higher drift rates than matched nonface objects, while real faces showed the strongest evidence accumulation overall. These findings suggest that illusory faces partially recruit face-related perceptual processing during visual search.
 
-\begin{thebibliography}{9}
+In contrast, target-absent conditions were better characterized by increases in boundary separation, consistent with increasingly conservative search termination processes as set size increased. Together, these findings demonstrate that behavioral visual-search effects can emerge from dissociable latent decision mechanisms, highlighting the value of diffusion decision modeling for interpreting reaction-time distributions beyond mean response measures alone.
 
-    \bibitem{Keys2021}
-    Keys, R. T., Taubert, J., \& Wardle, S. G. (2021).
-    \textit{A visual search advantage for illusory faces in objects}.
-    Attention, Perception, \& Psychophysics, 83, 1942–1953.
-    \url{https://doi.org/10.3758/s13414-021-02267-4}
+\printbibliography
 
-    \bibitem{Hershler2005}
-    Hershler, O., \& Hochstein, S. (2005).
-    \textit{At first sight: A high-level pop out effect for faces}.
-    Vision Research, 45(13), 1707–1724.
+\section*{Author Notes}
+\subsection*{Project Duration}
 
-    \bibitem{Wolfe2001}
-    Wolfe, J. M. (2001).
-    \textit{Asymmetries in visual search: An introduction}.
-    Perception \& Psychophysics, 63(3), 381–389.
+The project was completed over an estimated total period of approximately 4–6 weeks. The main components of the workflow included implementation, data collection, preprocessing, modeling, and report writing.
 
-\end{thebibliography}
+The initial translation of the experimental paradigm from MATLAB to Python required approximately 15 hours of development and debugging. Data collection was conducted over approximately 2 days of experimental sessions. Data preprocessing and visualization required approximately 5 hours, while diffusion decision modeling and parameter estimation required approximately 30 hours. The final report writing and revision process required approximately 40 hours.
+
+\subsection*{AI Usage Statement}
+AI-assisted tools (ChatGPT) were extensively used throughout this project, particularly for software development. A substantial portion of the initial Python/Pygame implementation was generated with AI assistance, including stimulus presentation logic, experimental control flow, and data handling scripts. These outputs were subsequently reviewed, debugged, and modified by the authors to ensure correctness and alignment with the experimental design.
+
+In addition, AI tools were used to support understanding of diffusion decision modeling (DDM), assist with LaTeX formatting, and provide suggestions for language refinement.
+
+All final experimental design decisions, data preprocessing steps, and modeling choices were independently verified and validated by the authors.
 
 \end{document}
