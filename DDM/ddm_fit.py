@@ -81,23 +81,11 @@ class FitConfig:
 # -----------------------------
 # Data loading and preprocessing
 # -----------------------------
-# 关键思路（中文说明）:
-# - DDM 使用 trial-level RT + response 做似然估计，不需要先做分位数分箱。
-# - PyDDM 使用最大似然拟合，因此不产生 MCMC 的 posterior 与 trace。
-# - 过滤极端 RT (200-3000 ms) 以减少非决策过程或偶然失误对拟合的干扰。
 def _normalize_text(value: str) -> str:
     return str(value).strip().lower()
 
 
 def _infer_response(task_label: str, correct: bool) -> int:
-    """Infer participant response (1=present, 0=absent).
-
-    中文说明：
-    这里没有直接的反应键值，但有 trial 的真实条件（present/absent）
-    与正确性。二选一任务中，错误意味着选择了相反选项，因此：
-    - 正确：response 与真实条件一致
-    - 错误：response 反转
-    """
     task_label = _normalize_text(task_label)
     is_present = task_label == TASK_PRESENT
     if correct:
@@ -106,12 +94,6 @@ def _infer_response(task_label: str, correct: bool) -> int:
 
 
 def _detect_rt_unit(rt_values: pd.Series) -> str:
-    """Detect RT unit by magnitude. Returns "ms" or "sec".
-
-    中文说明：
-    从实验代码可知 RT 以毫秒写入 CSV（runner/trials 输出 rt_ms），
-    因此默认按毫秒处理。若你之后换了数据来源，再用该函数自动判断。
-    """
     median_rt = float(np.nanmedian(rt_values.values))
     return "ms" if median_rt > 20 else "sec"
 
@@ -139,41 +121,32 @@ def load_and_clean(csv_path: Path) -> Tuple[pd.DataFrame, Dict[str, int]]:
         }
     )
 
-    # Normalize correctness field
     df["correctResponse"] = df["correctResponse"].astype(str).str.upper()
     df["timeoutOrKeyNotPressed"] = df["timeoutOrKeyNotPressed"].astype(str).str.upper()
 
-    # 删除缺失 trial
     before = len(df)
     df = df.dropna(subset=["rt", "correctResponse", "task", "searchTarget", "setSize"]).copy()
     dropped_missing = before - len(df)
 
-    # 删除 timeout trial（非有效决策过程）
     df = df[df["timeoutOrKeyNotPressed"] == "FALSE"].copy()
 
-    # RT 单位在原始实验代码中为毫秒，这里默认按毫秒处理
     rt_unit = "ms"
     df["rt"] = _convert_rt_to_seconds(df["rt"], rt_unit)
 
-    # 删除异常 RT：过短可能是误触，过长可能是走神或非决策过程
     rt_mask = (df["rt"] >= MIN_RT_SEC) & (df["rt"] <= MAX_RT_SEC)
     dropped_rt = int((~rt_mask).sum())
     df = df[rt_mask].copy()
 
-    # 转成布尔正确性
     df["is_correct"] = df["correctResponse"].map(lambda v: str(v).upper() == "TRUE")
 
-    # 仅保留正确试次
     before_correct = len(df)
     df = df[df["is_correct"]].copy()
     dropped_incorrect = before_correct - len(df)
 
-    # 推断 response 给 PyDDM 使用（1=present, 0=absent）
     df["response"] = df.apply(
         lambda row: _infer_response(row["task"], bool(row["is_correct"])), axis=1
     )
 
-    # 轻量检查：提示是否出现非预期条件（不终止，仅提醒）
     exp1_sizes = set(df[df["experiment"] == 1]["setSize"].unique())
     exp2_sizes = set(df[df["experiment"] == 2]["setSize"].unique())
     if exp1_sizes and not exp1_sizes.issubset(EX1_SET_SIZES):
@@ -196,19 +169,6 @@ def load_and_clean(csv_path: Path) -> Tuple[pd.DataFrame, Dict[str, int]]:
 # -----------------------------
 # PyDDM fitting helpers
 # -----------------------------
-# 理论说明：
-# - drift rate v 表征证据积累速度（证据质量/效率）。
-# - boundary a 表征谨慎度（speed-accuracy tradeoff）。
-# - nondecision time Ter 表征感知/运动等非决策时间。
-# - noise parameter s 通常固定（如 s=1）以保证模型可辨识性。
-#
-# DDM 核心随机微分方程（理论背景说明）：
-#   dx = v dt + s dW
-#   x: accumulated evidence
-#   v: drift rate
-#   s: noise magnitude (通常固定)
-#   dW: Wiener process
-# 决策规则：上界=反应A（present），下界=反应B（absent）。
 def _require_pyddm() -> None:
     if Model is None:
         print(
@@ -309,7 +269,6 @@ class OverlayNonDecisionByTarget(Overlay):
 def _build_sample(df: pd.DataFrame, conditions_columns: Optional[List[str]] = None) -> "Sample":
     _require_pyddm()
 
-    # PyDDM 需要 rt (秒) 和 response (0/1) 以及条件列
     try:
         if not conditions_columns:
             conditions_columns = ["setSize"]
@@ -580,7 +539,6 @@ def fit_experiment_1(df: pd.DataFrame, config: FitConfig) -> None:
             sample = _build_sample(subset, conditions_columns=["setSize"])
             tag = f"{_slugify(task_label)}_{_slugify(target_label)}"
 
-            # Model A: 函数约束 drift rate v 随 set size 变化（log 线性，严格下降）
             model_a = Model(
                 name=f"exp1_v_setsize_{tag}",
                 drift=DriftFuncSetSizeLog(
@@ -593,7 +551,7 @@ def fit_experiment_1(df: pd.DataFrame, config: FitConfig) -> None:
                 IC=ICPointSourceCenter(),
                 dt=0.001,
                 dx=0.01,
-                T_dur=MAX_RT_SEC+1.0,  # Ensure T_dur exceeds max RT to capture full distribution
+                T_dur=MAX_RT_SEC+1.0,  
             )
             model_a = _fit_model(model_a, sample)
             metrics_a = _model_metrics(model_a, sample)
@@ -626,7 +584,6 @@ def fit_experiment_1(df: pd.DataFrame, config: FitConfig) -> None:
                 f"Experiment 1 ({task_label}, {target_label}) | Model A | RT by Set Size",
             )
 
-            # Model B: 函数约束 drift rate v + boundary a 随 set size 变化
             model_b = Model(
                 name=f"exp1_v_a_setsize_{tag}",
                 drift=DriftFuncSetSizeLog(
@@ -775,7 +732,6 @@ def fit_experiment_2(df: pd.DataFrame, config: FitConfig) -> None:
                 f"Experiment 2 ({task_label}, {target_label}) | Model A | RT by Set Size",
             )
 
-            # Model B: 函数约束 drift rate v + boundary a 随 set size 变化
             model_b = Model(
                 name=f"exp2_v_a_setsize_{tag}",
                 drift=DriftFuncSetSizeLog(
@@ -876,13 +832,6 @@ def write_summary_report(config: FitConfig, summary: Dict[str, int]) -> None:
         f"- RT unit detected: {summary['rt_unit']}",
         f"- Clean rows: {summary['clean_rows']}",
         "",
-        "Modeling Notes:",
-        "- Experiment 1: set size 影响 drift rate（证据积累效率）。",
-        "- Experiment 2: target type 影响 drift rate（证据质量）。",
-        "- Boundary (a), starting point (z), and nondecision time (Ter) are fixed unless specified.",
-        "- noise parameter s 通常固定（DDM 可辨识性约束）。",
-        "- 不做 quantile binning：PyDDM 使用 trial-level 似然直接拟合。",
-        "- PyDDM 为最大似然拟合，不生成 MCMC posterior 或 trace。",
     ]
 
     report_path.write_text("\n".join(lines), encoding="utf-8")
